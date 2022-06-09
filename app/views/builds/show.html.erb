@@ -4,7 +4,7 @@
   <div class="">
     <h2>Appliances</h2>
     <div class="builds-card-container">
-      <% @build.build_appliances %>
+      <% @build.build_appliances.each do |appliance|%>
       <div class="d-flex justify-content-between">
         <div>
           <div class="build-title">
