@@ -20,8 +20,10 @@
         <p><strong>Capacity: </strong> <%= build.total_amp_hours %>Ah   /  <strong>Appliances: </strong><%= build.build_appliances.length %></p>
       </div>
 
-      <div class="d-flex justify-content-center container-trio-new">
-        <%= image_tag("trio_2.png", :alt => "icons", style: 'width: 60%') %>
+      <div class="trio-line">
+        <div class="d-flex justify-content-center container-trio-new">
+          <%= image_tag("trio_2.png", :alt => "icons", style: 'width: 75%') %>
+        </div>
       </div>
     </div>
   <% end %>

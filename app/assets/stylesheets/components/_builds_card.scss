@@ -25,7 +25,7 @@
 }
 
 .container-trio-new {
-  margin-top: 30px;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
@@ -35,6 +35,10 @@
   grid-gap: 16px;
   row-gap: 60px;
   column-gap: 5px;
+}
+
+.trio-line {
+  border-top: 1px solid grey;
 }
 
 // Smallest device
