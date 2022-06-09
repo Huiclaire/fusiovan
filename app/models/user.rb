@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :bookmarks
   has_many :builds
   has_many :comments
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :bio, presence: true, length: { maximum: 500 }
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
+  # validates :bio, presence: true, length: { maximum: 500 }
 end
