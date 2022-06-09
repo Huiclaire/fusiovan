@@ -52,14 +52,14 @@ Battery.destroy_all
 
 # BUILDS
 
-  build1 = Build.create(name: 'low budget', created_at: datetime, updated_at: datetime, solar_panel_id: integer, battery: battery1, user: user1)
-  build1.update(total_price: 950)
+  build1 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
 
-
-  fridge1_build = BuildAppliance.create(
+  fridge1_build = BuildAppliance.create!(
     use_hours: 6, amp_hours: 4, build: build1, appliance: fridge1
   )
 
-  lights1_build = BuildAppliance.create(
+  lights1_build = BuildAppliance.create!(
     use_hours: 3, amp_hours: 1.5, build: build1, appliance: lights1
   )
+
+  build1.update(total_price: build1.set_total_price)
