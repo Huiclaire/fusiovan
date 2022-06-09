@@ -1,3 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>This is a test</p>
+<div class="header">
+  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+  <div class="overlay"></div>
+
+  <!-- The HTML5 video element that will create the background video on the header -->
+  <%= video_tag "Into_the_wild.mp4", autoplay: "autoplay", muted: "muted", loop: "loop" %>
+
+  <!-- The header content -->
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">FusioVan</h1>
+        <p class="lead mb-0">Dream. Design. Build.</p>
+      </div>
+    </div>
+  </div>
+</div>
