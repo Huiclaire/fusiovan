@@ -13,12 +13,12 @@
   </head>
 
   <body>
-    <%# <%= render 'shared/navbar' %> %>
-    <%= render 'shared/flashes' %>
-    <%# <% if controller_name == "pages" && controller.params[:action] == "home" || controller_name == "registrations" && controller.params[:action] == "new" ||
-    controller_name == "sessions" && controller.params[:action] == "new" %> %>
-      <%# <%= yield %> %>
-    <%# <% else %> %>
+  <%= render 'shared/flashes' %>
+    <% if controller_name == "pages" && controller.params[:action] == "home" || controller_name == "registrations" && controller.params[:action] == "new" ||
+    controller_name == "sessions" && controller.params[:action] == "new" %>
+      <%= render 'shared/navbar' %>
+      <%= yield %>
+    <% else %>
       <div class="main-wrapper">
         <div class="sidebar-wrapper">
           <%= render 'shared/sidebar' %>
@@ -27,7 +27,7 @@
           <%= yield %>
         </div>
       </div>
-    <%# <% end %> %>
+    <% end %>
 
   </body>
 </html>
