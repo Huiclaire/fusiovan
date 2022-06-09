@@ -1,3 +1,102 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>This is a test</p>
+<div class="header">
+  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+  <div class="overlay"></div>
+
+  <!-- The HTML5 video element that will create the background video on the header -->
+  <%#= video_tag "Into_the_wild.mp4", autoplay: "autoplay", muted: "muted", loop: "loop" %>
+
+  <!-- The header content -->
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">FusioVan</h1>
+        <p class="lead mb-0">Dream. Design. Build.</p>
+        <%= link_to "Get started", builds_path, class: "btn btn-flat mt-5" %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mh-100" style="height: 150px"></div>
+<div class="row">
+  <div class="col-lg-5"></div>
+  <div class="col-lg-7">
+    <div id="white_rectangle">
+      <h2>Design, optimise and share</h2>
+    </div>
+  </div>
+  <div class="col-lg-5"></div>
+  <div class="col-lg-7">
+    <div id="blue_rectangle">
+      <h2>Your custom van</h2>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="mh-100" style="height: 80px"></div>
+    <div class="p-center">
+    Fusiovan makes building your custom van easy. Mix and match a wide variety of appliances and components  to get the perfect build.
+    </div>
+  <div class="mh-100" style="height: 50px"></div>
+  <div class="row">
+    <div class="col-lg-6 d-flex justify-content-center">
+      <%= link_to "Create a build", builds_path, class: "btn btn-flat mt-5" %>
+    </div>
+    <div class="col-lg-6 d-flex justify-content-center">
+      <%= link_to "Explore all builds", builds_path, class: "btn btn-flat mt-5" %>
+    </div>
+    <div class="mh-100" style="height: 130px"></div>
+    <h2>Designing a van is a whole adventure</h2>
+    <div class="mh-100" style="height: 100px"></div>
+    <div class="mh-100 d-flex justify-content-center align-items-center" style="height: 300px; background-color: #e6e2eb">
+      <h2>Placeholder for the iceberg picture</h2>
+    </div>
+    <div class="mh-100" style="height: 130px"></div>
+    <h2>Build your van in 3 simple steps</h2>
+    <div class="mh-100" style="height: 100px"></div>
+    <div class="col-lg-4">
+      <div class="card-step text-center">
+        <i class="fas fa-user" style="font-size: 130px; color: #142970;"></i>
+      </div>
+      <div class="row margin-left-large">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-5 text-end mt-3" style="font-size: 20px">
+          <p>Create your user profile<p>
+        </div>
+        <div class="col-lg-3 text-start align-content-top" style="font-size: 50px">
+          1
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card-step text-center">
+        <i class="fas fa-solar-panel" style="font-size: 130px; color: #142970;" ></i>
+      </div>
+      <div class="row margin-left-large">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-5 text-end mt-3" style="font-size: 20px">
+          <p>Choose your appliances and components<p>
+        </div>
+        <div class="col-lg-3 text-start align-content-top" style="font-size: 50px">
+          2
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card-step text-center">
+        <i class="fas fa-cogs" style="font-size: 130px; color: #142970;"></i>
+      </div>
+      <div class="row margin-left-large">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-5 text-end mt-3" style="font-size: 20px">
+          <p>Use the build generator to customize your van<p>
+        </div>
+        <div class="col-lg-3 text-start align-content-top" style="font-size: 50px">
+          3
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+  </div>
+</div>
