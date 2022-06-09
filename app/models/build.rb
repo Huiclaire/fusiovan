@@ -13,4 +13,7 @@ class Build < ApplicationRecord
   def set_total_price
     appliances.sum(:price)
   end
+  def total_amp_hours
+    build_appliances.sum(:amp_hours)
+  end
 end
