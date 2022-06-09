@@ -7,6 +7,7 @@
   background-color: white;
   padding: 20px;
   margin-bottom: 32px;
+  box-shadow: 0 0 15px rgba(20, 41, 112, 0.22);
 
   p {
     margin: 0;
@@ -45,4 +46,8 @@
   height: 100%;
   width: 120px;
   object-fit: cover;
+}
+
+.inner-space {
+  padding: 12px;
 }

@@ -1,11 +1,10 @@
 <div class="card-wrapper">
   <h1>Build Overview</h1>
   <hr>
-  <div class="">
-    <h2>Appliances</h2>
+  <h2 class="mt-4 mb-3">Appliances</h2>
     <div class="builds-card-container">
-      <% @build.build_appliances.each do |appliance|%>
-      <div class="d-flex justify-content-between">
+      <%# <% @build.build_appliances.each do |appliance|%>
+      <div class="d-flex justify-content-between inner-space">
         <div>
           <div class="build-title">
             <p><strong>Dometic</strong></p>
@@ -14,7 +13,7 @@
             <p><strong>RM8400</strong></p>
           </div>
           <div class="build-price">
-            <p class="mt-3 mb-3"><strong>$300</strong></p>
+            <p class="mt-3"><strong>$300</strong></p>
           </div>
         </div>
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="">
@@ -26,12 +25,12 @@
         <a href="#">Go to product page</a>
       </div>
     </div>
-    <hr>
+  <hr>
     <div class="d-flex justify-content-around">
       <div>
         <h2 class="text-center mt-3 mb-3">Battery</h2>
         <div class="builds-card-container">
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-between inner-space">
             <div>
               <div class="build-title">
                 <p><strong>Dometic</strong></p>
@@ -40,7 +39,7 @@
                 <p><strong>RM8400</strong></p>
               </div>
               <div class="build-price">
-                <p class="mt-3 mb-3"><strong>$300</strong></p>
+                <p class="mt-3"><strong>$300</strong></p>
               </div>
             </div>
             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="">
@@ -56,7 +55,7 @@
       <div>
         <h2 class="text-center mt-3 mb-3">Solar Panel</h2>
         <div class="builds-card-container">
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-between inner-space">
             <div>
               <div class="build-title">
                 <p><strong>Dometic</strong></p>
@@ -65,7 +64,7 @@
                 <p><strong>RM8400</strong></p>
               </div>
               <div class="build-price">
-                <p class="mt-3 mb-3"><strong>$300</strong></p>
+                <p class="mt-3"><strong>$300</strong></p>
               </div>
             </div>
             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="">
@@ -82,11 +81,10 @@
     <hr>
     <div class="banner" style="">
       <div class="container">
-        <h2 class="mb-3">Summary</h2>
+        <h2 class="mb-3">Overview</h2>
         <p>Fridge - 6 hrs/day @ 2 amps = 12ah</p>
         <p>Fan - 3 hrs/day @ 1 amps = 3ah</p>
         <p>total daily power needs: 9ah</p>
       </div>
     </div>
-  </div>
 </div>
