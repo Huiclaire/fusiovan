@@ -1,7 +1,7 @@
 class BuildsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
   def index
-    @builds = Build.includes(:solar_panel, :battery, :user)
+    @builds = Build.includes(:solar_panel, :battery, :user, :build_appliances)
   end
 
   def show
