@@ -3,4 +3,8 @@ class BuildsController < ApplicationController
   def index
     @builds = Build.includes(:solar_panel, :battery, :user, :build_appliances)
   end
+
+  def show
+    @build = Build.find(params[:id])
+  end
 end
