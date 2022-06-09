@@ -49,3 +49,17 @@ Battery.destroy_all
   battery1 = Battery.create!(kind: "Lithium Iron Phosphate", make: "Renogy", model: "RBT100LFP12S-US", voltage: 12, amp_hours: 100, price: 722.49, product_url: "https://renogy.com/12v-100ah-smart-lithium-iron-phosphate-battery/")
 
   puts "created 1 battery"
+
+# BUILDS
+
+  build1 = Build.create(name: 'low budget', created_at: datetime, updated_at: datetime, solar_panel_id: integer, battery: battery1, user: user1)
+  build1.update(total_price: 950)
+
+
+  fridge1_build = BuildAppliance.create(
+    use_hours: 6, amp_hours: 4, build: build1, appliance: fridge1
+  )
+
+  lights1_build = BuildAppliance.create(
+    use_hours: 3, amp_hours: 1.5, build: build1, appliance: lights1
+  )
