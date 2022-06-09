@@ -1,200 +1,27 @@
 <h1><strong>All builds</strong></h1>
 <div class="cards">
-  <div class="builds-card-container">
-    <div class="d-flex justify-content-between">
-      <div>
-        <div class="build-title">
-          <p><strong>Koala build</strong></p>
+  <% @builds.each do |build| %>
+
+    <div class="builds-card-container">
+      <div class="d-flex justify-content-between">
+        <div>
+          <div class="build-title">
+            <p><strong><%= build.name %></strong></p>
+          </div>
+          <div class="build-price">
+            <p><strong>$<%= build.total_price %></strong></p>
+          </div>
         </div>
-        <div class="build-price">
-          <p><strong>$2500</strong></p>
-        </div>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar-large", alt: "avatar-large" %>
       </div>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-    </div>
 
-    <div class="build-text">
-      <p><strong>Capacity:</strong> 20Ah   /  <strong>Appliances:</strong> 3</p>
-    </div>
-
-    <div class="d-flex justify-content-center container-trio">
-      <%= image_tag("trio_icons.png", :alt => "icons", style: 'width: 70%') %>
-    </div>
-  </div>
-
-  <div class="builds-card-container">
-    <div class="d-flex justify-content-between">
-      <div>
-        <div class="build-title">
-          <p><strong>Koala build</strong></p>
-        </div>
-        <div class="build-price">
-          <p><strong>$2500</strong></p>
-        </div>
+      <div class="build-text">
+        <p><strong>Capacity: </strong> <%= build.total_amp_hours %>   /  <strong>Appliances: </strong><%= build.build_appliances.length %></p>
       </div>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-    </div>
 
-    <div class="build-text">
-      <p><strong>Capacity:</strong> 20Ah   /  <strong>Appliances:</strong> 3</p>
-    </div>
-
-    <div class="d-flex justify-content-center container-trio">
-      <%= image_tag("trio_icons.png", :alt => "icons", style: 'width: 70%') %>
-    </div>
-  </div>
-
-  <div class="builds-card-container">
-    <div class="d-flex justify-content-between">
-      <div>
-        <div class="build-title">
-          <p><strong>Koala build</strong></p>
-        </div>
-        <div class="build-price">
-          <p><strong>$2500</strong></p>
-        </div>
+      <div class="d-flex justify-content-center container-trio">
+        <%= image_tag("trio_icons.png", :alt => "icons", style: 'width: 70%') %>
       </div>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
     </div>
-
-    <div class="build-text">
-      <p><strong>Capacity:</strong> 20Ah   /  <strong>Appliances:</strong> 3</p>
-    </div>
-
-    <div class="d-flex justify-content-center container-trio">
-      <%= image_tag("trio_icons.png", :alt => "icons", style: 'width: 70%') %>
-    </div>
-  </div>
-
-  <div class="builds-card-container">
-    <div class="d-flex justify-content-between">
-      <div>
-        <div class="build-title">
-          <p><strong>Koala build</strong></p>
-        </div>
-        <div class="build-price">
-          <p><strong>$2500</strong></p>
-        </div>
-      </div>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-    </div>
-
-    <div class="build-text">
-      <p><strong>Capacity:</strong> 20Ah   /  <strong>Appliances:</strong> 3</p>
-    </div>
-
-    <div class="d-flex justify-content-center container-trio">
-      <%= image_tag("trio_icons.png", :alt => "icons", style: 'width: 70%') %>
-    </div>
-  </div>
-
-  <div class="builds-card-container">
-    <div class="d-flex justify-content-between">
-      <div>
-        <div class="build-title">
-          <p><strong>Koala build</strong></p>
-        </div>
-        <div class="build-price">
-          <p><strong>$2500</strong></p>
-        </div>
-      </div>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-    </div>
-
-    <div class="build-text">
-      <p><strong>Capacity:</strong> 20Ah   /  <strong>Appliances:</strong> 3</p>
-    </div>
-
-    <div class="d-flex justify-content-center container-trio">
-      <%= image_tag("trio_icons.png", :alt => "icons", style: 'width: 70%') %>
-    </div>
-  </div>
-
-  <div class="builds-card-container">
-    <div class="d-flex justify-content-between">
-      <div>
-        <div class="build-title">
-          <p><strong>Koala build</strong></p>
-        </div>
-        <div class="build-price">
-          <p><strong>$2500</strong></p>
-        </div>
-      </div>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-    </div>
-
-    <div class="build-text">
-      <p><strong>Capacity:</strong> 20Ah   /  <strong>Appliances:</strong> 3</p>
-    </div>
-
-    <div class="d-flex justify-content-center container-trio">
-      <%= image_tag("trio_icons.png", :alt => "icons", style: 'width: 70%') %>
-    </div>
-  </div>
-
-  <div class="builds-card-container">
-    <div class="d-flex justify-content-between">
-      <div>
-        <div class="build-title">
-          <p><strong>Koala build</strong></p>
-        </div>
-        <div class="build-price">
-          <p><strong>$2500</strong></p>
-        </div>
-      </div>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-    </div>
-
-    <div class="build-text">
-      <p><strong>Capacity:</strong> 20Ah   /  <strong>Appliances:</strong> 3</p>
-    </div>
-
-    <div class="d-flex justify-content-center container-trio">
-      <%= image_tag("trio_icons.png", :alt => "icons", style: 'width: 70%') %>
-    </div>
-  </div>
-
-  <div class="builds-card-container">
-    <div class="d-flex justify-content-between">
-      <div>
-        <div class="build-title">
-          <p><strong>Koala build</strong></p>
-        </div>
-        <div class="build-price">
-          <p><strong>$2500</strong></p>
-        </div>
-      </div>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-    </div>
-
-    <div class="build-text">
-      <p><strong>Capacity:</strong> 20Ah   /  <strong>Appliances:</strong> 3</p>
-    </div>
-
-    <div class="d-flex justify-content-center container-trio">
-      <%= image_tag("trio_icons.png", :alt => "icons", style: 'width: 70%') %>
-    </div>
-  </div>
-
-  <div class="builds-card-container">
-    <div class="d-flex justify-content-between">
-      <div>
-        <div class="build-title">
-          <p><strong>Koala build</strong></p>
-        </div>
-        <div class="build-price">
-          <p><strong>$2500</strong></p>
-        </div>
-      </div>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
-    </div>
-
-    <div class="build-text">
-      <p><strong>Capacity:</strong> 20Ah   /  <strong>Appliances:</strong> 3</p>
-    </div>
-
-    <div class="d-flex justify-content-center container-trio">
-      <%= image_tag("trio_icons.png", :alt => "icons", style: 'width: 70%') %>
-    </div>
-  </div>
+  <% end %>
 </div>

@@ -63,3 +63,27 @@ Battery.destroy_all
   )
 
   build1.update(total_price: build1.set_total_price)
+
+  build2 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
+  build2.update(total_price: build2.set_total_price)
+
+  build3 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
+  build3.update(total_price: build2.set_total_price)
+
+  build4 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
+  build4.update(total_price: build2.set_total_price)
+
+  build5 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
+  build5.update(total_price: build2.set_total_price)
+
+  build6 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
+  build6.update(total_price: build2.set_total_price)
+
+  build7 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
+  build7.update(total_price: build2.set_total_price)
+
+  build8 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
+  build8.update(total_price: build2.set_total_price)
+
+  build9 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
+  build9.update(total_price: build2.set_total_price)

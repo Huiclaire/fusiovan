@@ -33,6 +33,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  row-gap: 5px;
+  column-gap: 5px;
 }
 
 // Smallest device
