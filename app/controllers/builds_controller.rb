@@ -5,6 +5,6 @@ class BuildsController < ApplicationController
   end
 
   def show
-    @builds = Build.find(params[:id])
+    @build = Build.find(params[:id])
   end
 end
