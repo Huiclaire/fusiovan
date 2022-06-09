@@ -1,39 +1,39 @@
-.builds-card-container {
+.builds-card-container-new {
   height: 251px;
-  width: 307px;
-  border: 3px solid #142970;
+  width: 350px;
+  border: 1px solid #142970;
   border-radius: 20px;
   padding: 10px;
   background-color: white;
 }
 
-.build-title {
+.build-title-new {
   font-size: 31px;
   font-style: bold;
   color: #142970;
 }
 
-.build-price {
+.build-price-new {
   font-size: 19px;
   font-style: bold;
   color: #142970;
 }
 
-.build-text {
+.build-text-new {
   font-size: 18px;
   color: #142970;
 }
 
-.container-trio {
+.container-trio-new {
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
-.cards {
+.cards-new {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  row-gap: 5px;
+  row-gap: 60px;
   column-gap: 5px;
 }
 
