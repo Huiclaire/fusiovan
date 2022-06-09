@@ -3,7 +3,7 @@
   <div class="overlay"></div>
 
   <!-- The HTML5 video element that will create the background video on the header -->
-  <%= video_tag "Into_the_wild.mp4", autoplay: "autoplay", muted: "muted", loop: "loop" %>
+  <%#= video_tag "Into_the_wild.mp4", autoplay: "autoplay", muted: "muted", loop: "loop" %>
 
   <!-- The header content -->
   <div class="container h-100">
@@ -11,7 +11,40 @@
       <div class="w-100 text-white">
         <h1 class="display-3">FusioVan</h1>
         <p class="lead mb-0">Dream. Design. Build.</p>
+        <%= link_to "Get started", builds_path, class: "btn btn-flat mt-5" %>
       </div>
     </div>
   </div>
+</div>
+<div class="mh-100" style="height: 150px"></div>
+<div class="row">
+  <div class="col-lg-5"></div>
+  <div class="col-lg-7">
+    <div id="white_rectangle">
+      <h2>Design, optimise and share</h2>
+    </div>
+  </div>
+  <div class="col-lg-5"></div>
+  <div class="col-lg-7">
+    <div id="blue_rectangle">
+      <h2>Your custom van</h2>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="mh-100" style="height: 80px"></div>
+    <div class="p-center">
+    Fusiovan makes building your custom van easy. Mix and match a wide variety of appliances and components to get the perfect build.
+    </div>
+  <div class="mh-100" style="height: 50px"></div>
+  <div class="row">
+    <div class="col-lg-6 d-flex justify-content-center">
+      <%= link_to "Create a build", builds_path, class: "btn btn-flat mt-5" %>
+    </div>
+    <div class="col-lg-6 d-flex justify-content-center">
+      <%= link_to "Explore all builds", builds_path, class: "btn btn-flat mt-5" %>
+    </div>
+  </div>
+  <div class="mh-100" style="height: 130px"></div>
+  <h2>Designing a van is a whole adventure</h2>
 </div>
