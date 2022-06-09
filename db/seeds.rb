@@ -104,7 +104,7 @@ BuildAppliance.destroy_all
 
     build2.update(total_price: build2.set_total_price)
   # big budget user 1
-    build3 = Build.create!(name: 'Sprinter Deluxe', solar_panel: rigidpanel200, battery: lithium170, user: user1)
+    build3 = Build.create!(name: 'Sprint Deluxe', solar_panel: rigidpanel200, battery: lithium170, user: user1)
 
     crx140s_build = BuildAppliance.create!(
       use_hours: 18, amp_hours: 40, build: build3, appliance: crx140s
