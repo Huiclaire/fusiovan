@@ -1,0 +1,26 @@
+<div class="container">
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <%= image_tag "logo.png", alt: "Fusiovan", height: 200%>
+      <% end %>
+  <h2 class= "text-justify">Fusiovan</h2>
+
+  <br>
+  <div class="sidebar-links">
+  <%= link_to "My Dashboard", "#", class: "d-block text-decoration-none text-black text-start" %>
+  <%= link_to "All Builds", builds_path, class: "d-block text-decoration-none text-black text-start" %>
+  <%= link_to "All Appliances", "#", class: "d-block text-decoration-none text-black text-start" %>
+  <%= link_to "All Components", "#", class: "d-block text-decoration-none text-black text-start" %>
+  </div>
+
+
+  <% if user_signed_in? %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "d-block text-decoration-none text-black text-start bottom-align-text" %>
+  <% else %>
+    <li class="nav-item">
+      <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+    </li>
+  <% end %>
+</div>
