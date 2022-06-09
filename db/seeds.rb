@@ -11,6 +11,7 @@ User.destroy_all
 Appliance.destroy_all
 SolarPanel.destroy_all
 Battery.destroy_all
+BuildAppliance.destroy_all
 
 # USERS:
 
@@ -25,65 +26,190 @@ Battery.destroy_all
 
   puts "created 4 users"
 
-# APPLIANCES 1 of each
+# APPLIANCES
 
   # img_url (need to add in a migration)
-  fridge1 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 50", voltage: 12, amps: 1, price: 599, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/camper-van-refrigerators/dometic-crx-50t-231419")
+  # FRIDGES
+    crx50 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 50", voltage: 12, amps: 1, price: 599, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/camper-van-refrigerators/dometic-crx-50t-231419")
 
-  puts "created 1 fridge"
+    crx65 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 65", voltage: 12, amps: 1.25, price: 629, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/mini-fridges/dometic-crx-65t-231420")
 
-  lights1 = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 4 Pack", voltage: 12, amps: 1, price: 28, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
+    crx140s = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 140s", voltage: 12, amps: 2.2, price: 1820, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/rv-refrigerators/dometic-crx-140s-136705")
 
-  lights2 = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 6 Pack", voltage: 12, amps: 1.5, price: 39, product_url: "https://acegoo.myshopify.com/products/12v-led-puck-light-rv-boat-overhead-recessed-mount-ceiling-light-12v-down-light-for-camper-vans-truck-motorhome-sailboat-interior-lighting-6-pack")
+    puts "created 3 fridges"
 
-  puts "created 2 lights"
+  # LIGHTS
+
+    led4pack = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 4 Pack", voltage: 12, amps: 1, price: 28, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
+
+    led6pack = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 6 Pack", voltage: 12, amps: 1.5, price: 39, product_url: "https://acegoo.myshopify.com/products/12v-led-puck-light-rv-boat-overhead-recessed-mount-ceiling-light-12v-down-light-for-camper-vans-truck-motorhome-sailboat-interior-lighting-6-pack")
+
+    led8pack = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 8 Pack", voltage: 12, amps: 2, price: 56, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
+
+    puts "created 3 lights"
+
+  # FANS
+
+    fantasticfan = Appliance.create!(kind: "fan", make: "Dometic", model: "Fantastic Fan", voltage: 12, amps: 1.2, price: 282, product_url: "https://www.dometic.com/en-us/outdoor/climate-and-comfort/ventilation-solutions/rv-roof-vents/dometic-fantastic-vent-3350-21213")
+
+    maxxfan = Appliance.create!(kind: "fan", make: "Maxxair", model: "Maxxfan", voltage: 12, amps: 0.5, price: 256, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan")
+
+    maxxfandeluxe = Appliance.create!(kind: "fan", make: "Maxxair", model: "Maxxfan Deluxe", voltage: 12, amps: 0.6, price: 338, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan-deluxe")
+
+    puts "created 3 fans"
 
 # SOLARPANELS
 
-  solarpanel1 = SolarPanel.create!(kind: "Rigid", make: "Renogy", model: "RNG-100D-SS-US", voltage: 12, watts: 100, price: 99.99, product_url: "https://renogy.com/12v-100ah-smart-lithium-iron-phosphate-battery/")
+  rigidpanel100 = SolarPanel.create!(kind: "Rigid", make: "Renogy", model: "Rigid Monocrystalline Panel", voltage: 12, watts: 100, price: 119.99, product_url: "https://renogy.com/renogy-100-watt-12-volt-monocrystalline-solar-panel/")
+  rigidpanel200 = SolarPanel.create!(kind: "Rigid", make: "Renogy", model: "Rigid Monocrystalline Panel", voltage: 12, watts: 200, price: 279.99, product_url: "https://renogy.com/200-watt-12-volt-monocrystalline-solar-panel/")
+  flexpanel170 = SolarPanel.create!(kind: "Rigid", make: "Renogy", model: "Flexible Monocrystalline Panel", voltage: 12, watts: 170, price: 280.49, product_url: "https://renogy.com/175-watt-12-volt-flexible-monocrystalline-solar-panel/")
 
-    puts "created 1 solar panel"
+    puts "created 3 solar panels"
 
 # BATTERIES
 
-  battery1 = Battery.create!(kind: "Lithium Iron Phosphate", make: "Renogy", model: "RBT100LFP12S-US", voltage: 12, amp_hours: 100, price: 722.49, product_url: "https://renogy.com/12v-100ah-smart-lithium-iron-phosphate-battery/")
+  agm100 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle Battery", voltage: 12, amp_hours: 100, price: 269.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-100ah/")
 
-  puts "created 1 battery"
+  agm200 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle Battery", voltage: 12, amp_hours: 200, price: 395.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-200ah/")
+
+  lithium170 = Battery.create!(kind: "Lithium Iron Phosphate", make: "Renogy", model: "Lithium-Iron Deep Cycle Battery", voltage: 12, amp_hours: 170, price: 1279.99, product_url: "https://renogy.com/lithium-iron-phosphate-battery-12-volt-170ah/")
+
+  puts "created 3 batteries"
 
 # BUILDS
+  # low budget user 1
+    build1 = Build.create!(name: 'small budget', solar_panel: rigidpanel100, battery: agm100, user: user1)
+    crx50_build = BuildAppliance.create!(
+      use_hours: 12, amp_hours: 12, build: build1, appliance: crx50
+    )
+    led4pack_build = BuildAppliance.create!(
+      use_hours: 3, amp_hours: 3, build: build1, appliance: led4pack
+    )
+    build1.update(total_price: build1.set_total_price)
 
-  build1 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
+  # medium budget user 1
+    build2 = Build.create!(name: 'medium budget', solar_panel: rigidpanel200, battery: agm200, user: user1)
 
-  fridge1_build = BuildAppliance.create!(
-    use_hours: 6, amp_hours: 4, build: build1, appliance: fridge1
-  )
+    crx65_build = BuildAppliance.create!(
+      use_hours: 12, amp_hours: 15, build: build2, appliance: crx65
+    )
 
-  lights1_build = BuildAppliance.create!(
-    use_hours: 3, amp_hours: 1.5, build: build1, appliance: lights1
-  )
+    led6pack_build = BuildAppliance.create!(
+      use_hours: 3, amp_hours: 4.5, build: build2, appliance: led6pack
+    )
 
-  build1.update(total_price: build1.set_total_price)
+    maxxfan_build = BuildAppliance.create!(
+      use_hours: 8, amp_hours: 4, build: build2, appliance: maxxfan
+    )
 
-  build2 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
-  build2.update(total_price: build2.set_total_price)
+    build2.update(total_price: build2.set_total_price)
+  # big budget user 1
+    build3 = Build.create!(name: 'Sprinter Deluxe', solar_panel: rigidpanel200, battery: lithium170, user: user1)
 
-  build3 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
-  build3.update(total_price: build2.set_total_price)
+    crx140s_build = BuildAppliance.create!(
+      use_hours: 18, amp_hours: 40, build: build3, appliance: crx140s
+    )
 
-  build4 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
-  build4.update(total_price: build2.set_total_price)
+    led8pack_build = BuildAppliance.create!(
+      use_hours: 3, amp_hours: 6, build: build3, appliance: led8pack
+    )
 
-  build5 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
-  build5.update(total_price: build2.set_total_price)
+    maxxfandeluxe_build = BuildAppliance.create!(
+      use_hours: 12, amp_hours: 7, build: build3, appliance: maxxfandeluxe
+    )
 
-  build6 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
-  build6.update(total_price: build2.set_total_price)
+    build3.update(total_price: build3.set_total_price)
 
-  build7 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
-  build7.update(total_price: build2.set_total_price)
 
-  build8 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
-  build8.update(total_price: build2.set_total_price)
+  # low budget user 2
 
-  build9 = Build.create!(name: 'low budget', solar_panel: solarpanel1, battery: battery1, user: user1)
-  build9.update(total_price: build2.set_total_price)
+      build4 = Build.create!(name: 'First build!', solar_panel: flexpanel170, battery: agm100, user: user2)
+
+      crx50_build = BuildAppliance.create!(
+        use_hours: 14, amp_hours: 14, build: build4, appliance: crx50
+      )
+      led6pack_build = BuildAppliance.create!(
+        use_hours: 3, amp_hours: 3, build: build4, appliance: led6pack
+      )
+      build4.update(total_price: build4.set_total_price)
+
+  # medium budget user 2
+      build5 = Build.create!(name: 'Snow', solar_panel: rigidpanel200, battery: agm200, user: user2)
+
+      crx65_build = BuildAppliance.create!(
+        use_hours: 12, amp_hours: 15, build: build5, appliance: crx65
+      )
+
+      led6pack_build = BuildAppliance.create!(
+        use_hours: 3, amp_hours: 4.5, build: build5, appliance: led6pack
+      )
+
+      maxxfan_build = BuildAppliance.create!(
+        use_hours: 8, amp_hours: 4, build: build5, appliance: maxxfan
+      )
+
+      build5.update(total_price: build5.set_total_price)
+
+  # big budget user 2
+      build6 = Build.create!(name: 'Vanagon', solar_panel: rigidpanel200, battery: agm200, user: user2)
+
+      crx65_build = BuildAppliance.create!(
+        use_hours: 18, amp_hours: 36, build: build6, appliance: crx65
+      )
+
+      led8pack_build = BuildAppliance.create!(
+        use_hours: 3, amp_hours: 8, build: build6, appliance: led8pack
+      )
+
+      maxxfandeluxe_build = BuildAppliance.create!(
+        use_hours: 12, amp_hours: 4, build: build6, appliance: maxxfandeluxe
+      )
+
+      build6.update(total_price: build6.set_total_price)
+
+  # low budget user 3
+
+      build7 = Build.create!(name: 'Sheeba', solar_panel: flexpanel170, battery: agm100, user: user3)
+
+      crx50_build = BuildAppliance.create!(
+        use_hours: 14, amp_hours: 10, build: build7, appliance: crx50
+      )
+      led6pack_build = BuildAppliance.create!(
+        use_hours: 3, amp_hours: 3, build: build7, appliance: led6pack
+      )
+      build7.update(total_price: build7.set_total_price)
+
+  # medium budget user 3
+      build8 = Build.create!(name: 'Westy', solar_panel: rigidpanel200, battery: agm200, user: user3)
+
+      crx65_build = BuildAppliance.create!(
+        use_hours: 12, amp_hours: 15, build: build8, appliance: crx65
+      )
+
+      led6pack_build = BuildAppliance.create!(
+        use_hours: 3, amp_hours: 4.5, build: build8, appliance: led6pack
+      )
+
+      maxxfan_build = BuildAppliance.create!(
+        use_hours: 8, amp_hours: 4, build: build8, appliance: maxxfan
+      )
+
+      build8.update(total_price: build8.set_total_price)
+
+  # big budget user 3
+        build9 = Build.create!(name: 'Amine', solar_panel: rigidpanel200, battery: agm200, user: user3)
+
+        crx65_build = BuildAppliance.create!(
+          use_hours: 18, amp_hours: 36, build: build9, appliance: crx65
+        )
+
+        led8pack_build = BuildAppliance.create!(
+          use_hours: 3, amp_hours: 8, build: build9, appliance: led8pack
+        )
+
+        maxxfandeluxe_build = BuildAppliance.create!(
+          use_hours: 12, amp_hours: 4, build: build9, appliance: maxxfandeluxe
+        )
+
+        build9.update(total_price: build9.set_total_price)
+  puts "created 6 builds"
