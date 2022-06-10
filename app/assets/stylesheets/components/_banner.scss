@@ -3,7 +3,14 @@
   background-position: center;
   padding: 50px 50px;
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(20, 41, 112, 0.22);
+  box-shadow: 0 0 8px rgba(20, 41, 112, 0.22);
+  transition: 0.2s;
+  margin-top: 50px;
+  &:not(.no-hover) {
+    &:hover {
+      scale: 1.05;
+    }
+  }
 }
 
 .banner h2 {

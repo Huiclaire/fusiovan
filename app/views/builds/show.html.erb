@@ -2,50 +2,58 @@
   <h1>Build Overview</h1>
   <hr>
   <h2 class="mt-4 mb-3">Appliances</h2>
-    <div class="builds-card-container">
-      <%# <% @build.build_appliances.each do |appliance|%>
-      <div class="d-flex justify-content-between inner-space">
-        <div>
-          <div class="build-title">
-            <p><strong>Dometic</strong></p>
+    <% @build.appliances.each do |appliance|%>
+      <div class="builds-card-container">
+        <div class="d-flex justify-content-between inner-space">
+          <div>
+            <div class="appliance-title">
+              <%# <p><strong>Dometic</strong></p> %>
+              <p><strong><%= @build.appliance.make %></strong></p>
+            </div>
+            <div class="appliance-model">
+              <%# <p><strong>RM8400</strong></p> %>
+              <p><strong><%= @build.appliance.model %></strong></p>
+            </div>
+            <div class="appliance-price">
+              <%# <p class="mt-3"><strong>$300</strong></p> %>
+              <p><strong><%= @build.appliance.price %></strong></p>
+            </div>
           </div>
-          <div class="build-model">
-            <p><strong>RM8400</strong></p>
-          </div>
-          <div class="build-price">
-            <p class="mt-3"><strong>$300</strong></p>
-          </div>
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="">
         </div>
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="">
+        <div class="build-text text-center mt-1">
+          <p><strong>Volts:</strong> 12V   /  <strong>Amps:</strong> 0.5A</p>
+        </div>
+        <div class="build-link text-center mt-2">
+          <a href="#">Go to product page</a>
+        </div>
       </div>
-      <div class="build-text text-center mt-1">
-        <p><strong>Volts:</strong> 12V   /  <strong>Amps:</strong> 0.5A</p>
-      </div>
-      <div class="build-link text-center mt-2">
-        <a href="#">Go to product page</a>
-      </div>
-    </div>
+    <% end %>
   <hr>
-    <div class="d-flex justify-content-around">
+    <div class="d-flex justify-content-evenly">
       <div>
         <h2 class="text-center mt-3 mb-3">Battery</h2>
         <div class="builds-card-container">
           <div class="d-flex justify-content-between inner-space">
             <div>
               <div class="build-title">
-                <p><strong>Dometic</strong></p>
+                <%# <p><strong>Dometic</strong></p> %>
+                <p><strong><%= @build.battery.make %></strong></p>
               </div>
               <div class="build-model">
-                <p><strong>RM8400</strong></p>
+                <%# <p><strong>RM8400</strong></p> %>
+                <p><strong><%= @build.battery.model %></strong></p>
               </div>
               <div class="build-price">
-                <p class="mt-3"><strong>$300</strong></p>
+                <%# <p class="mt-3"><strong>$300</strong></p> %>
+                <p class="mt-3"><strong>$ <%= @build.battery.price %></strong></p>
               </div>
             </div>
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="">
+            <%= image_tag "battery.png" %>
           </div>
           <div class="build-text text-center mt-1">
-            <p><strong>Volts:</strong> 12V   /  <strong>Amps:</strong> 0.5A</p>
+            <%# <p><strong>Volts:</strong> 12V   /  <strong>Amps:</strong> 0.5A</p> %>
+            <p><strong><%= @build.battery.voltage %>/ <%= @build.battery.amp_hours %></strong></p>
           </div>
           <div class="build-link text-center mt-2">
             <a href="#">Go to product page</a>
@@ -58,16 +66,16 @@
           <div class="d-flex justify-content-between inner-space">
             <div>
               <div class="build-title">
-                <p><strong>Dometic</strong></p>
+                <p><strong><%= @build.solar_panel.make %></strong></p>
               </div>
               <div class="build-model">
-                <p><strong>RM8400</strong></p>
+                <p><strong><%= @build.solar_panel.model %></strong></p>
               </div>
               <div class="build-price">
-                <p class="mt-3"><strong>$300</strong></p>
+                <p class="mt-3"><strong>$ <%= @build.solar_panel.model %></strong></p>
               </div>
             </div>
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" alt="">
+            <%= image_tag "battery.png" %>
           </div>
           <div class="build-text text-center mt-1">
             <p><strong>Volts:</strong> 12V   /  <strong>Amps:</strong> 0.5A</p>
@@ -79,12 +87,15 @@
       </div>
     </div>
     <hr>
-    <div class="banner" style="">
+    <div class="banner mx-auto" style="width:400px">
       <div class="container">
-        <h2 class="mb-3">Overview</h2>
-        <p>Fridge - 6 hrs/day @ 2 amps = 12ah</p>
-        <p>Fan - 3 hrs/day @ 1 amps = 3ah</p>
-        <p>total daily power needs: 9ah</p>
+        <h1 class="mb-3">Overview</h1>
+        <h2>Fridge</h2>
+        <p class="mb-3 mt-2"> 6 hrs/day @ 2 amps = 12ah</p>
+        <h2>Fan</h2>
+        <p class="mb-3 mt-2"> 3 hrs/day @ 1 amps = 3ah</p>
+        <h2>Total daily power needs</h2>
+        <p class="mb-3 mt-2">9ah</p>
       </div>
     </div>
 </div>
