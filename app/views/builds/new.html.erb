@@ -3,7 +3,16 @@
   <%= simple_form_for(@build) do |f|  %>
 
     <div data-wizard-target="step">
-      <%= f.association :appliances, :label => "Select a Fridge:", :collection => Appliance.find_appliance("fridge"), required: false %>
+      <%= f.simple_fields_for :build_appliances do |fa| %>
+        <%= fa.input :appliance_id,
+                     :label => "Select a Fridge:",
+                     :collection => Appliance.find_appliance("fridge"),
+                     required: false %>
+        <%= fa.input :use_hours,
+                     :label => "How many hours a day will you use your Fridge:",
+                     :collection => 1..24,
+                     required: false %>
+      <% end %>
 
       <%= button_tag "Next", type: "button",
         data: {
@@ -13,7 +22,16 @@
     </div>
 
     <div data-wizard-target="step" class="d-none">
-      <%= f.association :appliances, :label => "Select lights:", :collection => Appliance.find_appliance("lights"), required: false %>
+      <%= f.simple_fields_for :build_appliances do |fa| %>
+        <%= fa.input :appliance_id,
+                     :label => "Select lights:",
+                     :collection => Appliance.find_appliance("lights"),
+                     required: false %>
+        <%= fa.input :use_hours,
+                     :label => "How many hours a day will you use your lights:",
+                     :collection => 1..24,
+                     required: false %>
+      <% end %>
 
       <%= button_tag "Previous", type: "button",
         data: {
@@ -29,7 +47,16 @@
     </div>
 
     <div data-wizard-target="step" class="d-none">
-      <%= f.association :appliances, :label => "Select a Fan:", :collection => Appliance.find_appliance("fan"), required: false %>
+      <%= f.simple_fields_for :build_appliances do |fa| %>
+        <%= fa.input :appliance_id,
+                    :label => "Select a Fan:",
+                    :collection => Appliance.find_appliance("fan"),
+                    required: false %>
+        <%= fa.input :use_hours,
+                    :label => "How many hours a day will you use your fan:",
+                    :collection => 1..24,
+                    required: false %>
+      <% end %>
 
       <%= button_tag "Previous", type: "button",
         data: {
