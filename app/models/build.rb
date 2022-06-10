@@ -8,11 +8,12 @@ class Build < ApplicationRecord
   has_many :appliances, through: :build_appliances
   # after_save :set_total_price
 
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 13 }
 
   def set_total_price
     appliances.sum(:price)
   end
+
   def total_amp_hours
     build_appliances.sum(:amp_hours)
   end

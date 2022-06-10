@@ -1,40 +1,53 @@
-.builds-card-container {
-  height: 251px;
-  width: 307px;
-  border: 3px solid #142970;
+.builds-card-container-new {
+  height: 285px;
+  width: 420px;
+  border: 1px solid #142970;
   border-radius: 20px;
-  padding: 10px;
+  padding: 20px;
   background-color: white;
+  transition: 0.2s;
+
+  &:hover {
+    scale: 1.05;
+    }
 }
 
-.build-title {
-  font-size: 31px;
+.build-title-new {
+  font-size: 29px;
   font-style: bold;
   color: #142970;
 }
 
-.build-price {
+.build-price-new {
   font-size: 19px;
   font-style: bold;
   color: #142970;
 }
 
-.build-text {
+.build-text-new {
   font-size: 18px;
   color: #142970;
 }
 
-.container-trio {
-  margin-top: 30px;
-  margin-bottom: 10px;
+.container-trio-new {
+  margin-top: 20px;
 }
 
-.cards {
+.cards-new {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto;
   grid-gap: 16px;
-  row-gap: 5px;
-  column-gap: 5px;
+  row-gap: 40px;
+  // column-gap: 60px;
+  justify-content: space-around;
+}
+
+.trio-line {
+  border-top: 1px solid grey;
+}
+
+.card-shadow {
+box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 // Smallest device
