@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :appliances, only: :index
   resources :components, only: :index
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :builds, only: [ :index, :show ]
+  resources :builds, only: [ :index, :show, :new, :create ]
 end

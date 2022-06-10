@@ -7,4 +7,27 @@ class BuildsController < ApplicationController
   def show
     @build = Build.find(params[:id])
   end
+
+  def new
+    @build = Build.new
+  end
+
+  def create
+    @build = Build.new(build_params)
+    @build.user_id = current_user.id
+    if @build.save
+         # Will raise ActiveModel::ForbiddenAttributesError
+    flash[:alert] = "Your build #{@build.name} has been added to your Dashboard!"
+    redirect_to build_path(@build)
+    else
+      flash[:alert] = "Error #{@build.errors.objects.first.full_message}"
+      render :new
+    end
+  end
+
+  private
+
+  def build_params
+    params.require(:build).permit(:name)
+  end
 end
