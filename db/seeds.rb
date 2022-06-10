@@ -213,3 +213,13 @@ BuildAppliance.destroy_all
 
         build9.update(total_price: build9.set_total_price)
   puts "created 6 builds"
+
+
+  Bookmark.create(user: user1, build: build1)
+  Bookmark.create(user: user1, build: build2)
+  Bookmark.create(user: user1, build: build3)
+  Bookmark.create(user: user1, build: build4)
+  Bookmark.create(user: user1, build: build5)
+  Bookmark.create(user: user1, build: build6)
+
+  puts "created #{Bookmark.count} bookmarks"
