@@ -1,7 +1,7 @@
 <div class="card-wrapper">
-  <h1>Build Overview</h1>
+  <h1 class="build-title-new fs-1"> <strong><%= @build.name.capitalize %> overview</strong></h1>
   <hr>
-  <h2 class="mt-4 mb-3">Appliances</h2>
+  <h2 class="mt-4 mb-3 build-title-new"><strong>Appliances</strong></h2>
     <div class="card-space">
       <% @build.appliances.each_with_index do |appliance, index|%>
         <div class="builds-card-container">
@@ -34,7 +34,7 @@
   <hr>
     <div class="d-flex justify-content-evenly">
       <div>
-        <h2 class="text-center mt-3 mb-3">Battery</h2>
+        <h2 class="text-center mt-3 mb-3 build-title-new"><strong>Battery</strong></h2>
         <div class="builds-card-container">
           <div class="d-flex justify-content-between inner-space">
             <div>
@@ -63,7 +63,7 @@
         </div>
       </div>
       <div>
-        <h2 class="text-center mt-3 mb-3">Solar Panel</h2>
+        <h2 class="text-center mt-3 mb-3 build-title-new"><strong>Solar Panel</strong></h2>
         <div class="builds-card-container">
           <div class="d-flex justify-content-between inner-space">
             <div>
@@ -91,7 +91,7 @@
     <hr>
     <div class="banner mx-auto" style="width:400px">
       <div class="container">
-        <h1 class="mb-3">Overview</h1>
+        <h1 class="mb-3 build-title-new fs-1"><strong>Overview</strong></h1>
         <p>Fridge:</p>
         <p class="mb-3 mt-2"> 6 hrs/day @ 2 amps = 12ah</p>
         <p>Fan:</p>
