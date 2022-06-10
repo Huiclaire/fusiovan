@@ -1,1 +1,118 @@
 <h2>Create a Build</h2>
+<div data-controller="wizard">
+  <%= simple_form_for(@build) do |f|  %>
+
+    <div data-wizard-target="step">
+      <%= f.simple_fields_for :build_appliances do |fa| %>
+        <%= fa.input :appliance_id,
+                     :label => "Select a Fridge:",
+                     :collection => Appliance.find_appliance("fridge"),
+                     required: false %>
+        <%= fa.input :use_hours,
+                     :label => "How many hours a day will you use your Fridge:",
+                     :collection => 1..24,
+                     required: false %>
+      <% end %>
+
+      <%= button_tag "Next", type: "button",
+        data: {
+          action: "click->wizard#goToNext",
+          next_step: "1"
+        } %>
+    </div>
+
+    <div data-wizard-target="step" class="d-none">
+      <%= f.simple_fields_for :build_appliances do |fa| %>
+        <%= fa.input :appliance_id,
+                     :label => "Select lights:",
+                     :collection => Appliance.find_appliance("lights"),
+                     required: false %>
+        <%= fa.input :use_hours,
+                     :label => "How many hours a day will you use your lights:",
+                     :collection => 1..24,
+                     required: false %>
+      <% end %>
+
+      <%= button_tag "Previous", type: "button",
+        data: {
+          action: "click->wizard#goToPrevious",
+          previous_step: "1"
+        } %>
+
+      <%= button_tag "Next", type: "button",
+        data: {
+          action: "click->wizard#goToNext",
+          next_step: "2"
+        } %>
+    </div>
+
+    <div data-wizard-target="step" class="d-none">
+      <%= f.simple_fields_for :build_appliances do |fa| %>
+        <%= fa.input :appliance_id,
+                    :label => "Select a Fan:",
+                    :collection => Appliance.find_appliance("fan"),
+                    required: false %>
+        <%= fa.input :use_hours,
+                    :label => "How many hours a day will you use your fan:",
+                    :collection => 1..24,
+                    required: false %>
+      <% end %>
+
+      <%= button_tag "Previous", type: "button",
+        data: {
+          action: "click->wizard#goToPrevious",
+          previous_step: "2"
+        } %>
+
+      <%= button_tag "Next", type: "button",
+        data: {
+          action: "click->wizard#goToNext",
+          next_step: "3"
+        } %>
+    </div>
+
+    <div data-wizard-target="step" class="d-none">
+      <%= f.association :battery, :label => "Select a battery:", :collection => Battery.formatted, required: false %>
+
+      <%= button_tag "Previous", type: "button",
+        data: {
+          action: "click->wizard#goToPrevious",
+          previous_step: "3"
+        } %>
+
+      <%= button_tag "Next", type: "button",
+        data: {
+          action: "click->wizard#goToNext",
+          next_step: "4"
+        } %>
+    </div>
+
+    <div data-wizard-target="step" class="d-none">
+      <%= f.association :solar_panel, :label => "Select a solar panel:", :collection => SolarPanel.formatted, required: false %>
+
+       <%= button_tag "Previous", type: "button",
+        data: {
+          action: "click->wizard#goToPrevious",
+          previous_step: "4"
+        } %>
+
+      <%= button_tag "Next", type: "button",
+        data: {
+          action: "click->wizard#goToNext",
+          next_step: "5"
+        } %>
+    </div>
+
+    <div data-wizard-target="step" class="d-none">
+      <%= f.input :name, :label => "Name your build!", required: false %>
+
+            <%= button_tag "Previous", type: "button",
+        data: {
+          action: "click->wizard#goToPrevious",
+          previous_step: "4"
+        } %>
+      <%= f.button :submit, class: "btn-primary" %>
+    </div>
+  <% end %>
+
+</div>
