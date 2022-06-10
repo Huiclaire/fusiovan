@@ -49,11 +49,11 @@
                 <p class="mt-3"><strong>$ <%= @build.battery.price %></strong></p>
               </div>
             </div>
-            <%= image_tag "battery.png" %>
+            <%= image_tag "battery_color.png" %>
           </div>
           <div class="build-text text-center mt-1">
             <%# <p><strong>Volts:</strong> 12V   /  <strong>Amps:</strong> 0.5A</p> %>
-            <p><strong><%= @build.battery.voltage %>/ <%= @build.battery.amp_hours %></strong></p>
+            <p><strong>Volts: <%= @build.battery.voltage %>/ Amps: <%= @build.battery.amp_hours %></strong></p>
           </div>
           <div class="build-link text-center mt-2">
             <a href="#">Go to product page</a>
@@ -75,7 +75,7 @@
                 <p class="mt-3"><strong>$ <%= @build.solar_panel.model %></strong></p>
               </div>
             </div>
-            <%= image_tag "battery.png" %>
+            <%= image_tag "solar_panel_color.png" %>
           </div>
           <div class="build-text text-center mt-1">
             <p><strong>Volts:</strong> 12V   /  <strong>Amps:</strong> 0.5A</p>
