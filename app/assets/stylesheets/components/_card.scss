@@ -7,6 +7,20 @@
   top: 80px;
 }
 
-.margin-left-large {
-  // margin-left: 72px;
+.card-strength {
+  height: 250px;
+  width: 600px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+
+  .icon {
+    height: 100px;
+    width: 30px;
+  }
+
+}
+
+.padding-icon {
+  padding: 20px;
 }
