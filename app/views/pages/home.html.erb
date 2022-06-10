@@ -99,4 +99,84 @@
       </div>
     </div>
   </div>
-</div>
+  <div class="mh-100" style="height: 130px"></div>
+  <h2>Explore the world’s first custom van build designer</h2>
+  <div class="mh-100" style="height: 100px"></div>
+    <div class="row d-flex justify-content-around">
+      <div class="card-strength d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-4">
+            <i class="fas fa-bolt padding-icon" style="font-size: 150px; color: #142970;" ></i>
+          </div>
+          <div class="col-lg-8 d-flex align-items-center">
+            <h3>Ensure <strong>safety</strong> of your build's <strong>electric system</strong></h3>
+          </div>
+        </div>
+      </div>
+      <div class="card-strength d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-4">
+            <i class="fas fa-palette padding-icon" style="font-size: 130px; color: #142970;"></i>
+          </div>
+          <div class="col-lg-8 d-flex align-items-center">
+            <h3><strong>Customise your build</strong> aligning <strong>automatically</strong> electric capability and consumption</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-100" style="height: 50px"></div>
+    <div class="row d-flex justify-content-around">
+      <div class="card-strength d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-4">
+            <i class="fas fa-solar-panel padding-icon" style="font-size: 130px; color: #142970;" ></i>
+          </div>
+          <div class="col-lg-8 d-flex align-items-center">
+            <h3><strong>Choose</strong> from a wide <strong>range of proposed parts</strong> and products <strong>matching your build’s</strong> requirements</h3>
+          </div>
+        </div>
+      </div>
+      <div class="card-strength d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-4">
+            <i class="far fa-comments padding-icon" style="font-size: 130px; color: #142970;"></i>
+          </div>
+          <div class="col-lg-8 d-flex align-items-center">
+            <h3><strong>Benefit</strong> from the <strong>input</strong> of our <strong>vibrant community</strong> of van enthusiasts</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-100" style="height: 130px"></div>
+    <h2>Van hippies love us</h2>
+    <div class="mh-100" style="height: 60px"></div>
+    <div class="cards-new mb-5">
+      <% @builds.each do |build| %>
+        <%= link_to build_path(build), class: "text-decoration-none text-black", target: :_blank do %>
+          <div class="builds-card-container-new card-shadow">
+            <div class="d-flex justify-content-between">
+              <div>
+                <div class="build-title-new">
+                  <p><strong><%= build.name %></strong></p>
+                </div>
+                <div class="build-price-new">
+                  <p><strong>$<%= build.total_price %></strong></p>
+                </div>
+              </div>
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar-large", alt: "avatar-large" %>
+            </div>
+
+            <div class="build-text-new">
+              <p><strong>Capacity: </strong> <%= build.total_amp_hours %>Ah   /  <strong>Appliances: </strong><%= build.build_appliances.length %></p>
+            </div>
+
+            <div class="trio-line">
+              <div class="d-flex justify-content-center container-trio-new">
+                <%= image_tag("trio_2.png", :alt => "icons", style: 'width: 75%') %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
