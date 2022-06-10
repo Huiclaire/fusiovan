@@ -7,4 +7,10 @@ class SolarPanel < ApplicationRecord
   validates :watts, presence: true, numericality: true
   validates :price, presence: true, numericality: true
   validates :product_url, presence: true
+
+  def self.formatted
+    SolarPanel.all.map do |solarpanel|
+      ["#{solarpanel.kind}, #{solarpanel.make}, #{solarpanel.model}", solarpanel.id]
+    end
+  end
 end

@@ -28,6 +28,6 @@ class BuildsController < ApplicationController
   private
 
   def build_params
-    params.require(:build).permit(:name)
+    params.require(:build).permit(:name, :battery_id, :solar_panel_id, :appliance_ids)
   end
 end

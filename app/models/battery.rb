@@ -7,4 +7,10 @@ class Battery < ApplicationRecord
   validates :amp_hours, presence: true, numericality: true
   validates :price, presence: true, numericality: true
   validates :product_url, presence: true
+
+  def self.formatted
+    Battery.all.map do |battery|
+      ["#{battery.kind}, #{battery.make}, #{battery.model}", battery.id]
+    end
+  end
 end
