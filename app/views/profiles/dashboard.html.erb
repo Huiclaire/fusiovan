@@ -1,8 +1,8 @@
 <div class="build-title-new">
   <h1><strong>My Dashboard</strong></h1>
 </div>
-<h2>My builds</h2>
 <div class="card-wrapper-new">
+<h2>My builds</h2>
   <div class="cards-new">
       <% current_user.builds.each do |build| %>
         <%= link_to build_path(build), class: "text-decoration-none text-black", target: :_blank do %>
@@ -32,6 +32,9 @@
         <% end %>
       <% end %>
   </div>
+  <br>
+
+  <h2>My bookmarks</h2>
   <div class="cards-new">
       <% current_user.bookmarks.each do |bookmark| %>
         <%= link_to build_path(bookmark.build), class: "text-decoration-none text-black", target: :_blank do %>
