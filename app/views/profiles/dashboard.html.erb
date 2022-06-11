@@ -35,6 +35,7 @@
   <br>
 
   <h2>My bookmarks</h2>
+  <hr>
   <div class="cards-new">
       <% current_user.bookmarks.each do |bookmark| %>
         <%= link_to build_path(bookmark.build), class: "text-decoration-none text-black", target: :_blank do %>
