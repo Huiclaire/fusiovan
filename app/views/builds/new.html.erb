@@ -4,7 +4,7 @@
     <div data-wizard-target="step">
       <%= f.simple_fields_for :build_appliances do |fa| %>
         <div class="create-page-header">
-          <h2><%= "Select your Fridge" %></h2>
+          <h2><%= "Select your fridge" %></h2>
         </div>
         <br>
         <%= fa.input :appliance_id,
@@ -12,7 +12,7 @@
                      :collection => Appliance.find_appliance("fridge"),
                      required: false %>
         <%= fa.input :use_hours,
-                     :label => "How many hours a day will you use your Fridge:",
+                     :label => "How many hours a day will you use your fridge?",
                      :collection => 1..24,
                      required: false %>
       <% end %>
@@ -35,7 +35,7 @@
                      :collection => Appliance.find_appliance("lights"),
                      required: false %>
         <%= fa.input :use_hours,
-                     :label => "How many hours a day will you use your lights:",
+                     :label => "How many hours a day will you use your lights?",
                      :collection => 1..24,
                      required: false %>
       <% end %>
@@ -64,7 +64,7 @@
                     :collection => Appliance.find_appliance("fan"),
                     required: false %>
         <%= fa.input :use_hours,
-                    :label => "How many hours a day will you use your fan:",
+                    :label => "How many hours a day will you use your fan?",
                     :collection => 1..24,
                     required: false %>
       <% end %>
@@ -84,7 +84,7 @@
 
     <div data-wizard-target="step" class="d-none">
     <div class="create-page-header">
-      <h2><%= "Select your Battery" %></h2>
+      <h2><%= "Select your battery" %></h2>
     </div>
     <%# <div>you can choose multiple</div> %>
     <br>
@@ -107,7 +107,7 @@
 
     <div data-wizard-target="step" class="d-none">
     <div class="create-page-header">
-        <h2><%= "Select your Solar Panel" %></h2>
+        <h2><%= "Select your solar panel" %></h2>
     </div>
     <%# <div>you can choose multiple</div> %>
     <br>
