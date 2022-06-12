@@ -6,31 +6,7 @@
 
     <div class="card-space">
       <% @build.appliances.each_with_index do |appliance, index|%>
-        <div class="builds-card-container">
-          <div class="d-flex justify-content-around inner-space">
-            <div>
-              <div class="appliance-title">
-                <%# <p><strong>Dometic</strong></p> %>
-                <p><strong><%= appliance.make %></strong></p>
-              </div>
-              <div class="appliance-model">
-                <%# <p><strong>RM8400</strong></p> %>
-                <p><strong><%= appliance.model %></strong></p>
-              </div>
-              <div class="appliance-price">
-                <%# <p class="mt-3"><strong>$300</strong></p> %>
-                <p><strong><%= appliance.price %></strong></p>
-              </div>
-            </div>
-            <%= image_tag "img#{rand(1..3)}.png" %>
-          </div>
-          <div class="build-text text-center mt-1">
-            <p><strong>Volts:</strong> 12V   /  <strong>Amps:</strong> 0.5A</p>
-          </div>
-          <div class="build-link text-center mt-2">
-            <a href="#">Go to product page</a>
-          </div>
-        </div>
+        <%= render "shared/appliance_card", appliance: appliance %>
       <% end %>
     </div>
   <hr>
@@ -38,57 +14,11 @@
     <div class="d-flex justify-content-evenly">
       <div>
         <h2 class="text-center mt-3 mb-3">Battery</h2>
-        <div class="builds-card-container">
-          <div class="d-flex justify-content-between inner-space">
-            <div>
-              <div class="build-title">
-                <%# <p><strong>Dometic</strong></p> %>
-                <p><strong><%= @build.battery.make %></strong></p>
-              </div>
-              <div class="build-model">
-                <%# <p><strong>RM8400</strong></p> %>
-                <p><strong><%= @build.battery.model %></strong></p>
-              </div>
-              <div class="build-price">
-                <%# <p class="mt-3"><strong>$300</strong></p> %>
-                <p class="mt-3"><strong>$ <%= @build.battery.price %></strong></p>
-              </div>
-            </div>
-            <%= image_tag "battery_color.png" %>
-          </div>
-          <div class="build-text text-center mt-1">
-            <%# <p><strong>Volts:</strong> 12V   /  <strong>Amps:</strong> 0.5A</p> %>
-            <p><strong>Volts: <%= @build.battery.voltage %>/ Amps: <%= @build.battery.amp_hours %></strong></p>
-          </div>
-          <div class="build-link text-center mt-2">
-            <a href="#">Go to product page</a>
-          </div>
-        </div>
+        <%= render "shared/battery_card" %>
       </div>
       <div>
         <h2 class="text-center mt-3 mb-3">Solar Panel</h2>
-        <div class="builds-card-container">
-          <div class="d-flex justify-content-between inner-space">
-            <div>
-              <div class="build-title">
-                <p><strong><%= @build.solar_panel.make %></strong></p>
-              </div>
-              <div class="build-model">
-                <p><strong><%= @build.solar_panel.model %></strong></p>
-              </div>
-              <div class="build-price">
-                <p class="mt-3"><strong>$ <%= @build.solar_panel.price %></strong></p>
-              </div>
-            </div>
-            <%= image_tag "solar_panel_color.png" %>
-          </div>
-          <div class="build-text text-center mt-1">
-            <p><strong>Volts:</strong> 12V   /  <strong>Amps:</strong> 0.5A</p>
-          </div>
-          <div class="build-link text-center mt-2">
-            <a href="#">Go to product page</a>
-          </div>
-        </div>
+        <%= render "shared/solar_panel_card" %>
       </div>
     </div>
     <hr>
