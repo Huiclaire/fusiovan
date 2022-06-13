@@ -11,7 +11,7 @@
   transition: 0.2s;
   &:not(.no-hover) {
     &:hover {
-      scale: 1.05;
+      transform: scale(1.05);
     }
   }
   p {
@@ -55,4 +55,10 @@
 
 .inner-space {
   padding: 12px;
+}
+
+.card-space {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 24px;
 }

@@ -1,0 +1,22 @@
+<div class="builds-card-container">
+          <div class="d-flex justify-content-between inner-space">
+            <div>
+              <div class="build-title">
+                <p><strong><%= build.solar_panel.make %></strong></p>
+              </div>
+              <div class="build-model">
+                <p><strong><%= build.solar_panel.model %></strong></p>
+              </div>
+              <div class="build-price">
+                <p class="mt-3"><strong>$ <%= build.solar_panel.price %></strong></p>
+              </div>
+            </div>
+            <%= image_tag "solar_panel_color.png" %>
+          </div>
+          <div class="build-text text-center mt-1">
+            <p><strong>Volts:</strong> 12V   /  <strong>Amps:</strong> 0.5A</p>
+          </div>
+          <div class="build-link text-center mt-2">
+            <a href="#">Go to product page</a>
+          </div>
+        </div>

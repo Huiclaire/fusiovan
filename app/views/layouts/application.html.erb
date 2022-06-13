@@ -6,7 +6,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
@@ -14,7 +19,7 @@
 
   <body>
   <%= render 'shared/flashes' %>
-    <% if controller_name == "pages" && controller.params[:action] == "home" || controller_name == "registrations" && controller.params[:action] == "new" ||
+    <% if controller_name == "pages" && (controller.params[:action] == "home" || controller.params[:action] == "styleguide") || controller_name == "registrations" && controller.params[:action] == "new" ||
     controller_name == "sessions" && controller.params[:action] == "new" %>
       <%= render 'shared/navbar' %>
       <%= yield %>
