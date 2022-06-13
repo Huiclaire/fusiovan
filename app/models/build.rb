@@ -17,4 +17,36 @@ class Build < ApplicationRecord
   def total_amp_hours
     build_appliances.sum(:amp_hours)
   end
+
+  def fridge_use_hours
+    build_appliances.joins(:appliance).where(appliances: { kind: "fridge" }).sum(:use_hours)
+  end
+
+  def fridge_amp_hours
+    build_appliances.joins(:appliance).where(appliances: { kind: "fridge" }).sum(:amp_hours)
+  end
+
+  def lights_use_hours
+    build_appliances.joins(:appliance).where(appliances: { kind: "lights" }).sum(:use_hours)
+  end
+
+  def lights_amp_hours
+    build_appliances.joins(:appliance).where(appliances: { kind: "lights" }).sum(:amp_hours)
+  end
+
+  def fan_use_hours
+    build_appliances.joins(:appliance).where(appliances: { kind: "fan" }).sum(:use_hours)
+  end
+
+  def fan_amp_hours
+    build_appliances.joins(:appliance).where(appliances: { kind: "fan" }).sum(:amp_hours)
+  end
+
+  def inverter_use_hours
+    build_appliances.joins(:appliance).where(appliances: { kind: "inverter" }).sum(:use_hours)
+  end
+
+  def inverter_amp_hours
+    build_appliances.joins(:appliance).where(appliances: { kind: "inverter" }).sum(:amp_hours)
+  end
 end

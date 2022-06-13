@@ -1,38 +1,62 @@
-<%# <div class="banner mx-auto" style="width:400px">
-  <div class="container">
-    <h1 class="mb-3 build-title-new fs-1"><strong>Build Specs:</strong></h1>
-    <p>Fridge:</p>
-    <p class="mb-3 mt-2"> 6 hrs/day @ 2 amps = 12ah</p>
-    <p>Fan:</p>
-    <p class="mb-3 mt-2"> 3 hrs/day @ 1 amps = 3ah</p>
-    <hr>
-    <h2 class="mt-2">Total daily power needs:</h2>
-    <h2 class="mb-3 mt-2">9ah</h2>
-  </div>
-</div> %>
 
-<div class="card-overview">
-  <h2>Overview</h2>
-  <p><strong>Appliances</strong></p>
+<div class="card-overview box-relative">
+  <h2 class="mb-3">Overview</h2>
+  <p class="mb-3"><strong>Appliances</strong></p>
+  <div class="d-flex" style="flex-wrap: wrap;">
+  <% @build.appliances.each do |appliance| %>
+    <% if appliance.kind == "inverter" %>
+      <div class="pill-container me-1">
+        <span class="pill-font"> 🔌 inverter</span>
+      </div>
+    <% elsif appliance.kind == "lights"%>
+      <div class="pill-container me-1">
+        <span class="pill-font"> 💡 lights</span>
+      </div>
+     <% elsif appliance.kind == "fridge"%>
+      <div class="pill-container me-1">
+        <span class="pill-font"> 🧊 fridge</span>
+      </div>
+     <% elsif appliance.kind == "fan"%>
+      <div class="pill-container me-1">
+        <span class="pill-font"> 💨 fan</span>
+      </div>
+    <% end %>
+  <% end %>
+
   <div class="small-text mt-3">
-    <p>🌴 10hr, 9ah</p>
-    <p>🌴 10hr, 9ah</p>
-    <p>🌴 10hr, 9ah</p>
-    <p>🌴 10hr, 9ah</p>
-    <p>🌴 10hr, 9ah</p>
+    <% @build.appliances.pluck(:kind).each do |kind| %>
+      <% if kind == "fridge" %>
+        <p>🧊 <%= @build.fridge_use_hours %>hr, <%= @build.fridge_amp_hours %>Ah</p>
+      <% elsif kind == "inverter" %>
+      <p>🔌  <%= @build.inverter_use_hours %>hr, <%= @build.inverter_amp_hours %>Ah</p> %>
+      <% elsif kind == "fan" %>
+      <p>💨 <%= @build.fan_use_hours %>hr, <%= @build.fan_amp_hours %>Ah</p>
+      <% elsif kind == "lights" %>
+      <p>💡 <%= @build.lights_use_hours %>hr, <%= @build.lights_amp_hours %>Ah</p>
+      <% end %>
+    <% end %>
   </div>
-  <p class="mt-3">Total dauly power needs:</p>
-  <h3>45 Ah</h3>
+
+  <div>
+    <p class="mt-5">Total daily power needs</p><br>
+    <h3 class="mt-1 mb-3">45 Ah</h3>
+  </div>
+
   <div>
     <p class="mt-3"><strong>Battery</strong></p>
-    <p >🌴 AGM, 100ah</p>
+    <p>🔋 AGM, 100ah</p>
     <p class="mt-5"><strong>Solar Panel</strong></p>
-      <p class="mb-3">🌴 RIGID, 200 Watts</p>
+      <p class="mb-3">☀️ RIGID, 200 Watts</p>
   </div>
-  <div>
-    <p>Daily Build Capacity</p>
-    <p class="small-text">100 ah</p>
-    <p>Total price</p>
-    <h3>$2500</h3>
+
+  <div class="d-flex border-top card-bottom-boxes-position w-100">
+    <div class="d-flex flex-column w-100 right-border ps-3">
+      <p class="mt-1">Daily Build Capacity</p>
+      <p class="small-text">100 ah</p>
+    </div>
+    <div class="d-flex flex-column w-100 ps-3">
+      <p>Total price</p>
+      <h3>$2500</h3>
+    </div>
   </div>
 </div>
