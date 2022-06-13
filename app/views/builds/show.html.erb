@@ -14,11 +14,11 @@
     <div class="d-flex justify-content-evenly">
       <div>
         <h2 class="text-center mt-3 mb-3">Battery</h2>
-        <%= render "shared/battery_card" %>
+        <%= render "shared/battery_card", build: @build %>
       </div>
       <div>
         <h2 class="text-center mt-3 mb-3">Solar Panel</h2>
-        <%= render "shared/solar_panel_card" %>
+        <%= render "shared/solar_panel_card", build: @build %>
       </div>
     </div>
     <hr>
