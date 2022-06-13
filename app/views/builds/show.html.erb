@@ -1,16 +1,16 @@
 <div class="page-headers">
-  <h1><%= @build.name.capitalize %> overview</h1>
+  <h1><%= @build.name.capitalize %></h1>
 </div>
-<div class="card-wrapper">
-  <h2 class="">Appliances</h2>
-
+<div class="card-wrapper mb-3 card-grid">
+  <div>
+    <h2>Appliances</h2>
     <div class="card-space">
       <% @build.appliances.each_with_index do |appliance, index|%>
         <%= render "shared/appliance_card", appliance: appliance %>
       <% end %>
     </div>
-  <hr>
 
+    <h2>Components</h2>
     <div class="d-flex justify-content-evenly">
       <div>
         <h2 class="text-center mt-3 mb-3">Battery</h2>
@@ -21,18 +21,8 @@
         <%= render "shared/solar_panel_card", build: @build %>
       </div>
     </div>
-    <hr>
-
-    <div class="banner mx-auto" style="width:400px">
-      <div class="container">
-        <h1 class="mb-3 build-title-new fs-1"><strong>Build Specs:</strong></h1>
-        <p>Fridge:</p>
-        <p class="mb-3 mt-2"> 6 hrs/day @ 2 amps = 12ah</p>
-        <p>Fan:</p>
-        <p class="mb-3 mt-2"> 3 hrs/day @ 1 amps = 3ah</p>
-        <hr>
-        <h2 class="mt-2">Total daily power needs:</h2>
-        <h2 class="mb-3 mt-2">9ah</h2>
-      </div>
-    </div>
+  </div>
+  <div>
+    <%= render "shared/overview_card" %>
+  </div>
 </div>
