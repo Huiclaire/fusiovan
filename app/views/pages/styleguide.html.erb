@@ -9,7 +9,7 @@
 <%= render "shared/battery_card", build: Build.first %>
 
 <%# display build-card %>
-<%= render "shared/build_card", build: Build.first %>
+<%= render "shared/build_card", build: Build.first, appliances: Build.first.appliances %>
 
 <%# display flashes %>
 <%= render "shared/flashes" %>
