@@ -29,215 +29,191 @@ BuildAppliance.destroy_all
 # APPLIANCES
 
   # img_url (need to add in a migration)
-  # FRIDGES
-    crx50 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 50", voltage: 12, amps: 1, price: 599, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/camper-van-refrigerators/dometic-crx-50t-231419")
-    crx65 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 65", voltage: 12, amps: 1.25, price: 629, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/mini-fridges/dometic-crx-65t-231420")
-    crx140s = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 140s", voltage: 12, amps: 2.2, price: 1820, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/rv-refrigerators/dometic-crx-140s-136705")
+  # fridge
+    fridge1 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 50", voltage: 12, amps: 1, price: 599, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/camper-van-refrigerators/dometic-crx-50t-231419")
+    fridge1x25 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 65", voltage: 12, amps: 1.25, price: 629, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/mini-fridges/dometic-crx-65t-231420")
+    fridge2x2 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 140s", voltage: 12, amps: 2.2, price: 1820, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/rv-refrigerators/dometic-crx-140s-136705")
 
-    puts "created 3 fridges"
 
-  # LIGHTS
+  # lights
 
-    led4pack = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 4 Pack", voltage: 12, amps: 1, price: 28, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
-    led6pack = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 6 Pack", voltage: 12, amps: 1.5, price: 39, product_url: "https://acegoo.myshopify.com/products/12v-led-puck-light-rv-boat-overhead-recessed-mount-ceiling-light-12v-down-light-for-camper-vans-truck-motorhome-sailboat-interior-lighting-6-pack")
-    led8pack = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 8 Pack", voltage: 12, amps: 2, price: 56, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
+    lights1 = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 4 Pack", voltage: 12, amps: 1, price: 28, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
+    lights1x5 = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 6 Pack", voltage: 12, amps: 1.5, price: 39, product_url: "https://acegoo.myshopify.com/products/12v-led-puck-light-rv-boat-overhead-recessed-mount-ceiling-light-12v-down-light-for-camper-vans-truck-motorhome-sailboat-interior-lighting-6-pack")
+    lights2 = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 8 Pack", voltage: 12, amps: 2, price: 56, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
 
-    puts "created 3 lights"
+  # fan
 
-  # FANS
+    fan1x2 = Appliance.create!(kind: "fan", make: "Dometic", model: "Fantastic Fan", voltage: 12, amps: 1.2, price: 282, product_url: "https://www.dometic.com/en-us/outdoor/climate-and-comfort/ventilation-solutions/rv-roof-vents/dometic-fantastic-vent-3350-21213")
+    fanx5 = Appliance.create!(kind: "fan", make: "Maxxair", model: "Maxxfan", voltage: 12, amps: 0.5, price: 256, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan")
+    fanx6 = Appliance.create!(kind: "fan", make: "Maxxair", model: "Maxxfan Deluxe", voltage: 12, amps: 0.6, price: 338, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan-deluxe")
 
-    fantasticfan = Appliance.create!(kind: "fan", make: "Dometic", model: "Fantastic Fan", voltage: 12, amps: 1.2, price: 282, product_url: "https://www.dometic.com/en-us/outdoor/climate-and-comfort/ventilation-solutions/rv-roof-vents/dometic-fantastic-vent-3350-21213")
-    maxxfan = Appliance.create!(kind: "fan", make: "Maxxair", model: "Maxxfan", voltage: 12, amps: 0.5, price: 256, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan")
-    maxxfandeluxe = Appliance.create!(kind: "fan", make: "Maxxair", model: "Maxxfan Deluxe", voltage: 12, amps: 0.6, price: 338, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan-deluxe")
 
-    puts "created 3 fans"
+  # pump
+
+    pump6 = Appliance.create!(kind: "pump", make: "ProGear", model: "3200 RV Pump", voltage: 12, amps: 6, price: 130, product_url: "https://www.usaadventuregear.com/collections/progear-12-volt-water-macerator-pumps/products/progear-3200-rv-replacement-water-pump-for-shurflo-4800-2088-revolution-pump")
+    pump7x7 = Appliance.create!(kind: "pump", make: "ShurFlo", model: "4008 Water Pump", voltage: 12, amps: 7.5, price: 69, product_url: "https://www.shurflowaterpump.com/")
+    pump10 = Appliance.create!(kind: "pump", make: "Bayite", model: "Fresh Water Pump", voltage: 12, amps: 10, price: 30, product_url: "https://www.amazon.com/bayite-Diaphragm-Priming-Pressure-Adjustable/dp/B074MZYS37/")
+
+  # charger
+
+      charger1 = Appliance.create!(kind: "charger", make: "Qidoe", model: "2 Pack QC Outlet", voltage: 12, amps: 1, price: 17, product_url: "https://www.amazon.com/Outlet-Charge-Waterproof-Charger-Motorcycle/dp/B089SNPYFL/ref=sr_1_10?crid=149OIKSU03BKX&keywords=12v+outlet&qid=1655131280&sprefix=12v+outl%2Caps%2C340&sr=8-10")
+      charger6 = Appliance.create!(kind: "charger", make: "Wotobeus", model: "120 Watt Charger", voltage: 12, amps: 6, price: 42, product_url: "https://www.amazon.com/Charger-WOTOBEUS-Charging-Cigarette-S21Ultra/dp/B09GJTF54Z/ref=sr_1_3?crid=1E3035OGZ2HDJ&keywords=high+watt+usb+c+car+charger&qid=1655131701&sprefix=high+watt+usb+c+car+charger%2Caps%2C442&sr=8-3")
+      charger3 = Appliance.create!(kind: "charger", make: "Ainope", model: "48 Watt Charger", voltage: 12, amps: 3, price: 18, product_url: "https://www.amazon.com/Charger-AINOPE-Adapter-Compatible-Samsung/dp/B07RHSD9WM/ref=sr_1_2?crid=1E3035OGZ2HDJ&keywords=high+watt+usb+c+car+charger&qid=1655131701&sprefix=high+watt+usb+c+car+charger%2Caps%2C442&sr=8-2")
+
+
+  # inv
+
+    inv8 = Appliance.create!(kind: "Inverter", make: "Xantrax", model: "SW 600", voltage: 12, amps: 8, price: 215, product_url: "https://xantrex.com/products/inverters/prowattsw/")
+    inv14 = Appliance.create!(kind: "Inverter", make: "Xantrax", model: "SW 1000", voltage: 12, amps: 14, price: 325, product_url: "https://xantrex.com/products/inverters/prowattsw/")
+    inv20 = Appliance.create!(kind: "Inverter", make: "Xantrax", model: "SW 2000", voltage: 12, amps: 20, price: 365, product_url: "https://xantrex.com/products/inverters/prowattsw/")
+
     puts "created #{Appliance.count} appliances"
 
-  # PUMPS
+  # panel
 
-    progear = Appliance.create!(kind: "pump", make: "ProGear", model: "3200 RV Pump", voltage: 12, amps: 6, price: 130, product_url: "https://www.usaadventuregear.com/collections/progear-12-volt-water-macerator-pumps/products/progear-3200-rv-replacement-water-pump-for-shurflo-4800-2088-revolution-pump")
-    shurflo = Appliance.create!(kind: "pump", make: "ShurFlo", model: "4008 Water Pump", voltage: 12, amps: 7.5, price: 69, product_url: "https://www.shurflowaterpump.com/")
-    bayite = Appliance.create!(kind: "pump", make: "Bayite", model: "Fresh Water Pump", voltage: 12, amps: 10, price: 30, product_url: "https://www.amazon.com/bayite-Diaphragm-Priming-Pressure-Adjustable/dp/B074MZYS37/")
+    panel100 = SolarPanel.create!(kind: "Rigid", make: "Renogy", model: "100W Panel", voltage: 12, watts: 100, price: 120, product_url: "https://renogy.com/renogy-100-watt-12-volt-monocrystalline-solar-panel/")
+    panel450 = SolarPanel.create!(kind: "Rigid", make: "Renogy", model: "450W Panel", voltage: 12, watts: 450, price: 899, product_url: "https://renogy.com/450-watt-monocrystalline-solar-panel/")
+    panel170 = SolarPanel.create!(kind: "Rigid", make: "Renogy", model: "Flex 170W Panel", voltage: 12, watts: 170, price: 320, product_url: "https://renogy.com/175-watt-12-volt-flexible-monocrystalline-solar-panel/")
 
-    puts "created 3 pumps"
+      puts "created #{SolarPanel.count} solar panels"
 
-  # CHARGERS
+# battery
 
-      # fantasticfan = Appliance.create!(kind: "fan", make: "Dometic", model: "Fantastic Fan", voltage: 12, amps: 1.2, price: 282, product_url: "https://www.dometic.com/en-us/outdoor/climate-and-comfort/ventilation-solutions/rv-roof-vents/dometic-fantastic-vent-3350-21213")
-      # maxxfan = Appliance.create!(kind: "fan", make: "Maxxair", model: "Maxxfan", voltage: 12, amps: 0.5, price: 256, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan")
-      # maxxfandeluxe = Appliance.create!(kind: "fan", make: "Maxxair", model: "Maxxfan Deluxe", voltage: 12, amps: 0.6, price: 338, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan-deluxe")
-
-      puts "created 3 Chargers"
-
-  # INVERTERS
-
-    prowatt600 = Appliance.create!(kind: "Inverter", make: "Xantrax", model: "SW 600", voltage: 12, amps: 8, price: 215, product_url: "https://www.dometic.com/en-us/outdoor/climate-and-comfort/ventilation-solutions/rv-roof-vents/dometic-Invertertastic-vent-3350-21213")
-    prowatt1000 = Appliance.create!(kind: "Inverter", make: "Xantrax", model: "SW 1000", voltage: 12, amps: 16, price: 325, product_url: "https://www.airxcel.com/rv/maxxair/products/Inverters/maxxInverter")
-    prowatt2000 = Appliance.create!(kind: "Inverter", make: "Xantrax", model: "SW 2000", voltage: 12, amps: 32, price: 365, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan-deluxe")
-
-    puts "created 3 Inverters"
-    puts "created #{Appliance.count} appliances"
-
-# SOLARPANELS
-
-  rigidpanel100 = SolarPanel.create!(kind: "Rigid", make: "Renogy", model: "Rigid Monocrystalline Panel", voltage: 12, watts: 100, price: 119.99, product_url: "https://renogy.com/renogy-100-watt-12-volt-monocrystalline-solar-panel/")
-  rigidpanel200 = SolarPanel.create!(kind: "Rigid", make: "Renogy", model: "Rigid Monocrystalline Panel", voltage: 12, watts: 200, price: 279.99, product_url: "https://renogy.com/200-watt-12-volt-monocrystalline-solar-panel/")
-  flexpanel170 = SolarPanel.create!(kind: "Rigid", make: "Renogy", model: "Flexible Monocrystalline Panel", voltage: 12, watts: 170, price: 280.49, product_url: "https://renogy.com/175-watt-12-volt-flexible-monocrystalline-solar-panel/")
-
-    puts "created #{SolarPanel.count} solar panels"
-
-# BATTERIES
-
-  agm100 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle Battery", voltage: 12, amp_hours: 100, price: 269.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-100ah/")
-  agm200 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle Battery", voltage: 12, amp_hours: 200, price: 395.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-200ah/")
-  lithium170 = Battery.create!(kind: "Lithium Iron Phosphate", make: "Renogy", model: "Lithium-Iron Deep Cycle Battery", voltage: 12, amp_hours: 170, price: 1279.99, product_url: "https://renogy.com/lithium-iron-phosphate-battery-12-volt-170ah/")
+  battery100 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle Battery", voltage: 12, amp_hours: 100, price: 269.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-100ah/")
+  battery200 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle Battery", voltage: 12, amp_hours: 200, price: 395.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-200ah/")
+  battery170 = Battery.create!(kind: "Lithium Iron Phosphate", make: "Renogy", model: "Lithium-Iron Deep Cycle Battery", voltage: 12, amp_hours: 170, price: 1279.99, product_url: "https://renogy.com/lithium-iron-phosphate-battery-12-volt-170ah/")
 
   puts "created #{Battery.count} batteries"
 
 # BUILDS
-  # low budget user 1
-    build1 = Build.create!(name: 'small budget', solar_panel: rigidpanel100, battery: agm100, user: user1)
-    crx50_build = BuildAppliance.create!(
-      use_hours: 12, amp_hours: 12, build: build1, appliance: crx50
+
+  # user 1 24ah
+    build1 = Build.create!(name: 'stay light', solar_panel: panel100, battery: battery100, user: user1)
+    fridge1_build = BuildAppliance.create!(
+      use_hours: 12, amp_hours: 12, build: build1, appliance: fridge1
     )
-    led4pack_build = BuildAppliance.create!(
-      use_hours: 3, amp_hours: 3, build: build1, appliance: led4pack
+    lights1build = BuildAppliance.create!(
+      use_hours: 12, amp_hours: 12, build: build1, appliance: lights1
     )
     build1.update(total_price: build1.set_total_price)
 
-  # medium budget user 1
-    build2 = Build.create!(name: 'medium budget', solar_panel: rigidpanel200, battery: agm200, user: user1)
 
-    crx65_build = BuildAppliance.create!(
-      use_hours: 12, amp_hours: 15, build: build2, appliance: crx65
+  # user 1 48ah
+    build2 = Build.create!(name: 'Westy', solar_panel: panel170, battery: battery200, user: user1)
+
+    fridge1x25_build = BuildAppliance.create!(
+      use_hours: 20, amp_hours: 25, build: build2, appliance: fridge1x25
     )
 
-    led6pack_build = BuildAppliance.create!(
-      use_hours: 3, amp_hours: 4.5, build: build2, appliance: led6pack
+    lights1x5_build = BuildAppliance.create!(
+      use_hours: 3, amp_hours: 4.5, build: build2, appliance: lights1x5
     )
 
-    maxxfan_build = BuildAppliance.create!(
-      use_hours: 8, amp_hours: 4, build: build2, appliance: maxxfan
+    fan1x2_build = BuildAppliance.create!(
+      use_hours: 10, amp_hours: 12, build: build2, appliance: fan1x2
+    )
+
+    pump6_build = BuildAppliance.create!(
+      use_hours: 1, amp_hours: 6, build: build2, appliance: pump6
     )
 
     build2.update(total_price: build2.set_total_price)
-  # big budget user 1
-    build3 = Build.create!(name: 'Sprint Deluxe', solar_panel: rigidpanel200, battery: lithium170, user: user1)
 
-    crx140s_build = BuildAppliance.create!(
-      use_hours: 18, amp_hours: 40, build: build3, appliance: crx140s
+  # user 1 61ah
+    build3 = Build.create!(name: 'Sprint Deluxe', solar_panel: panel450, battery: battery170, user: user1)
+
+    fridge2x2_build = BuildAppliance.create!(
+      use_hours: 10, amp_hours: 22, build: build3, appliance: fridge2x2
     )
 
-    led8pack_build = BuildAppliance.create!(
-      use_hours: 3, amp_hours: 6, build: build3, appliance: led8pack
+    lights2_build = BuildAppliance.create!(
+      use_hours: 6, amp_hours: 12, build: build3, appliance: lights2
     )
 
-    maxxfandeluxe_build = BuildAppliance.create!(
-      use_hours: 12, amp_hours: 7, build: build3, appliance: maxxfandeluxe
+    fanx6_build = BuildAppliance.create!(
+      use_hours: 12, amp_hours: 7, build: build3, appliance: fanx6
     )
+
+    pump6_build = BuildAppliance.create!(
+      use_hours: 2, amp_hours: 12, build: build3, appliance: pump6
+    )
+
+    charger1_build = BuildAppliance.create!(
+      use_hours: 8, amp_hours: 8, build: build3, appliance: charger1
+    )
+
 
     build3.update(total_price: build3.set_total_price)
 
+    ######################
 
-  # low budget user 2
-
-      build4 = Build.create!(name: 'First build!', solar_panel: flexpanel170, battery: agm100, user: user2)
-
-      crx50_build = BuildAppliance.create!(
-        use_hours: 14, amp_hours: 14, build: build4, appliance: crx50
-      )
-      led6pack_build = BuildAppliance.create!(
-        use_hours: 3, amp_hours: 3, build: build4, appliance: led6pack
-      )
-      build4.update(total_price: build4.set_total_price)
-
-  # medium budget user 2
-      build5 = Build.create!(name: 'Snow', solar_panel: rigidpanel200, battery: agm200, user: user2)
-
-      crx65_build = BuildAppliance.create!(
-        use_hours: 12, amp_hours: 15, build: build5, appliance: crx65
-      )
-
-      led6pack_build = BuildAppliance.create!(
-        use_hours: 3, amp_hours: 4.5, build: build5, appliance: led6pack
-      )
-
-      maxxfan_build = BuildAppliance.create!(
-        use_hours: 8, amp_hours: 4, build: build5, appliance: maxxfan
-      )
-
-      build5.update(total_price: build5.set_total_price)
-
-  # big budget user 2
-      build6 = Build.create!(name: 'Vanagon', solar_panel: rigidpanel200, battery: agm200, user: user2)
-
-      crx65_build = BuildAppliance.create!(
-        use_hours: 18, amp_hours: 36, build: build6, appliance: crx65
-      )
-
-      led8pack_build = BuildAppliance.create!(
-        use_hours: 3, amp_hours: 8, build: build6, appliance: led8pack
-      )
-
-      maxxfandeluxe_build = BuildAppliance.create!(
-        use_hours: 12, amp_hours: 4, build: build6, appliance: maxxfandeluxe
-      )
-
-      build6.update(total_price: build6.set_total_price)
-
-  # low budget user 3
-
-      build7 = Build.create!(name: 'Sheeba', solar_panel: flexpanel170, battery: agm100, user: user3)
-
-      crx50_build = BuildAppliance.create!(
-        use_hours: 14, amp_hours: 10, build: build7, appliance: crx50
-      )
-      led6pack_build = BuildAppliance.create!(
-        use_hours: 3, amp_hours: 3, build: build7, appliance: led6pack
-      )
-      build7.update(total_price: build7.set_total_price)
-
-  # medium budget user 3
-      build8 = Build.create!(name: 'Westy', solar_panel: rigidpanel200, battery: agm200, user: user3)
-
-      crx65_build = BuildAppliance.create!(
-        use_hours: 12, amp_hours: 15, build: build8, appliance: crx65
-      )
-
-      led6pack_build = BuildAppliance.create!(
-        use_hours: 3, amp_hours: 4.5, build: build8, appliance: led6pack
-      )
-
-      maxxfan_build = BuildAppliance.create!(
-        use_hours: 8, amp_hours: 4, build: build8, appliance: maxxfan
-      )
-
-      build8.update(total_price: build8.set_total_price)
-
-  # big budget user 3
-        build9 = Build.create!(name: 'Amine', solar_panel: rigidpanel200, battery: agm200, user: user3)
-
-        crx65_build = BuildAppliance.create!(
-          use_hours: 18, amp_hours: 36, build: build9, appliance: crx65
-        )
-
-        led8pack_build = BuildAppliance.create!(
-          use_hours: 3, amp_hours: 8, build: build9, appliance: led8pack
-        )
-
-        maxxfandeluxe_build = BuildAppliance.create!(
-          use_hours: 12, amp_hours: 4, build: build9, appliance: maxxfandeluxe
-        )
-
-        build9.update(total_price: build9.set_total_price)
-  puts "created #{Build.count} builds"
+  # user 2 24ah
+    build4 = Build.create!(name: 'Utah', solar_panel: panel100, battery: battery100, user: user2)
+    fridge1_build = BuildAppliance.create!(
+      use_hours: 12, amp_hours: 12, build: build4, appliance: fridge1
+    )
+    lights1build = BuildAppliance.create!(
+      use_hours: 12, amp_hours: 12, build: build4, appliance: lights1
+    )
+    build4.update(total_price: build4.set_total_price)
 
 
-  Bookmark.create(user: user1, build: build1)
-  Bookmark.create(user: user1, build: build2)
-  Bookmark.create(user: user1, build: build3)
-  Bookmark.create(user: user1, build: build4)
-  Bookmark.create(user: user1, build: build5)
-  Bookmark.create(user: user1, build: build6)
+  # user 2 48ah
+    build5 = Build.create!(name: 'Amine', solar_panel: panel170, battery: battery200, user: user2)
 
-  puts "created #{Bookmark.count} bookmarks"
+    fridge1x25_build = BuildAppliance.create!(
+      use_hours: 20, amp_hours: 25, build: build5, appliance: fridge1x25
+    )
+
+    lights1x5_build = BuildAppliance.create!(
+      use_hours: 3, amp_hours: 4.5, build: build5, appliance: lights1x5
+    )
+
+    fan1x2_build = BuildAppliance.create!(
+      use_hours: 10, amp_hours: 12, build: build5, appliance: fan1x2
+    )
+
+    pump6_build = BuildAppliance.create!(
+      use_hours: 1, amp_hours: 6, build: build5, appliance: pump6
+    )
+
+    build5.update(total_price: build5.set_total_price)
+
+  # user 2 61ah
+    build6 = Build.create!(name: 'Folds', solar_panel: panel450, battery: battery170, user: user3)
+
+    fridge2x2_build = BuildAppliance.create!(
+      use_hours: 10, amp_hours: 22, build: build6, appliance: fridge2x2
+    )
+
+    lights2_build = BuildAppliance.create!(
+      use_hours: 6, amp_hours: 12, build: build6, appliance: lights2
+    )
+
+    fanx6_build = BuildAppliance.create!(
+      use_hours: 12, amp_hours: 7, build: build6, appliance: fanx6
+    )
+
+    pump6_build = BuildAppliance.create!(
+      use_hours: 2, amp_hours: 12, build: build6, appliance: pump6
+    )
+
+    charger1_build = BuildAppliance.create!(
+      use_hours: 8, amp_hours: 8, build: build6, appliance: charger1
+    )
+
+    build6.update(total_price: build6.set_total_price)
+
+
+
+puts "created #{Build.count} builds"
+
+
+  # Bookmark.create(user: user2, build: build4)
+  # Bookmark.create(user: user2, build: build5)
+  # Bookmark.create(user: user2, build: build6)
+  # Bookmark.create(user: user1, build: build7)
+  # Bookmark.create(user: user1, build: build8)
+  # Bookmark.create(user: user1, build: build9)
+
+  # puts "created #{Bookmark.count} bookmarks"
