@@ -17,21 +17,28 @@
     </li>
     <li>
       <span class="material-symbols-outlined">explore</span>
-      <%= link_to "Explore Builds", builds_path, class: "d-block text-decoration-none text-black text-start" %></li>
+      <%= link_to "Explore Builds", builds_path, class: "d-block text-decoration-none text-black text-start" %>
+    </li>
     <li>
       <span class="material-symbols-outlined">mode_fan</span>
-      <%= link_to "Appliances", appliances_path, class: "d-block text-decoration-none text-black text-start" %></li>
+      <%= link_to "Appliances", appliances_path, class: "d-block text-decoration-none text-black text-start" %>
+    </li>
     <li>
       <span class="material-symbols-outlined">dashboard</span>
-      <%= link_to "Components", components_path, class: "d-block text-decoration-none text-black text-start" %></li>
+      <%= link_to "Components", components_path, class: "d-block text-decoration-none text-black text-start" %>
+    </li>
     <li>
       <span class="material-symbols-outlined">build_circle</span>
-      <%= link_to "Create a Build", new_build_path, class: "d-block text-decoration-none text-black text-start" %></li>
+      <%= link_to "Create a Build", new_build_path, class: "d-block text-decoration-none text-black text-start" %>
+    </li>
     </ul>
 
     <% if user_signed_in? %>
     <div class="m-3">
+      <li>
+      <span class="material-symbols-outlined d-block text-decoration-none text-black text-align-center bottom-align-text">logout</span>
       <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "d-block text-decoration-none text-black text-align-center bottom-align-text" %>
+      </li>
     </div>
     <% else %>
       <div class="m-3">
