@@ -180,7 +180,7 @@ BuildAppliance.destroy_all
     build5.update(total_price: build5.set_total_price)
 
   # user 2 61ah
-    build6 = Build.create!(name: 'Folds', solar_panel: panel450, battery: battery170, user: user3)
+    build6 = Build.create!(name: 'Folds', solar_panel: panel450, battery: battery170, user: user2)
 
     fridge2x2_build = BuildAppliance.create!(
       use_hours: 10, amp_hours: 22, build: build6, appliance: fridge2x2
@@ -204,7 +204,64 @@ BuildAppliance.destroy_all
 
     build6.update(total_price: build6.set_total_price)
 
+#######################
 
+  # user 3 24ah
+  build7 = Build.create!(name: 'Canggu', solar_panel: panel100, battery: battery100, user: user3)
+  fridge1_build = BuildAppliance.create!(
+    use_hours: 12, amp_hours: 12, build: build7, appliance: fridge1
+  )
+  lights1build = BuildAppliance.create!(
+    use_hours: 12, amp_hours: 12, build: build7, appliance: lights1
+  )
+  build7.update(total_price: build7.set_total_price)
+
+
+  # user 3 48ah
+    build8 = Build.create!(name: 'Amine', solar_panel: panel170, battery: battery200, user: user3)
+
+    fridge1x25_build = BuildAppliance.create!(
+      use_hours: 20, amp_hours: 25, build: build8, appliance: fridge1x25
+    )
+
+    lights1x5_build = BuildAppliance.create!(
+      use_hours: 3, amp_hours: 4.5, build: build8, appliance: lights1x5
+    )
+
+    fan1x2_build = BuildAppliance.create!(
+      use_hours: 10, amp_hours: 12, build: build8, appliance: fan1x2
+    )
+
+    pump6_build = BuildAppliance.create!(
+      use_hours: 1, amp_hours: 6, build: build8, appliance: pump6
+    )
+
+    build8.update(total_price: build8.set_total_price)
+
+  # user 3 61ah
+    build9 = Build.create!(name: 'Folds', solar_panel: panel450, battery: battery170, user: user3)
+
+    fridge2x2_build = BuildAppliance.create!(
+      use_hours: 10, amp_hours: 22, build: build9, appliance: fridge2x2
+    )
+
+    lights2_build = BuildAppliance.create!(
+      use_hours: 6, amp_hours: 12, build: build9, appliance: lights2
+    )
+
+    fanx6_build = BuildAppliance.create!(
+      use_hours: 12, amp_hours: 7, build: build9, appliance: fanx6
+    )
+
+    pump6_build = BuildAppliance.create!(
+      use_hours: 2, amp_hours: 12, build: build9, appliance: pump6
+    )
+
+    charger1_build = BuildAppliance.create!(
+      use_hours: 8, amp_hours: 8, build: build9, appliance: charger1
+    )
+
+    build9.update(total_price: build9.set_total_price)
 
 puts "created #{Build.count} builds"
 
