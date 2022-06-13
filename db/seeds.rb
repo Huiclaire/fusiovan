@@ -31,9 +31,7 @@ BuildAppliance.destroy_all
   # img_url (need to add in a migration)
   # FRIDGES
     crx50 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 50", voltage: 12, amps: 1, price: 599, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/camper-van-refrigerators/dometic-crx-50t-231419")
-
     crx65 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 65", voltage: 12, amps: 1.25, price: 629, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/mini-fridges/dometic-crx-65t-231420")
-
     crx140s = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 140s", voltage: 12, amps: 2.2, price: 1820, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/rv-refrigerators/dometic-crx-140s-136705")
 
     puts "created 3 fridges"
@@ -41,9 +39,7 @@ BuildAppliance.destroy_all
   # LIGHTS
 
     led4pack = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 4 Pack", voltage: 12, amps: 1, price: 28, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
-
     led6pack = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 6 Pack", voltage: 12, amps: 1.5, price: 39, product_url: "https://acegoo.myshopify.com/products/12v-led-puck-light-rv-boat-overhead-recessed-mount-ceiling-light-12v-down-light-for-camper-vans-truck-motorhome-sailboat-interior-lighting-6-pack")
-
     led8pack = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 8 Pack", voltage: 12, amps: 2, price: 56, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
 
     puts "created 3 lights"
@@ -51,12 +47,36 @@ BuildAppliance.destroy_all
   # FANS
 
     fantasticfan = Appliance.create!(kind: "fan", make: "Dometic", model: "Fantastic Fan", voltage: 12, amps: 1.2, price: 282, product_url: "https://www.dometic.com/en-us/outdoor/climate-and-comfort/ventilation-solutions/rv-roof-vents/dometic-fantastic-vent-3350-21213")
-
     maxxfan = Appliance.create!(kind: "fan", make: "Maxxair", model: "Maxxfan", voltage: 12, amps: 0.5, price: 256, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan")
-
     maxxfandeluxe = Appliance.create!(kind: "fan", make: "Maxxair", model: "Maxxfan Deluxe", voltage: 12, amps: 0.6, price: 338, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan-deluxe")
 
     puts "created 3 fans"
+    puts "created #{Appliance.count} appliances"
+
+  # PUMPS
+
+    progear = Appliance.create!(kind: "pump", make: "ProGear", model: "3200 RV Pump", voltage: 12, amps: 6, price: 130, product_url: "https://www.usaadventuregear.com/collections/progear-12-volt-water-macerator-pumps/products/progear-3200-rv-replacement-water-pump-for-shurflo-4800-2088-revolution-pump")
+    shurflo = Appliance.create!(kind: "pump", make: "ShurFlo", model: "4008 Water Pump", voltage: 12, amps: 7.5, price: 69, product_url: "https://www.shurflowaterpump.com/")
+    bayite = Appliance.create!(kind: "pump", make: "Bayite", model: "Fresh Water Pump", voltage: 12, amps: 10, price: 30, product_url: "https://www.amazon.com/bayite-Diaphragm-Priming-Pressure-Adjustable/dp/B074MZYS37/")
+
+    puts "created 3 pumps"
+
+  # CHARGERS
+
+      # fantasticfan = Appliance.create!(kind: "fan", make: "Dometic", model: "Fantastic Fan", voltage: 12, amps: 1.2, price: 282, product_url: "https://www.dometic.com/en-us/outdoor/climate-and-comfort/ventilation-solutions/rv-roof-vents/dometic-fantastic-vent-3350-21213")
+      # maxxfan = Appliance.create!(kind: "fan", make: "Maxxair", model: "Maxxfan", voltage: 12, amps: 0.5, price: 256, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan")
+      # maxxfandeluxe = Appliance.create!(kind: "fan", make: "Maxxair", model: "Maxxfan Deluxe", voltage: 12, amps: 0.6, price: 338, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan-deluxe")
+
+      puts "created 3 Chargers"
+
+  # INVERTERS
+
+    prowatt600 = Appliance.create!(kind: "Inverter", make: "Xantrax", model: "SW 600", voltage: 12, amps: 8, price: 215, product_url: "https://www.dometic.com/en-us/outdoor/climate-and-comfort/ventilation-solutions/rv-roof-vents/dometic-Invertertastic-vent-3350-21213")
+    prowatt1000 = Appliance.create!(kind: "Inverter", make: "Xantrax", model: "SW 1000", voltage: 12, amps: 16, price: 325, product_url: "https://www.airxcel.com/rv/maxxair/products/Inverters/maxxInverter")
+    prowatt2000 = Appliance.create!(kind: "Inverter", make: "Xantrax", model: "SW 2000", voltage: 12, amps: 32, price: 365, product_url: "https://www.airxcel.com/rv/maxxair/products/fans/maxxfan-deluxe")
+
+    puts "created 3 Inverters"
+    puts "created #{Appliance.count} appliances"
 
 # SOLARPANELS
 
@@ -64,17 +84,15 @@ BuildAppliance.destroy_all
   rigidpanel200 = SolarPanel.create!(kind: "Rigid", make: "Renogy", model: "Rigid Monocrystalline Panel", voltage: 12, watts: 200, price: 279.99, product_url: "https://renogy.com/200-watt-12-volt-monocrystalline-solar-panel/")
   flexpanel170 = SolarPanel.create!(kind: "Rigid", make: "Renogy", model: "Flexible Monocrystalline Panel", voltage: 12, watts: 170, price: 280.49, product_url: "https://renogy.com/175-watt-12-volt-flexible-monocrystalline-solar-panel/")
 
-    puts "created 3 solar panels"
+    puts "created #{SolarPanel.count} solar panels"
 
 # BATTERIES
 
   agm100 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle Battery", voltage: 12, amp_hours: 100, price: 269.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-100ah/")
-
   agm200 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle Battery", voltage: 12, amp_hours: 200, price: 395.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-200ah/")
-
   lithium170 = Battery.create!(kind: "Lithium Iron Phosphate", make: "Renogy", model: "Lithium-Iron Deep Cycle Battery", voltage: 12, amp_hours: 170, price: 1279.99, product_url: "https://renogy.com/lithium-iron-phosphate-battery-12-volt-170ah/")
 
-  puts "created 3 batteries"
+  puts "created #{Battery.count} batteries"
 
 # BUILDS
   # low budget user 1
@@ -212,7 +230,7 @@ BuildAppliance.destroy_all
         )
 
         build9.update(total_price: build9.set_total_price)
-  puts "created 6 builds"
+  puts "created #{Build.count} builds"
 
 
   Bookmark.create(user: user1, build: build1)
