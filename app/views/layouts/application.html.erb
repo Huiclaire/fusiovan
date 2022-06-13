@@ -14,7 +14,7 @@
 
   <body>
   <%= render 'shared/flashes' %>
-    <% if controller_name == "pages" && controller.params[:action] == "home" || controller_name == "registrations" && controller.params[:action] == "new" ||
+    <% if controller_name == "pages" && (controller.params[:action] == "home" || controller.params[:action] == "styleguide") || controller_name == "registrations" && controller.params[:action] == "new" ||
     controller_name == "sessions" && controller.params[:action] == "new" %>
       <%= render 'shared/navbar' %>
       <%= yield %>
