@@ -6,7 +6,7 @@
 
     <div class="card-space">
       <% @build.appliances.each_with_index do |appliance, index|%>
-        <%= render "shared/appliance_card", appliance: appliance %>
+        <%= render "shared/appliance_card_redesigned", appliance: appliance %>
       <% end %>
     </div>
   <hr>
@@ -14,11 +14,11 @@
     <div class="d-flex justify-content-evenly">
       <div>
         <h2 class="text-center mt-3 mb-3">Battery</h2>
-        <%= render "shared/battery_card", build: @build %>
+        <%= render "shared/battery_card_redesigned", build: @build %>
       </div>
       <div>
         <h2 class="text-center mt-3 mb-3">Solar Panel</h2>
-        <%= render "shared/solar_panel_card", build: @build %>
+        <%= render "shared/solar_panel_card_redesigned", build: @build %>
       </div>
     </div>
     <hr>
