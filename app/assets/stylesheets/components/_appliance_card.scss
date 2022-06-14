@@ -7,7 +7,7 @@
   background-color: white;
   padding: 20px;
   margin-bottom: 32px;
-  box-shadow: 0 0 15px rgba(20, 41, 112, 0.22);
+  box-shadow: 0 0 10px rgba(29, 48, 112, 0.4);
   transition: 0.2s;
   &:not(.no-hover) {
     &:hover {
@@ -59,6 +59,6 @@
 
 .card-space {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 24px;
 }
