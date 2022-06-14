@@ -1,10 +1,15 @@
 <div class="page-headers d-flex justify-content-between">
+<% if params[:query].present? && params[:query][:search_word].present? %>
+  <h1> Explore Builds - showing results for <em><%= params[:query][:search_word] %></em></h1>
+<% else %>
   <h1>Explore Builds</h1>
+<% end %>
+
   <%= simple_form_for :query, url: builds_path, method: :get do |f| %>
     <div class="d-flex align-items-center position-relative">
-      <%= f.input :search_word, placeholder: "Search for a build...", label: false, required: false, input_html: { value: @params_query, class: "search-field"} ,wrapper_html: { class: "no-margin" } %>
+      <%= f.input :search_word, placeholder: "Search by build name, appliance or creator name...", label: false, required: false, input_html: { value: @params_query, class: "search-field"}, wrapper_html: { class: "no-margin" } %>
       <div class="icon-positioning">
-        <span class="material-symbols-outlined">search</span>
+        <span class="material-symbols-outlined icon-circle text-white">search</span>
       </div>
     </div>
   <% end %>

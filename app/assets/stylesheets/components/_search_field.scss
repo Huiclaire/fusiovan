@@ -2,21 +2,22 @@
   background-color: white;
   border: 1px solid #c6c6c6;
   border-radius: 33px;
-  width: 329px;
+  width: 440px;
   height: 50px;
+  padding-left: 18px;
 }
 
 .icon-positioning {
   position: relative;
   position: absolute;
-  top: 13px;
-  right: 20px;
+  top: 4px;
+  right: 5px;
 }
 
 .icon-circle {
-  position: absolute;
-  top: 20px;
-  width: 50px;
-  height: 50px;
   background-color: #142970;
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+  padding: 9px;
 }
