@@ -30,7 +30,7 @@
 
       <% end %>
 
-      <%= button_tag "Next", type: "button",
+      <%= button_tag "Next", type: "button", class: "btn btn-banner mt-5", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToNext",
           next_step: "1"
@@ -65,13 +65,13 @@
                      required: false %>
       <% end %>
 
-      <%= button_tag "Previous", type: "button",
+      <%= button_tag "Previous", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToPrevious",
           previous_step: "1"
         } %>
 
-      <%= button_tag "Next", type: "button",
+      <%= button_tag "Next", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToNext",
           next_step: "2"
@@ -106,13 +106,13 @@
                     required: false %>
       <% end %>
 
-      <%= button_tag "Previous", type: "button",
+      <%= button_tag "Previous", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToPrevious",
           previous_step: "2"
         } %>
 
-      <%= button_tag "Next", type: "button",
+      <%= button_tag "Next", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToNext",
           next_step: "3"
@@ -147,13 +147,13 @@
                     required: false %>
       <% end %>
 
-      <%= button_tag "Previous", type: "button",
+      <%= button_tag "Previous", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToPrevious",
           previous_step: "3"
         } %>
 
-      <%= button_tag "Next", type: "button",
+      <%= button_tag "Next", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToNext",
           next_step: "4"
@@ -188,13 +188,13 @@
                     required: false %>
       <% end %>
 
-      <%= button_tag "Previous", type: "button",
+      <%= button_tag "Previous", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToPrevious",
           previous_step: "4"
         } %>
 
-      <%= button_tag "Next", type: "button",
+      <%= button_tag "Next", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToNext",
           next_step: "5"
@@ -229,13 +229,13 @@
                     required: false %>
       <% end %>
 
-      <%= button_tag "Previous", type: "button",
+      <%= button_tag "Previous", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToPrevious",
           previous_step: "5"
         } %>
 
-      <%= button_tag "Next", type: "button",
+      <%= button_tag "Next", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToNext",
           next_step: "6"
@@ -268,13 +268,13 @@
           :label => false,
           :collection => Battery.formatted, required: false %>
 
-      <%= button_tag "Previous", type: "button",
+      <%= button_tag "Previous", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToPrevious",
           previous_step: "6"
         } %>
 
-      <%= button_tag "Next", type: "button",
+      <%= button_tag "Next", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToNext",
           next_step: "7"
@@ -306,13 +306,13 @@
                         :label => false,
                         :collection => SolarPanel.formatted, required: false %>
 
-       <%= button_tag "Previous", type: "button",
+       <%= button_tag "Previous", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToPrevious",
           previous_step: "7"
         } %>
 
-      <%= button_tag "Next", type: "button",
+      <%= button_tag "Next", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToNext",
           next_step: "8"
@@ -327,7 +327,7 @@
     <br>
       <%= f.input :name, :label => "Name your build!", required: false %>
 
-            <%= button_tag "Previous", type: "button",
+            <%= button_tag "Previous", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToPrevious",
           previous_step: "8"
