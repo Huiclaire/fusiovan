@@ -1,0 +1,32 @@
+// Base layout of the cards grid
+.category-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+// To move/hide the checkbox
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+// Base styling for each card (LABEL)
+.category-selector+label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  padding: 10px 10px 30px 10px;
+}
+
+// IMPORTANT: This is where you add the styling for the card that is checked
+.category-selector:checked+label {
+  // border: solid .5px black;
+  // border-radius: 5%;
+  .builds-card-container-new.card-shadow.box-relative {
+  border:  .5px solid black;
+  // TODO: CHANGE THIS
+  }
+}

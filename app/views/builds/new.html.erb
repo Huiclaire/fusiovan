@@ -7,14 +7,27 @@
           <h2><%= "Select your fridge" %></h2>
         </div>
         <br>
-        <%= fa.input :appliance_id,
-                     :label => false,
-                     :collection => Appliance.find_appliance("fridge"),
-                     required: false %>
+        <fieldset class="mb-3 radio_buttons optional build_build_appliances_appliance_id">
+          <div class="category-wrapper">
+            <input type="hidden" name="build[build_appliances_attributes][0][appliance_id]" value="" autocomplete="off">
+
+            <% Appliance.where(kind: "fridge").each do |appliance| %>
+              <div class="category-item">
+                <input class="form-check-input radio_buttons optional category-selector" type="radio" value="<%= appliance.id %>" name="build[build_appliances_attributes][0][appliance_id]" id="build_build_appliances_attributes_0_appliance_id_<%= appliance.id %>">
+                <label
+                  class="form-check-label collection_radio_buttons"
+                  for="build_build_appliances_attributes_0_appliance_id_<%= appliance.id %>">
+                  <%= render "shared/appliance_card_redesigned", appliance: appliance %>
+                </label>
+              </div>
+            <% end %>
+          </div>
+        </fieldset>
         <%= fa.input :use_hours,
                      :label => "How many hours a day will you use your fridge?",
-                     :collection => 1..24,
+                     :collection => 1..12,
                      required: false %>
+
       <% end %>
 
       <%= button_tag "Next", type: "button",
@@ -30,13 +43,25 @@
           <h2><%= "Select your lights" %></h2>
         </div>
         <br>
-        <%= fa.input :appliance_id,
-                     :label => false,
-                     :collection => Appliance.find_appliance("lights"),
-                     required: false %>
+        <fieldset class="mb-3 radio_buttons optional build_build_appliances_appliance_id">
+          <div class="category-wrapper">
+            <input type="hidden" name="build[build_appliances_attributes][1][appliance_id]" value="" autocomplete="off">
+
+            <% Appliance.where(kind: "lights").each do |appliance| %>
+              <div class="category-item">
+                <input class="form-check-input radio_buttons optional category-selector" type="radio" value="<%= appliance.id %>" name="build[build_appliances_attributes][1][appliance_id]" id="build_build_appliances_attributes_1_appliance_id_<%= appliance.id %>">
+                <label
+                  class="form-check-label collection_radio_buttons"
+                  for="build_build_appliances_attributes_1_appliance_id_<%= appliance.id %>">
+                  <%= render "shared/appliance_card_redesigned", appliance: appliance %>
+                </label>
+              </div>
+            <% end %>
+          </div>
+        </fieldset>
         <%= fa.input :use_hours,
                      :label => "How many hours a day will you use your lights?",
-                     :collection => 1..24,
+                     :collection => 1..12,
                      required: false %>
       <% end %>
 
@@ -59,13 +84,25 @@
             <h2><%= "Select your fan" %></h2>
         </div>
         <br>
-        <%= fa.input :appliance_id,
-                    :label => false,
-                    :collection => Appliance.find_appliance("fan"),
-                    required: false %>
+        <fieldset class="mb-3 radio_buttons optional build_build_appliances_appliance_id">
+          <div class="category-wrapper">
+            <input type="hidden" name="build[build_appliances_attributes][2][appliance_id]" value="" autocomplete="off">
+
+            <% Appliance.where(kind: "fan").each do |appliance| %>
+              <div class="category-item">
+                <input class="form-check-input radio_buttons optional category-selector" type="radio" value="<%= appliance.id %>" name="build[build_appliances_attributes][2][appliance_id]" id="build_build_appliances_attributes_2_appliance_id_<%= appliance.id %>">
+                <label
+                  class="form-check-label collection_radio_buttons"
+                  for="build_build_appliances_attributes_2_appliance_id_<%= appliance.id %>">
+                  <%= render "shared/appliance_card_redesigned", appliance: appliance %>
+                </label>
+              </div>
+            <% end %>
+          </div>
+        </fieldset>
         <%= fa.input :use_hours,
                     :label => "How many hours a day will you use your fan?",
-                    :collection => 1..24,
+                    :collection => 1..12,
                     required: false %>
       <% end %>
 
@@ -83,14 +120,32 @@
     </div>
 
     <div data-wizard-target="step" class="d-none">
-    <div class="create-page-header">
-      <h2><%= "Select your battery" %></h2>
-    </div>
-    <%# <div>you can choose multiple</div> %>
-    <br>
-      <%= f.association :battery,
-                        :label => false,
-                        :collection => Battery.formatted, required: false %>
+      <%= f.simple_fields_for :build_appliances do |fa| %>
+        <div class="create-page-header">
+            <h2><%= "Select your water pump" %></h2>
+        </div>
+        <br>
+        <fieldset class="mb-3 radio_buttons optional build_build_appliances_appliance_id">
+          <div class="category-wrapper">
+            <input type="hidden" name="build[build_appliances_attributes][3][appliance_id]" value="" autocomplete="off">
+
+            <% Appliance.where(kind: "pump").each do |appliance| %>
+              <div class="category-item">
+                <input class="form-check-input radio_buttons optional category-selector" type="radio" value="<%= appliance.id %>" name="build[build_appliances_attributes][3][appliance_id]" id="build_build_appliances_attributes_3_appliance_id_<%= appliance.id %>">
+                <label
+                  class="form-check-label collection_radio_buttons"
+                  for="build_build_appliances_attributes_3_appliance_id_<%= appliance.id %>">
+                  <%= render "shared/appliance_card_redesigned", appliance: appliance %>
+                </label>
+              </div>
+            <% end %>
+          </div>
+        </fieldset>
+        <%= fa.input :use_hours,
+                    :label => "How many hours a day will you use your fan?",
+                    :collection => 1..12,
+                    required: false %>
+      <% end %>
 
       <%= button_tag "Previous", type: "button",
         data: {
@@ -106,16 +161,34 @@
     </div>
 
     <div data-wizard-target="step" class="d-none">
-    <div class="create-page-header">
-        <h2><%= "Select your solar panel" %></h2>
-    </div>
-    <%# <div>you can choose multiple</div> %>
-    <br>
-      <%= f.association :solar_panel,
-                        :label => false,
-                        :collection => SolarPanel.formatted, required: false %>
+      <%= f.simple_fields_for :build_appliances do |fa| %>
+        <div class="create-page-header">
+            <h2><%= "Select your 12V charger" %></h2>
+        </div>
+        <br>
+        <fieldset class="mb-3 radio_buttons optional build_build_appliances_appliance_id">
+          <div class="category-wrapper">
+            <input type="hidden" name="build[build_appliances_attributes][4][appliance_id]" value="" autocomplete="off">
 
-       <%= button_tag "Previous", type: "button",
+            <% Appliance.where(kind: "charger").each do |appliance| %>
+              <div class="category-item">
+                <input class="form-check-input radio_buttons optional category-selector" type="radio" value="<%= appliance.id %>" name="build[build_appliances_attributes][4][appliance_id]" id="build_build_appliances_attributes_4_appliance_id_<%= appliance.id %>">
+                <label
+                  class="form-check-label collection_radio_buttons"
+                  for="build_build_appliances_attributes_4_appliance_id_<%= appliance.id %>">
+                  <%= render "shared/appliance_card_redesigned", appliance: appliance %>
+                </label>
+              </div>
+            <% end %>
+          </div>
+        </fieldset>
+        <%= fa.input :use_hours,
+                    :label => "How many hours a day will you use your 12V charger?",
+                    :collection => 1..12,
+                    required: false %>
+      <% end %>
+
+      <%= button_tag "Previous", type: "button",
         data: {
           action: "click->wizard#goToPrevious",
           previous_step: "4"
@@ -128,18 +201,126 @@
         } %>
     </div>
 
+      <div data-wizard-target="step" class="d-none">
+      <%= f.simple_fields_for :build_appliances do |fa| %>
+        <div class="create-page-header">
+            <h2><%= "Select your Inverter" %></h2>
+        </div>
+        <br>
+        <fieldset class="mb-3 radio_buttons optional build_build_appliances_appliance_id">
+          <div class="category-wrapper">
+            <input type="hidden" name="build[build_appliances_attributes][5][appliance_id]" value="" autocomplete="off">
+
+            <% Appliance.where(kind: "inverter").each do |appliance| %>
+              <div class="category-item">
+                <input class="form-check-input radio_buttons optional category-selector" type="radio" value="<%= appliance.id %>" name="build[build_appliances_attributes][5][appliance_id]" id="build_build_appliances_attributes_5_appliance_id_<%= appliance.id %>">
+                <label
+                  class="form-check-label collection_radio_buttons"
+                  for="build_build_appliances_attributes_5_appliance_id_<%= appliance.id %>">
+                  <%= render "shared/appliance_card_redesigned", appliance: appliance %>
+                </label>
+              </div>
+            <% end %>
+          </div>
+        </fieldset>
+        <%= fa.input :use_hours,
+                    :label => "How many hours a day will you use your Inverter?",
+                    :collection => 1..12,
+                    required: false %>
+      <% end %>
+
+      <%= button_tag "Previous", type: "button",
+        data: {
+          action: "click->wizard#goToPrevious",
+          previous_step: "5"
+        } %>
+
+      <%= button_tag "Next", type: "button",
+        data: {
+          action: "click->wizard#goToNext",
+          next_step: "6"
+        } %>
+    </div>
+
+    <div data-wizard-target="step" class="d-none">
+    <div class="create-page-header">
+      <h2><%= "Select your battery" %></h2>
+    </div>
+    <br>
+    <fieldset class="mb-3 radio_buttons optional build_battery">
+      <div class="category-wrapper">
+        <input type="hidden" name="build[battery_id]" value="" autocomplete="off">
+        <% Battery.all.each do |battery| %>
+          <div class="category-item">
+            <input class="form-check-input radio_buttons optional category-selector" type="radio" value="<%= battery.id %>" name="build[battery_id]" id="build_battery_id_<%= battery.id %>">
+            <label
+              class="form-check-label collection_radio_buttons"
+              for="build_battery_id_<%= battery.id %>">
+              <%= render "shared/battery_card_redesigned", battery: battery %>
+            </label>
+           </div>
+          <% end %>
+        </div>
+      </fieldset>
+
+      <%= button_tag "Previous", type: "button", class: "btn btn-banner mt-5",
+        data: {
+          action: "click->wizard#goToPrevious",
+          previous_step: "6"
+        } %>
+
+      <%= button_tag "Next", type: "button",
+        data: {
+          action: "click->wizard#goToNext",
+          next_step: "7"
+        } %>
+    </div>
+
+    <div data-wizard-target="step" class="d-none">
+    <div class="create-page-header">
+        <h2><%= "Select your solar panel" %></h2>
+    </div>
+    <br>
+    <fieldset class="mb-3 radio_buttons optional build_solar_panel">
+      <div class="category-wrapper">
+        <input type="hidden" name="build[solar_panel_id]" value="" autocomplete="off">
+        <% SolarPanel.all.each do |solar_panel| %>
+          <div class="category-item">
+            <input class="form-check-input radio_buttons optional category-selector" type="radio" value="<%= solar_panel.id %>" name="build[solar_panel_id]" id="build_solar_panel_id_<%= solar_panel.id %>">
+            <label
+              class="form-check-label collection_radio_buttons"
+              for="build_solar_panel_id_<%= solar_panel.id %>">
+              <%= render "shared/solar_panel_card_redesigned", solar_panel: solar_panel %>
+            </label>
+           </div>
+          <% end %>
+        </div>
+      </fieldset>
+
+       <%= button_tag "Previous", type: "button",
+        data: {
+          action: "click->wizard#goToPrevious",
+          previous_step: "7"
+        } %>
+
+      <%= button_tag "Next", type: "button",
+        data: {
+          action: "click->wizard#goToNext",
+          next_step: "8"
+        } %>
+    </div>
+
     <div data-wizard-target="step" class="d-none">
     <div class="create-page-header">
         <h2><%= "Wrapping up your new build" %></h2>
     </div>
-    <%# <div>you can choose multiple</div> %>
     <br>
       <%= f.input :name, :label => "Name your build!", required: false %>
 
             <%= button_tag "Previous", type: "button",
         data: {
           action: "click->wizard#goToPrevious",
-          previous_step: "4"
+          previous_step: "8"
         } %>
       <%= f.button :submit, class: "btn-primary" %>
     </div>

@@ -6,15 +6,18 @@
   overflow: hidden;
   background-size: cover;
   background-position: center;
+  padding: 0px;
 }
 
 .header .container {
   position: relative;
   z-index: 2;
+  padding: 0px;
 }
 
 .header .overlay {
   position: absolute;
+  padding: 0px;
   top: 0;
   left: 0;
   height: 100%;
