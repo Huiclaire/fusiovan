@@ -26,8 +26,8 @@
   // border: solid .5px black;
   // border-radius: 5%;
   .builds-card-container-new.card-shadow.box-relative {
-  border:  .75px solid $primary;
-  opacity: 0.6;
+  border:  2px solid $primary;
+  opacity: 0.8;
   // TODO: CHANGE THIS
   }
 }
@@ -35,6 +35,11 @@
 .form-wrapper {
   display: flex;
   justify-content: flex-end;
+}
+
+.form-wrapper-final {
+  display: flex;
+  justify-content: center;
 }
 
 .form-label {
@@ -49,8 +54,22 @@
   margin: 0 20px 0 20px;
 }
 
+.form-input-final {
+  border-radius: 60px;
+  height: 40px;
+  text-align: center;
+  width: 150px;
+  margin: 0 20px 0 20px;
+}
+
 .form-buttons {
   display: flex;
   justify-content: flex-end;
-  margin: 50px 20px;
+  margin: 10px 20px;
+}
+
+.form-buttons-final {
+  display: flex;
+  justify-content: center;
+  margin: 10px 20px;
 }
