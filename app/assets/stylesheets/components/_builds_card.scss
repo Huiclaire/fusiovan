@@ -1,6 +1,5 @@
 .builds-card-container-new {
   overflow: hidden;
-  // border: 1px solid #142970;
   border-radius: 11px;
   padding: 15px;
   background: white;
@@ -14,8 +13,7 @@
 }
 
 .build-title-new {
-  font-size: 30px;
-  // font-style: bold;
+  font-size: 30px;;
   color: black;
   font-family: 'Roboto', sans-serif;
 }
@@ -37,11 +35,9 @@
 
 .cards-new {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  row-gap: 40px;
-  // column-gap: 60px;
-  justify-content: space-around;
+  row-gap: 20px;
 }
 
 .trio-line {
