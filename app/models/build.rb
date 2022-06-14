@@ -17,4 +17,15 @@ class Build < ApplicationRecord
   def total_amp_hours
     build_appliances.sum(:amp_hours)
   end
+
+  include PgSearch::Model
+  pg_search_scope :global_search,
+    against: [ :name ],
+    associated_against: {
+      user: [ :first_name, :last_name ],
+      appliances: [ :kind ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
 end

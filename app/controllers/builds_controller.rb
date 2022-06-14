@@ -1,7 +1,13 @@
 class BuildsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
+
   def index
-    @builds = Build.includes(:solar_panel, :battery, :user, :build_appliances)
+    # @params_query = params[:query] && params[:query][:search_word] ? params[:query][:search_word] : ""
+    if params[:query].present? && params[:query][:search_word].present?
+      @builds = Build.global_search(params[:query][:search_word])
+    else
+      @builds = Build.includes(:solar_panel, :battery, :user, :build_appliances)
+    end
   end
 
   def show
