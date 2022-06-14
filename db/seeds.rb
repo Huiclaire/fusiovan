@@ -63,9 +63,9 @@ BuildAppliance.destroy_all
 
   # inv
 
-    inv8 = Appliance.create!(kind: "Inverter", make: "Xantrax", model: "SW 600", voltage: 12, amps: 8, price: 215, product_url: "https://xantrex.com/products/inverters/prowattsw/")
-    inv14 = Appliance.create!(kind: "Inverter", make: "Xantrax", model: "SW 1000", voltage: 12, amps: 14, price: 325, product_url: "https://xantrex.com/products/inverters/prowattsw/")
-    inv20 = Appliance.create!(kind: "Inverter", make: "Xantrax", model: "SW 2000", voltage: 12, amps: 20, price: 365, product_url: "https://xantrex.com/products/inverters/prowattsw/")
+    inv8 = Appliance.create!(kind: "inverter", make: "Xantrax", model: "SW 600", voltage: 12, amps: 8, price: 215, product_url: "https://xantrex.com/products/inverters/prowattsw/")
+    inv14 = Appliance.create!(kind: "inverter", make: "Xantrax", model: "SW 1000", voltage: 12, amps: 14, price: 325, product_url: "https://xantrex.com/products/inverters/prowattsw/")
+    inv20 = Appliance.create!(kind: "inverter", make: "Xantrax", model: "SW 2000", voltage: 12, amps: 20, price: 365, product_url: "https://xantrex.com/products/inverters/prowattsw/")
 
     puts "created #{Appliance.count} appliances"
 

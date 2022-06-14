@@ -6,7 +6,7 @@
 <%= render "shared/appliance_card_redesigned", appliance: Appliance.first %>
 
 <%# display battery-card %>
-<%= render "shared/battery_card_redesigned", build: Build.first %>
+<%= render "shared/battery_card_redesigned", battery: battery %>
 
 <%# display build-card %>
 <%= render "shared/build_card", build: Build.first, appliances: Build.first.appliances %>
@@ -21,7 +21,7 @@
 <%= render "shared/sidebar" %>
 
 <%# display solar panel card %>
-<%= render "shared/solar_panel_card_redesigned", build: Build.first %>
+<%= render "shared/solar_panel_card_redesigned", solar_panel: solar_panel %>
 
 <%# display overview card %>
 <%= render "shared/overview_card" %>
