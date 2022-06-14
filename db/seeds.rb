@@ -37,9 +37,9 @@ BuildAppliance.destroy_all
 
   # lights
 
-    lights1 = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 4 Pack", voltage: 12, amps: 1, price: 28, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
-    lights1x5 = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 6 Pack", voltage: 12, amps: 1.5, price: 39, product_url: "https://acegoo.myshopify.com/products/12v-led-puck-light-rv-boat-overhead-recessed-mount-ceiling-light-12v-down-light-for-camper-vans-truck-motorhome-sailboat-interior-lighting-6-pack")
-    lights2 = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck Light 8 Pack", voltage: 12, amps: 2, price: 56, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
+    lights1 = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck 4 Pack", voltage: 12, amps: 1, price: 28, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
+    lights1x5 = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck 6 Pack", voltage: 12, amps: 1.5, price: 39, product_url: "https://acegoo.myshopify.com/products/12v-led-puck-light-rv-boat-overhead-recessed-mount-ceiling-light-12v-down-light-for-camper-vans-truck-motorhome-sailboat-interior-lighting-6-pack")
+    lights2 = Appliance.create!(kind: "lights", make: "Acegoo", model: "LED Puck 8 Pack", voltage: 12, amps: 2, price: 56, product_url: "https://acegoo.myshopify.com/products acegoo-rv-boat-led-recessed-ceiling-light-4-pieces-super-slim-full-aluminum-1")
 
   # fan
 
@@ -57,8 +57,8 @@ BuildAppliance.destroy_all
   # charger
 
       charger1 = Appliance.create!(kind: "charger", make: "Qidoe", model: "2 Pack QC Outlet", voltage: 12, amps: 1, price: 17, product_url: "https://www.amazon.com/Outlet-Charge-Waterproof-Charger-Motorcycle/dp/B089SNPYFL/ref=sr_1_10?crid=149OIKSU03BKX&keywords=12v+outlet&qid=1655131280&sprefix=12v+outl%2Caps%2C340&sr=8-10")
-      charger6 = Appliance.create!(kind: "charger", make: "Wotobeus", model: "120 Watt Charger", voltage: 12, amps: 6, price: 42, product_url: "https://www.amazon.com/Charger-WOTOBEUS-Charging-Cigarette-S21Ultra/dp/B09GJTF54Z/ref=sr_1_3?crid=1E3035OGZ2HDJ&keywords=high+watt+usb+c+car+charger&qid=1655131701&sprefix=high+watt+usb+c+car+charger%2Caps%2C442&sr=8-3")
-      charger3 = Appliance.create!(kind: "charger", make: "Ainope", model: "48 Watt Charger", voltage: 12, amps: 3, price: 18, product_url: "https://www.amazon.com/Charger-AINOPE-Adapter-Compatible-Samsung/dp/B07RHSD9WM/ref=sr_1_2?crid=1E3035OGZ2HDJ&keywords=high+watt+usb+c+car+charger&qid=1655131701&sprefix=high+watt+usb+c+car+charger%2Caps%2C442&sr=8-2")
+      charger6 = Appliance.create!(kind: "charger", make: "Wotobeus", model: "120W Charger", voltage: 12, amps: 6, price: 42, product_url: "https://www.amazon.com/Charger-WOTOBEUS-Charging-Cigarette-S21Ultra/dp/B09GJTF54Z/ref=sr_1_3?crid=1E3035OGZ2HDJ&keywords=high+watt+usb+c+car+charger&qid=1655131701&sprefix=high+watt+usb+c+car+charger%2Caps%2C442&sr=8-3")
+      charger3 = Appliance.create!(kind: "charger", make: "Ainope", model: "48W Charger", voltage: 12, amps: 3, price: 18, product_url: "https://www.amazon.com/Charger-AINOPE-Adapter-Compatible-Samsung/dp/B07RHSD9WM/ref=sr_1_2?crid=1E3035OGZ2HDJ&keywords=high+watt+usb+c+car+charger&qid=1655131701&sprefix=high+watt+usb+c+car+charger%2Caps%2C442&sr=8-2")
 
 
   # inv
@@ -79,9 +79,9 @@ BuildAppliance.destroy_all
 
 # battery
 
-  battery100 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle Battery", voltage: 12, amp_hours: 100, price: 269.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-100ah/")
-  battery200 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle Battery", voltage: 12, amp_hours: 200, price: 395.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-200ah/")
-  battery170 = Battery.create!(kind: "Lithium Iron Phosphate", make: "Renogy", model: "Lithium-Iron Deep Cycle Battery", voltage: 12, amp_hours: 170, price: 1279.99, product_url: "https://renogy.com/lithium-iron-phosphate-battery-12-volt-170ah/")
+  battery100 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle", voltage: 12, amp_hours: 100, price: 269.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-100ah/")
+  battery200 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle", voltage: 12, amp_hours: 200, price: 395.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-200ah/")
+  battery170 = Battery.create!(kind: "Lithium Iron Phosphate", make: "Renogy", model: "Li-ion Deep C", voltage: 12, amp_hours: 170, price: 1279.99, product_url: "https://renogy.com/lithium-iron-phosphate-battery-12-volt-170ah/")
 
   puts "created #{Battery.count} batteries"
 

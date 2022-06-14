@@ -14,7 +14,7 @@
     </div>
   <% end %>
 </div>
-<div class="cards-new card-wrapper-new">
+<div class="cards-new card-wrapper-index">
   <% @builds.each do |build| %>
     <%= render "shared/build_card", build: build, appliances: build.appliances %>
   <% end %>
