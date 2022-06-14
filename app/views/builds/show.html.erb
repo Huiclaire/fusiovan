@@ -13,12 +13,10 @@
     <h2 class="mt-5 mb-3">Components</h2>
     <div class="card-space card-grid">
       <div>
-        <%# <h3 class="mt-3 mb-3", style="opacity: .8;">Battery</h3> %>
-        <%= render "shared/battery_card_redesigned", build: @build %>
+        <%= render "shared/battery_card_redesigned", battery: @build.battery %>
       </div>
       <div>
-        <%# <h3 class="mt-3 mb-3 text-opacity", style="opacity: .8;">Solar Panel</h3> %>
-        <%= render "shared/solar_panel_card_redesigned", build: @build %>
+        <%= render "shared/solar_panel_card_redesigned", solar_panel: @build.solar_panel %>
       </div>
     </div>
   </div>
