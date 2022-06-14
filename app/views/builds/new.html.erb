@@ -4,13 +4,27 @@
     <div data-wizard-target="step">
       <%= f.simple_fields_for :build_appliances do |fa| %>
         <div class="create-page-header">
+        <%# <div class="cards-new card-wrapper-new"> %>
           <h2><%= "Select your fridge" %></h2>
+        </div>
+
+
+        <div class="cards-new card-wrapper-new">
+          <% Appliance.where(kind: "fridge").each do |appliance| %>
+          <%= render "shared/appliance_card_redesigned", appliance: appliance %>
+          <% end %>
+        </div>
         </div>
         <br>
         <%= fa.input :appliance_id,
-                     :label => false,
-                     :collection => Appliance.find_appliance("fridge"),
-                     required: false %>
+                      as: :radio_buttons,
+                      collection_wrapper_tag: 'div',
+                      collection_wrapper_class: 'cards-new card-wrapper-new',
+                      # item_wrapper_class: 'builds-card-container-new card-shadow box-relative',
+                      input_html: {class: 'category-selector'},
+                      :label => "false",
+                      :collection => Appliance.find_appliance("fridge"),
+                      required: false %>
         <%= fa.input :use_hours,
                      :label => "How many hours a day will you use your fridge?",
                      :collection => 1..24,
