@@ -26,11 +26,14 @@
         <%= fa.input :use_hours,
                      :label => "How many hours a day will you use your fridge?",
                      :collection => 1..12,
-                     required: false %>
+                     required: false,
+                     wrapper_html: { class: "form-wrapper"},
+                     label_html: {class: "form-label"},
+                     input_html: {class: "form-input"} %>
 
       <% end %>
 
-      <%= button_tag "Next", type: "button",
+      <%= button_tag "Next", type: "button", class:"form-button",
         data: {
           action: "click->wizard#goToNext",
           next_step: "1"

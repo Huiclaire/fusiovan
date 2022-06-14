@@ -30,3 +30,30 @@
   // TODO: CHANGE THIS
   }
 }
+
+.form-wrapper {
+  display: flex;
+}
+
+.form-label {
+
+}
+
+.form-input {
+
+}
+
+.form-button {
+    color: white;
+    background-color: $primary;
+    padding: 10px 30px 10px 30px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+  }
+
+  .form-button:hover {
+    background: $orange;
+    color: white;
+  }
