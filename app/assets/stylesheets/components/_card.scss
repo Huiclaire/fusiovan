@@ -12,11 +12,13 @@
   width: 600px;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 0 20px 8px #d0d0d0;
+  box-shadow: 0 0 10px rgba(29, 48, 112, 0.4);
+  transition: 0.2s;
 
-  .icon {
-    height: 100px;
-    width: 30px;
+  &:not(.no-hover) {
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
 }
