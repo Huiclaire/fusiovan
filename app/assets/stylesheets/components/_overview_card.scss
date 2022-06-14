@@ -1,11 +1,13 @@
 .card-overview {
   background: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(29, 48, 112, 0.4);
   height: 95%;
   padding: 18px;
   border-radius: 11px;
   // margin-top: 46px;
-  height: 740px;
+  width: 278px;
+  height: 83vh;
+  margin-right: 18px;
 }
 
 .card-overview h2 {
@@ -22,20 +24,33 @@
 
 
 .card-overview p {
-  font-size: 16px;
+  font-size: 14px;
   margin: 0;
   margin-top: 12px;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 18px;
+  position: relative;
+  margin-right: 520px;
+  margin-left: 16px;
 }
 
-.small-text {
+.pill-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 12px;
-  font-size: 12pz;
+}
+
+.pill-text {
+  font-size: 10px;
+  color: #807E7E;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sidebar-overview {
+  position: fixed;
+  top: 95px;
+  right: 35px;
 }
