@@ -26,15 +26,22 @@
         <%= fa.input :use_hours,
                      :label => "How many hours a day will you use your fridge?",
                      :collection => 1..12,
-                     required: false %>
+                     required: false,
+                     wrapper_html: { class: "form-wrapper"},
+                     label_html: {class: "form-label"},
+                     input_html: {class: "form-input"},
+                     wrapper_html: { class: "form-wrapper"},
+                     label_html: {class: "form-label"},
+                     input_html: {class: "form-input"} %>
 
       <% end %>
-
-      <%= button_tag "Next", type: "button",
+      <div class="form-buttons">
+      <%= button_tag "Next", type: "button", class:"btn-first",
         data: {
           action: "click->wizard#goToNext",
           next_step: "1"
         } %>
+      </div>
     </div>
 
     <div data-wizard-target="step" class="d-none">
@@ -62,20 +69,24 @@
         <%= fa.input :use_hours,
                      :label => "How many hours a day will you use your lights?",
                      :collection => 1..12,
-                     required: false %>
+                     required: false,
+                     wrapper_html: { class: "form-wrapper"},
+                     label_html: {class: "form-label"},
+                     input_html: {class: "form-input"} %>
       <% end %>
-
-      <%= button_tag "Previous", type: "button",
+      <div class="form-buttons">
+      <%= button_tag "Previous", type: "button", class:"btn-ghost",
         data: {
           action: "click->wizard#goToPrevious",
           previous_step: "1"
         } %>
 
-      <%= button_tag "Next", type: "button",
+      <%= button_tag "Next", type: "button", class:"btn-first",
         data: {
           action: "click->wizard#goToNext",
           next_step: "2"
         } %>
+      </div>
     </div>
 
     <div data-wizard-target="step" class="d-none">
@@ -103,20 +114,28 @@
         <%= fa.input :use_hours,
                     :label => "How many hours a day will you use your fan?",
                     :collection => 1..12,
-                    required: false %>
+                    required: false,
+                    wrapper_html: { class: "form-wrapper"},
+                    label_html: {class: "form-label"},
+                    input_html: {class: "form-input"},
+                    wrapper_html: { class: "form-wrapper"},
+                    label_html: {class: "form-label"},
+                    input_html: {class: "form-input"}  %>
       <% end %>
 
-      <%= button_tag "Previous", type: "button",
+      <div class="form-buttons">
+      <%= button_tag "Previous", type: "button", class:"btn-ghost",
         data: {
           action: "click->wizard#goToPrevious",
           previous_step: "2"
         } %>
 
-      <%= button_tag "Next", type: "button",
+      <%= button_tag "Next", type: "button", class:"btn-first",
         data: {
           action: "click->wizard#goToNext",
           next_step: "3"
         } %>
+      </div>
     </div>
 
     <div data-wizard-target="step" class="d-none">
@@ -144,20 +163,25 @@
         <%= fa.input :use_hours,
                     :label => "How many hours a day will you use your fan?",
                     :collection => 1..12,
-                    required: false %>
+                    required: false,
+                    wrapper_html: { class: "form-wrapper"},
+                    label_html: {class: "form-label"},
+                    input_html: {class: "form-input"} %>
       <% end %>
 
-      <%= button_tag "Previous", type: "button",
-        data: {
-          action: "click->wizard#goToPrevious",
-          previous_step: "3"
-        } %>
+      <div class="form-buttons">
+        <%= button_tag "Previous", type: "button", class:"btn-ghost",
+          data: {
+            action: "click->wizard#goToPrevious",
+            previous_step: "3"
+          } %>
 
-      <%= button_tag "Next", type: "button",
-        data: {
-          action: "click->wizard#goToNext",
-          next_step: "4"
-        } %>
+        <%= button_tag "Next", type: "button", class:"btn-first",
+          data: {
+            action: "click->wizard#goToNext",
+            next_step: "4"
+          } %>
+      </div>
     </div>
 
     <div data-wizard-target="step" class="d-none">
@@ -185,20 +209,25 @@
         <%= fa.input :use_hours,
                     :label => "How many hours a day will you use your 12V charger?",
                     :collection => 1..12,
-                    required: false %>
+                    required: false,
+                    wrapper_html: { class: "form-wrapper"},
+                    label_html: {class: "form-label"},
+                    input_html: {class: "form-input"} %>
       <% end %>
 
-      <%= button_tag "Previous", type: "button",
-        data: {
-          action: "click->wizard#goToPrevious",
-          previous_step: "4"
-        } %>
+    <div class="form-buttons">
+        <%= button_tag "Previous", type: "button", class:"btn-ghost",
+          data: {
+            action: "click->wizard#goToPrevious",
+            previous_step: "4"
+          } %>
 
-      <%= button_tag "Next", type: "button",
-        data: {
-          action: "click->wizard#goToNext",
-          next_step: "5"
-        } %>
+        <%= button_tag "Next", type: "button", class:"btn-first",
+          data: {
+            action: "click->wizard#goToNext",
+            next_step: "5"
+          } %>
+      </div>
     </div>
 
       <div data-wizard-target="step" class="d-none">
@@ -226,20 +255,25 @@
         <%= fa.input :use_hours,
                     :label => "How many hours a day will you use your Inverter?",
                     :collection => 1..12,
-                    required: false %>
+                    required: false,
+                    wrapper_html: { class: "form-wrapper"},
+                    label_html: {class: "form-label"},
+                    input_html: {class: "form-input"} %>
       <% end %>
 
-      <%= button_tag "Previous", type: "button",
-        data: {
-          action: "click->wizard#goToPrevious",
-          previous_step: "5"
-        } %>
+    <div class="form-buttons">
+        <%= button_tag "Previous", type: "button", class:"btn-ghost",
+          data: {
+            action: "click->wizard#goToPrevious",
+            previous_step: "5"
+          } %>
 
-      <%= button_tag "Next", type: "button",
-        data: {
-          action: "click->wizard#goToNext",
-          next_step: "6"
-        } %>
+        <%= button_tag "Next", type: "button", class:"btn-first",
+          data: {
+            action: "click->wizard#goToNext",
+            next_step: "6"
+          } %>
+      </div>
     </div>
 
     <div data-wizard-target="step" class="d-none">
@@ -263,17 +297,19 @@
         </div>
       </fieldset>
 
-      <%= button_tag "Previous", type: "button", class: "btn btn-banner mt-5",
-        data: {
-          action: "click->wizard#goToPrevious",
-          previous_step: "6"
-        } %>
+    <div class="form-buttons">
+        <%= button_tag "Previous", type: "button", class:"btn-ghost",
+          data: {
+            action: "click->wizard#goToPrevious",
+            previous_step: "6"
+          } %>
 
-      <%= button_tag "Next", type: "button",
-        data: {
-          action: "click->wizard#goToNext",
-          next_step: "7"
-        } %>
+        <%= button_tag "Next", type: "button", class:"btn-first",
+          data: {
+            action: "click->wizard#goToNext",
+            next_step: "7"
+          } %>
+      </div>
     </div>
 
     <div data-wizard-target="step" class="d-none">
@@ -297,32 +333,41 @@
         </div>
       </fieldset>
 
-       <%= button_tag "Previous", type: "button",
-        data: {
-          action: "click->wizard#goToPrevious",
-          previous_step: "7"
-        } %>
+    <div class="form-buttons">
+        <%= button_tag "Previous", type: "button", class:"btn-ghost",
+          data: {
+            action: "click->wizard#goToPrevious",
+            previous_step: "7"
+          } %>
 
-      <%= button_tag "Next", type: "button",
-        data: {
-          action: "click->wizard#goToNext",
-          next_step: "8"
-        } %>
+        <%= button_tag "Next", type: "button", class:"btn-first",
+          data: {
+            action: "click->wizard#goToNext",
+            next_step: "8"
+          } %>
+      </div>
     </div>
 
     <div data-wizard-target="step" class="d-none">
     <div class="create-page-header">
-        <h2><%= "Wrapping up your new build" %></h2>
+        <h2><%= "Let's wrap up! Name your new build:" %></h2>
     </div>
     <br>
-      <%= f.input :name, :label => "Name your build!", required: false %>
+      <%= f.input :name,
+                  :label => false,
+                  required: false,
+                  wrapper_html: { class: "form-wrapper-final"},
+                  label_html: {class: "form-label-final"},
+                  input_html: {class: "form-input-final"} %>
 
-            <%= button_tag "Previous", type: "button",
-        data: {
+        <div class="form-buttons-final">
+          <%= button_tag "Previous", type: "button", class:"btn-ghost",
+          data: {
           action: "click->wizard#goToPrevious",
           previous_step: "8"
-        } %>
-      <%= f.button :submit, class: "btn-primary" %>
+          } %>
+          <%= f.button :submit, class: "btn-first" %>
+      </div>
     </div>
   <% end %>
   </div>
