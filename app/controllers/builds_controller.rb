@@ -10,7 +10,6 @@ class BuildsController < ApplicationController
 
   def new
     @build = Build.new
-    @builds = Build.includes(:solar_panel, :battery, :user, :build_appliances)
     @build.build_appliances.build
   end
 

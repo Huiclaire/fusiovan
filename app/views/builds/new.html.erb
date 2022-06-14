@@ -246,8 +246,25 @@
     <div class="create-page-header">
       <h2><%= "Select your battery" %></h2>
     </div>
+    <br>
+    <fieldset class="mb-3 radio_buttons optional build_battery">
+      <div class="category-wrapper">
+        <input type="hidden" name="build[battery_id]" value="" autocomplete="off">
+        <% Battery.all.each do |battery| %>
+          <div class="category-item">
+            <input class="form-check-input radio_buttons optional category-selector" type="radio" value="<%= battery.id %>" name="build[battery_id]" id="build_battery_id_<%= battery.id %>">
+            <label
+              class="form-check-label collection_radio_buttons"
+              for="build_battery_id_<%= battery.id %>">
+              <%= render "shared/battery_card_redesigned", battery: battery %>
+            </label>
+           </div>
+          <% end %>
+        </div>
+      </fieldset>
+
     <%# <div>you can choose multiple</div> %>
-    <%= f.association :battery,
+    <%#= f.association :battery,
           :label => false,
           :collection => Battery.formatted, required: false %>
 
@@ -268,9 +285,24 @@
     <div class="create-page-header">
         <h2><%= "Select your solar panel" %></h2>
     </div>
-    <%# <div>you can choose multiple</div> %>
     <br>
-      <%= f.association :solar_panel,
+    <fieldset class="mb-3 radio_buttons optional build_solar_panel">
+      <div class="category-wrapper">
+        <input type="hidden" name="build[solar_panel_id]" value="" autocomplete="off">
+        <% SolarPanel.all.each do |solar_panel| %>
+          <div class="category-item">
+            <input class="form-check-input radio_buttons optional category-selector" type="radio" value="<%= solar_panel.id %>" name="build[solar_panel_id]" id="build_solar_panel_id_<%= solar_panel.id %>">
+            <label
+              class="form-check-label collection_radio_buttons"
+              for="build_solar_panel_id_<%= solar_panel.id %>">
+              <%= render "shared/solar_panel_card_redesigned", solar_panel: solar_panel %>
+            </label>
+           </div>
+          <% end %>
+        </div>
+      </fieldset>
+    <%# <div>you can choose multiple</div> %>
+      <%#= f.association :solar_panel,
                         :label => false,
                         :collection => SolarPanel.formatted, required: false %>
 

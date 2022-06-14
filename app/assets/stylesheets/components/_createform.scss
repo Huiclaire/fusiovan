@@ -23,10 +23,10 @@
 
 // IMPORTANT: This is where you add the styling for the card that is checked
 .category-selector:checked+label {
-  border: solid .5px black;
-  border-radius: 5%;
-  .build-cards-container-new .card-shadow-box-relative {
-  border: solid .5px black;
+  // border: solid .5px black;
+  // border-radius: 5%;
+  .builds-card-container-new.card-shadow.box-relative {
+  border:  .5px solid black;
   // TODO: CHANGE THIS
   }
 }
