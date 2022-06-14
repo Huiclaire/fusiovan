@@ -6,27 +6,27 @@
     <% @build.appliances.each do |appliance| %>
       <% if appliance.kind == "inverter" %>
         <div class="pill-container me-1">
-          <span class="pill-font"> 🔌 inverter</span>
+          <span class="pill-font">🔌 inverter</span>
         </div>
       <% elsif appliance.kind == "lights"%>
         <div class="pill-container me-1">
-          <span class="pill-font"> 💡 lights</span>
+          <span class="pill-font">💡 lights</span>
         </div>
       <% elsif appliance.kind == "fridge"%>
         <div class="pill-container me-1">
-          <span class="pill-font"> 🧊 fridge</span>
+          <span class="pill-font">❄️ fridge</span>
         </div>
       <% elsif appliance.kind == "fan"%>
         <div class="pill-container me-1">
-          <span class="pill-font"> 💨 fan</span>
+          <span class="pill-font">💨 fan</span>
         </div>
       <% elsif appliance.kind == "pump"%>
         <div class="pill-container me-1">
-          <span class="pill-font"> 💧 Water pump</span>
+          <span class="pill-font">💧 Water pump</span>
         </div>
       <% elsif appliance.kind == "charger"%>
         <div class="pill-container me-1">
-          <span class="pill-font"> 📱 12V charger</span>
+          <span class="pill-font">⚡️ 12V charger</span>
         </div>
       <% end %>
     <% end %>
@@ -34,7 +34,7 @@
   <div class="pill-grid pill-text mt-3">
     <% @build.appliances.pluck(:kind).each do |kind| %>
       <% if kind == "fridge" %>
-        <p>🧊 <%= @build.fridge_use_hours %> hr, <%= @build.fridge_amp_hours %> Ah</p>
+        <p>❄️ <%= @build.fridge_use_hours %> hr, <%= @build.fridge_amp_hours %> Ah</p>
       <% elsif kind == "inverter" %>
       <p>🔌  <%= @build.inverter_use_hours %> hr, <%= @build.inverter_amp_hours %> Ah</p> %>
       <% elsif kind == "fan" %>
@@ -44,7 +44,7 @@
       <% elsif kind == "pump" %>
       <p>💧 <%= @build.pump_use_hours %> hr, <%= @build.pump_amp_hours %> Ah</p>
       <% elsif kind == "charger" %>
-      <p>📱 <%= @build.charger_use_hours %> hr, <%= @build.charger_amp_hours %> Ah</p>
+      <p> ⚡️ <%= @build.charger_use_hours %> hr, <%= @build.charger_amp_hours %> Ah</p>
       <% end %>
     <% end %>
   </div>
