@@ -263,12 +263,7 @@
         </div>
       </fieldset>
 
-    <%# <div>you can choose multiple</div> %>
-    <%#= f.association :battery,
-          :label => false,
-          :collection => Battery.formatted, required: false %>
-
-      <%= button_tag "Previous", type: "button",
+      <%= button_tag "Previous", type: "button", class: "btn btn-banner mt-5",
         data: {
           action: "click->wizard#goToPrevious",
           previous_step: "6"
@@ -301,10 +296,6 @@
           <% end %>
         </div>
       </fieldset>
-    <%# <div>you can choose multiple</div> %>
-      <%#= f.association :solar_panel,
-                        :label => false,
-                        :collection => SolarPanel.formatted, required: false %>
 
        <%= button_tag "Previous", type: "button",
         data: {
@@ -323,7 +314,6 @@
     <div class="create-page-header">
         <h2><%= "Wrapping up your new build" %></h2>
     </div>
-    <%# <div>you can choose multiple</div> %>
     <br>
       <%= f.input :name, :label => "Name your build!", required: false %>
 
