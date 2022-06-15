@@ -1,3 +1,13 @@
 <div class="page-headers">
   <h1>All Components</h1>
 </div>
+
+<div class="cards-new card-wrapper-index">
+  <% @batteries.each do |battery| %>
+    <%= render "shared/battery_card_redesigned", battery: battery %>
+  <% end %>
+
+<% @solar_panels.each do |solar_panel| %>
+  <%= render "shared/solar_panel_card_redesigned", solar_panel: solar_panel %>
+<% end %>
+</div>
