@@ -1,2 +1,8 @@
 <div class="page-headers"><h1>All Appliances</h1>
 </div>
+
+<div class="cards-new card-wrapper-index">
+  <% @appliances.each do |appliance| %>
+    <%= render "shared/appliance_card_redesigned", appliance: appliance %>
+  <% end %>
+</div>
