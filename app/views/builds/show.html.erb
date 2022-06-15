@@ -1,5 +1,13 @@
-<div class="page-headers">
+<div class="page-headers d-flex justify-content-between">
   <h1><%= @build.name.capitalize %></h1>
+  <%# use '&' to sort out the case of not logged in. Alternatively wrap code in an 'if' to check whether logged in %>
+  <% bookmark = current_user&.bookmarks&.find_by(build: @build) %>
+  <% if bookmark.present? %>
+    <p class="bookmarked">Added to bookmarks ♥</p>
+  <% else %>
+    <%# don't forget to specify 'method: :post' - the route uses POST %>
+    <%= link_to "Add to bookmarks ♡", build_bookmarks_path(@build), method: :post, class: "bookmark-text" %>
+  <% end %>
 </div>
 <div class="card-wrapper-new mb-3">
   <div>
