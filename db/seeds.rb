@@ -22,7 +22,7 @@ BuildAppliance.destroy_all
 
   user3 = User.create!(email: "user3@email.com", password: "123456", reset_password_token: "reset token test 3", first_name: "Jamie", last_name: "Guzman", bio: "I've decided to rent my personal camper van François, so that others can enjoy the beauty of nature and have a comfortable camping experience. I try to be a responsible steward of the land, air, water, and biodiversity. Realizing that we all have impacts when we visit natural areas and parks, I will donate 2% of proceeds to environmental causes, National Parks Foundations, and other friend group organizations. Please reach out with any questions!", user_url: "https://kitt.lewagon.com/placeholder/users/christinasugiono")
 
-  user4 = User.create!(email: "user4@email.com", password: "123456", reset_password_token: "reset token test 4", first_name: "Patricio", last_name: "Henrickson", bio: "We love to camp, our camping love started with backpacking trips in college and as we had kids shifted to long car/RV camping trips with the kids. We have slowly introduced them to backpacking but our primary camping trips are 3-4 days in length. We transitioned from a pop-up trailer and now have a van that we rent out here on Vanish.", user_url: "https://kitt.lewagon.com/placeholder/users/rayhanw")
+  user4 = User.create!(email: "user4@email.com", password: "123456", reset_password_token: "reset token test 4", first_name: "Patricio", last_name: "Henrickson", bio: "We love to camp, our camping love started with backpacking trips in college and as we had kids shifted to long car/RV camping trips with the kids. We have slowly introduced them to backpacking but our primary camping trips are 3-4 days in length. We transitioned from a pop-up trailer and now have a van that we rent out here on Vanish.", user_url: "https://kitt.lewagon.com/placeholder/users/random")
 
   puts "created 4 users"
 
@@ -30,7 +30,7 @@ BuildAppliance.destroy_all
 
   # img_url (need to add in a migration)
   # fridge
-    fridge1 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 50", voltage: 12, amps: 1, price: 599, img:"new_fridge",product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/camper-van-refrigerators/dometic-crx-50t-231419", image_tag "battery_color.png")
+    fridge1 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 50", voltage: 12, amps: 1, price: 599, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/camper-van-refrigerators/dometic-crx-50t-231419")
     fridge1x25 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 65", voltage: 12, amps: 1.25, price: 629, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/mini-fridges/dometic-crx-65t-231420")
     fridge2x2 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 140s", voltage: 12, amps: 2.2, price: 1820, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/rv-refrigerators/dometic-crx-140s-136705")
 
@@ -88,7 +88,7 @@ BuildAppliance.destroy_all
 # BUILDS
 
   # user 1 24ah
-    build1 = Build.create!(name: 'stay light', solar_panel: panel100, battery: battery100, user: user1)
+    build1 = Build.create!(name: 'stay light', solar_panel: panel100, battery: battery100, user: user4)
     fridge1_build = BuildAppliance.create!(
       use_hours: 12, amp_hours: 12, build: build1, appliance: fridge1
     )
@@ -120,7 +120,7 @@ BuildAppliance.destroy_all
     build2.update(total_price: build2.set_total_price)
 
   # user 1 61ah
-    build3 = Build.create!(name: 'Sprint Deluxe', solar_panel: panel450, battery: battery170, user: user1)
+    build3 = Build.create!(name: 'Sprint Deluxe', solar_panel: panel450, battery: battery170, user: user3)
 
     fridge2x2_build = BuildAppliance.create!(
       use_hours: 10, amp_hours: 22, build: build3, appliance: fridge2x2
@@ -218,7 +218,7 @@ BuildAppliance.destroy_all
 
 
   # user 3 48ah
-    build8 = Build.create!(name: 'Amine', solar_panel: panel170, battery: battery200, user: user3)
+    build8 = Build.create!(name: 'Sprinter', solar_panel: panel170, battery: battery200, user: user3)
 
     fridge1x25_build = BuildAppliance.create!(
       use_hours: 20, amp_hours: 25, build: build8, appliance: fridge1x25
@@ -239,7 +239,7 @@ BuildAppliance.destroy_all
     build8.update(total_price: build8.set_total_price)
 
   # user 3 61ah
-    build9 = Build.create!(name: 'Folds', solar_panel: panel450, battery: battery170, user: user3)
+    build9 = Build.create!(name: 'Koala', solar_panel: panel450, battery: battery170, user: user3)
 
     fridge2x2_build = BuildAppliance.create!(
       use_hours: 10, amp_hours: 22, build: build9, appliance: fridge2x2
@@ -271,6 +271,6 @@ puts "created #{Build.count} builds"
   Bookmark.create(user: user2, build: build6)
   Bookmark.create(user: user3, build: build7)
   Bookmark.create(user: user1, build: build8)
-  Bookmark.create(user: user4, build: build9)
+  Bookmark.create(user: user1, build: build9)
 
   puts "created #{Bookmark.count} bookmarks"
