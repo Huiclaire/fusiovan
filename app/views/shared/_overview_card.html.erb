@@ -34,17 +34,17 @@
   <div class="pill-grid pill-text mb-3">
     <% @build.appliances.pluck(:kind).each do |kind| %>
       <% if kind == "fridge" %>
-        <p class="me-1 mb-1">❄️ <%= @build.fridge_use_hours.to_i %> hr, <%= @build.fridge_amp_hours %> Ah</p>
+        <p class="me-1 mb-1">❄️ <%= @build.fridge_use_hours.to_i %> hr, <%= @build.fridge_amp_hours.round(2) %> Ah</p>
       <% elsif kind == "inverter" %>
-      <p class="me-1 mb-1">🔌  <%= @build.inverter_use_hours.to_i %> hr, <%= @build.inverter_amp_hours %> Ah</p> %>
+      <p class="me-1 mb-1">🔌  <%= @build.inverter_use_hours.to_i %> hr, <%= @build.inverter_amp_hours.round(2) %> Ah</p>
       <% elsif kind == "fan" %>
       <p class="me-1 mb-1">💨 <%= @build.fan_use_hours.to_i %> hr, <%= @build.fan_amp_hours.round(2) %> Ah</p>
       <% elsif kind == "lights" %>
-      <p class="me-1 mb-1">💡 <%= @build.lights_use_hours.to_i %> hr, <%= @build.lights_amp_hours %> Ah</p>
+      <p class="me-1 mb-1">💡 <%= @build.lights_use_hours.to_i %> hr, <%= @build.lights_amp_hours.round(2) %> Ah</p>
       <% elsif kind == "pump" %>
-      <p class="me-1 mb-1">💧 <%= @build.pump_use_hours.to_i %> hr, <%= @build.pump_amp_hours %> Ah</p>
+      <p class="me-1 mb-1">💧 <%= @build.pump_use_hours.to_i %> hr, <%= @build.pump_amp_hours.round(2) %> Ah</p>
       <% elsif kind == "charger" %>
-      <p class="me-1 mb-1"> ⚡️ <%= @build.charger_use_hours.to_i %> hr, <%= @build.charger_amp_hours %> Ah</p>
+      <p class="me-1 mb-1"> ⚡️ <%= @build.charger_use_hours.to_i %> hr, <%= @build.charger_amp_hours.round(2) %> Ah</p>
       <% end %>
     <% end %>
   </div>
@@ -52,12 +52,12 @@
   <div class="d-flex d-flex align-items-start flex-column bd-highlight">
     <div class="p-1 bd-highlight">
       <p class="mb-0">Total daily battery usage</p>
-      <h5 class="mt-1"><%= @build.total_amp_hours %> AH</h5>
+      <h5 class="mt-1"><%= @build.total_amp_hours %> Ah</h5>
     </div>
 
     <div class="p-1 bd-highlight">
       <p class="mb-2"><strong>Battery</strong></p>
-      <p class="mb-2">🔋 <%= @build.battery.make %>, <%= @build.battery.amp_hours %> AH</p>
+      <p class="mb-2">🔋 <%= @build.battery.make %>, <%= @build.battery.amp_hours %> Ah</p>
     </div>
     <div class="p-1 bd-highlight">
       <p class="mb-2"><strong>Solar Panel</strong></p>
