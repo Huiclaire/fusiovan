@@ -1,6 +1,9 @@
 <div class="page-headers d-flex justify-content-between">
 <% if params[:query].present? && params[:query][:search_word].present? %>
-  <h1> Explore Builds - showing results for <em><%= params[:query][:search_word] %></em></h1>
+  <div class="index-results">
+  <h1>Explore Builds</h1>
+  <p> Showing <%= @builds.length %> results for <%= @params_query %> </p>
+  </div>
 <% else %>
   <h1>Explore Builds</h1>
 <% end %>
