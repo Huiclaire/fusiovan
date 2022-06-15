@@ -6,7 +6,7 @@
                 <p class="mb-1"><%= build.name %></p>
               </div>
             </div>
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/random", class: "avatar-large", alt: "avatar-large" %>
+            <%= image_tag build.user.user_url, class: "avatar-large", alt: "avatar-large" %>
           </div>
           <p class="appliances-text mb-2">Appliances</p>
           <div class="d-flex" style="flex-wrap: wrap">
