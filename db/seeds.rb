@@ -30,7 +30,7 @@ BuildAppliance.destroy_all
 
   # img_url (need to add in a migration)
   # fridge
-    fridge1 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 50", voltage: 12, amps: 1, price: 599, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/camper-van-refrigerators/dometic-crx-50t-231419", image_tag "battery_color.png")
+    fridge1 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 50", voltage: 12, amps: 1, price: 599, img:"new_fridge",product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/camper-van-refrigerators/dometic-crx-50t-231419", image_tag "battery_color.png")
     fridge1x25 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 65", voltage: 12, amps: 1.25, price: 629, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/mini-fridges/dometic-crx-65t-231420")
     fridge2x2 = Appliance.create!(kind: "fridge", make: "Dometic", model: "CRX 140s", voltage: 12, amps: 2.2, price: 1820, product_url: "https://www.dometic.com/en-us/outdoor/food-and-beverage/refrigerators/rv-refrigerators/dometic-crx-140s-136705")
 
