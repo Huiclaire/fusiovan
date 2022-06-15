@@ -88,7 +88,7 @@ BuildAppliance.destroy_all
 # BUILDS
 
   # user 1 24ah
-    build1 = Build.create!(name: 'stay light', solar_panel: panel100, battery: battery100, user: user1)
+    build1 = Build.create!(name: 'stay light', solar_panel: panel100, battery: battery100, user: user4)
     fridge1_build = BuildAppliance.create!(
       use_hours: 12, amp_hours: 12, build: build1, appliance: fridge1
     )
@@ -120,7 +120,7 @@ BuildAppliance.destroy_all
     build2.update(total_price: build2.set_total_price)
 
   # user 1 61ah
-    build3 = Build.create!(name: 'Sprint Deluxe', solar_panel: panel450, battery: battery170, user: user1)
+    build3 = Build.create!(name: 'Sprint Deluxe', solar_panel: panel450, battery: battery170, user: user4)
 
     fridge2x2_build = BuildAppliance.create!(
       use_hours: 10, amp_hours: 22, build: build3, appliance: fridge2x2
@@ -218,7 +218,7 @@ BuildAppliance.destroy_all
 
 
   # user 3 48ah
-    build8 = Build.create!(name: 'Amine', solar_panel: panel170, battery: battery200, user: user3)
+    build8 = Build.create!(name: 'Sprinter', solar_panel: panel170, battery: battery200, user: user3)
 
     fridge1x25_build = BuildAppliance.create!(
       use_hours: 20, amp_hours: 25, build: build8, appliance: fridge1x25
@@ -239,7 +239,7 @@ BuildAppliance.destroy_all
     build8.update(total_price: build8.set_total_price)
 
   # user 3 61ah
-    build9 = Build.create!(name: 'Folds', solar_panel: panel450, battery: battery170, user: user3)
+    build9 = Build.create!(name: 'Koala', solar_panel: panel450, battery: battery170, user: user3)
 
     fridge2x2_build = BuildAppliance.create!(
       use_hours: 10, amp_hours: 22, build: build9, appliance: fridge2x2
@@ -271,6 +271,6 @@ puts "created #{Build.count} builds"
   Bookmark.create(user: user2, build: build6)
   Bookmark.create(user: user3, build: build7)
   Bookmark.create(user: user1, build: build8)
-  Bookmark.create(user: user4, build: build9)
+  Bookmark.create(user: user1, build: build9)
 
   puts "created #{Bookmark.count} bookmarks"
