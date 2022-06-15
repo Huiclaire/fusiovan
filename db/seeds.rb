@@ -266,11 +266,11 @@ BuildAppliance.destroy_all
 puts "created #{Build.count} builds"
 
 
-  # Bookmark.create(user: user2, build: build4)
-  # Bookmark.create(user: user2, build: build5)
-  # Bookmark.create(user: user2, build: build6)
-  # Bookmark.create(user: user1, build: build7)
-  # Bookmark.create(user: user1, build: build8)
-  # Bookmark.create(user: user1, build: build9)
+  Bookmark.create(user: user2, build: build4)
+  Bookmark.create(user: user1, build: build5)
+  Bookmark.create(user: user2, build: build6)
+  Bookmark.create(user: user3, build: build7)
+  Bookmark.create(user: user1, build: build8)
+  Bookmark.create(user: user4, build: build9)
 
-  # puts "created #{Bookmark.count} bookmarks"
+  puts "created #{Bookmark.count} bookmarks"
