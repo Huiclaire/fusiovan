@@ -1,0 +1,14 @@
+.bookmark-text {
+  padding-top: 10px;
+  padding-right: 31px;
+  text-decoration: none;
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.bookmarked {
+  padding-top: 10px;
+  padding-right: 31px;
+  color: #0C2471;
+}
