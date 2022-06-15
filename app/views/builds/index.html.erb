@@ -7,7 +7,6 @@
 <% else %>
   <h1>Explore Builds</h1>
 <% end %>
-
   <%= simple_form_for :query, url: builds_path, method: :get do |f| %>
     <div class="d-flex align-items-center position-relative">
       <%= f.input :search_word, placeholder: "Search by build name, appliance or creator name...", label: false, required: false, input_html: { value: @params_query, class: "search-field"}, wrapper_html: { class: "no-margin" } %>
