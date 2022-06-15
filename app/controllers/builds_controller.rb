@@ -26,7 +26,7 @@ class BuildsController < ApplicationController
     if @build.save
       @build.update(total_price: @build.set_total_price)
          # Will raise ActiveModel::ForbiddenAttributesError
-      flash[:alert] = "Your build #{@build.name} has been added to your Dashboard!"
+      # flash[:alert] = "Your build #{@build.name} has been added to your Dashboard!"
       redirect_to build_path(@build)
     else
       flash[:alert] = "Error #{@build.errors.objects.first.full_message}"
