@@ -7,33 +7,39 @@
     <div class="d-flex h-100 text-center align-items-center">
       <div class="w-100 text-white">
         <h1 class="display-1">FusioVan</h1>
-        <h1>Dream. Design. Build.</h1>
-        <%= link_to "Get started", builds_path, class: "btn btn-banner mt-5" %>
+        <h1 class="slogan" >Dream. Design. Build.</h1>
+        <%= link_to "Get started", builds_path, class: "btn btn-banner mt-3" %>
       </div>
     </div>
   </div>
 </div>
+
 <div class="mh-100" style="height: 90px"></div>
 <div class="row m-0">
-  <div class="col-lg-3"></div>
-  <div class="col-lg-9">
+  <%# <div class="col-lg-3"></div> %>
+  <div class="top-lettering">
     <div id="white_rectangle">
       Design, optimise and share
     </div>
   </div>
-  <div class="col-lg-3"></div>
-  <div class="col-lg-9">
+  <div class="blue-box">
+    <div class="blue-leftside"></div>
     <div id="blue_rectangle">
-      Your custom van
+      Your <strong>custom</strong> van build
     </div>
-  </div>
+    <div class="blue-rightside"></div>
+
 </div>
 <div class="container">
-  <div class="mh-100" style="height: 80px"></div>
+  <div class="mh-50" style="height: 80px"></div>
     <div class="p-center">
-    Fusiovan makes building your custom van easy. Mix and match a wide variety of appliances and components  to get the perfect build.
+    Fusiovan makes building your custom van easy.
+    <br>
+    Mix and match a wide variety of appliances and components
+    <br>
+     to get the <strong>perfect build</strong>.
     </div>
-  <div class="mh-100" style="height: 50px"></div>
+  <%# <div class="mh-100" style="height: 50px"></div> %>
   <div class="row justify-content-center">
     <div class="col-lg-3 d-flex justify-content-center"></div>
     <div class="col-lg-3 d-flex justify-content-center">
@@ -44,10 +50,10 @@
     </div>
     <div class="col-lg-3 d-flex justify-content-center"></div>
     <div class="mh-100" style="height: 150px"></div>
-    <h2>Designing a van is a whole adventure</h2>
+    <h2 class="home-headers">Designing a van is a whole adventure</h2>
     <div class="image-iceberg" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "iceberg.png" %>');"></div>
     <div class="mh-100" style="height: 150px"></div>
-    <h2>Build your van in 3 simple steps</h2>
+    <h2 class="home-headers">Build your van in 3 simple steps</h2>
     <div class="col-lg-4 justify-content-center">
       <div class="image-step" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "step_1.png" %>');"></div>
       <div class="row margin-left-large">
@@ -89,7 +95,7 @@
     </div>
   </div>
   <div class="mh-100" style="height: 150px"></div>
-  <h2>Explore the world’s first custom van build designer</h2>
+  <h2 class="home-headers">Explore the world’s first custom van build designer</h2>
   <div class="mh-100" style="height: 60px"></div>
     <div class="row d-flex justify-content-around">
       <div class="card-strength d-flex align-items-center">
@@ -137,7 +143,7 @@
       </div>
     </div>
     <div class="mh-100" style="height: 150px"></div>
-      <h2>Recent builds from our community</h2>
+      <h2 class="home-headers">Recent builds from our community</h2>
     <div class="mh-100" style="height: 60px"></div>
     <div class="homepage-cards">
       <div class="cards-new mb-5"> <% @builds.each do |build| %>
