@@ -350,28 +350,35 @@
 
     <div data-wizard-target="step" class="d-none">
     <div class="create-page-header">
-        <h2><%= "Let's wrap up! Name your new build:" %></h2>
+        <h2><%= "Let's wrap up..." %></h2>
     </div>
-    <div class="create-image">
-    <%=image_tag "createvan.jpg", alt: "create logo" %>
-    </div>
-    <br>
-      <%= f.input :name,
-                  :label => false,
-                  required: false,
-                  wrapper_html: { class: "form-wrapper-final"},
-                  label_html: {class: "form-label-final"},
-                  input_html: {class: "form-input-final"} %>
+    <div class="create-final-image">
+      <div class="create-image">
+      <%=image_tag "final01.jpg", alt: "create image" %>
+      </div> <%# create final image %>
+      <br>
+      <div class="create-final-wrapper">
+        <div class="gears">
+              <%=image_tag "gears.gif", alt: "gears image" %>
+        </div>
+        <%= f.input :name,
+                    :label => "Name your new build!",
+                    required: false,
+                    wrapper_html: { class: "form-wrapper-final"},
+                    label_html: {class: "form-label-final"},
+                    input_html: {class: "form-input-final"} %>
 
-        <div class="form-buttons-final">
-          <%= button_tag "Previous", type: "button", class:"btn-ghost",
-          data: {
-          action: "click->wizard#goToPrevious",
-          previous_step: "8"
-          } %>
-          <%= f.button :submit, class: "btn-first" %>
-      </div>
-    </div>
+          <div class="form-buttons-final">
+            <%= button_tag "Previous", type: "button", class:"btn-ghost",
+            data: {
+              action: "click->wizard#goToPrevious",
+            previous_step: "8"
+            } %>
+            <%= f.button :submit, class: "btn-first" %>
+          </div>
+      </div> <%# create final wrapper %>
+  <%# </div> %>
+  </div> <%# create final image %>
   <% end %>
   </div>
 </div>
