@@ -41,7 +41,7 @@
           <div class="appliances-text d-flex border-top card-bottom-boxes-position w-100">
             <div class="d-flex flex-column w-100 right-border ps-3">
               <p class="mb-2 pt-2">Daily Battery Usage</p>
-              <p class="text-black"><strong><%= build.total_amp_hours %> Ah</strong></p>
+              <p class="text-black"><strong><%= build.total_amp_hours.round(2) %> Ah</strong></p>
             </div>
             <div class="d-flex flex-column w-100 ps-3">
               <p class="mb-2 pt-2">Total Price</p>
