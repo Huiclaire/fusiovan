@@ -16,13 +16,14 @@ BuildAppliance.destroy_all
 # USERS:
 
 
-  user1 = User.create!(email: "email1@email.com", password: "123456", reset_password_token: "reset token test 1", first_name: "Josh", last_name: "Howard", bio: "Am I supposed to write something here?", user_url: "https://kitt.lewagon.com/placeholder/users/ThierryMR")
+  user1 = User.create!(email: "email1@email.com", password: "123456", reset_password_token: "reset token test 1", first_name: "Maxime", last_name: "Howard", bio: "Am I supposed to write something here?", user_url: "https://kitt.lewagon.com/placeholder/users/ThierryMR")
 
   user2 = User.create!(email: "email2@email.com", password: "123456", reset_password_token: "reset token test 2", first_name: "Melissa", last_name: "Ugas", bio: "I like turtles.", user_url: "https://kitt.lewagon.com/placeholder/users/menzoid")
 
   user3 = User.create!(email: "user3@email.com", password: "123456", reset_password_token: "reset token test 3", first_name: "Jamie", last_name: "Guzman", bio: "I've decided to rent my personal camper van François, so that others can enjoy the beauty of nature and have a comfortable camping experience. I try to be a responsible steward of the land, air, water, and biodiversity. Realizing that we all have impacts when we visit natural areas and parks, I will donate 2% of proceeds to environmental causes, National Parks Foundations, and other friend group organizations. Please reach out with any questions!", user_url: "https://kitt.lewagon.com/placeholder/users/christinasugiono")
 
   user4 = User.create!(email: "user4@email.com", password: "123456", reset_password_token: "reset token test 4", first_name: "Patricio", last_name: "Henrickson", bio: "We love to camp, our camping love started with backpacking trips in college and as we had kids shifted to long car/RV camping trips with the kids. We have slowly introduced them to backpacking but our primary camping trips are 3-4 days in length. We transitioned from a pop-up trailer and now have a van that we rent out here on Vanish.", user_url: "https://kitt.lewagon.com/placeholder/users/random")
+
 
   puts "created 4 users"
 
@@ -134,16 +135,16 @@ BuildAppliance.destroy_all
       use_hours: 12, amp_hours: 7, build: build3, appliance: fanx6
     )
 
-    pump6_build = BuildAppliance.create!(
-      use_hours: 2, amp_hours: 12, build: build3, appliance: pump6
-    )
+    # pump6_build = BuildAppliance.create!(
+    #   use_hours: 2, amp_hours: 12, build: build3, appliance: pump6
+    # )
 
     charger1_build = BuildAppliance.create!(
       use_hours: 8, amp_hours: 8, build: build3, appliance: charger1
     )
 
 
-    build3.update(total_price: build3.set_total_price)
+    build3.update(total_price: 1422)
 
     ######################
 
@@ -239,14 +240,14 @@ BuildAppliance.destroy_all
     build8.update(total_price: build8.set_total_price)
 
   # user 3 61ah
-    build9 = Build.create!(name: 'Koala', solar_panel: panel450, battery: battery170, user: user3)
+    build9 = Build.create!(name: 'Koala', solar_panel: panel450, battery: battery170, user: user4)
 
     fridge2x2_build = BuildAppliance.create!(
-      use_hours: 10, amp_hours: 22, build: build9, appliance: fridge2x2
+      use_hours: 6, amp_hours: 20, build: build9, appliance: fridge2x2
     )
 
     lights2_build = BuildAppliance.create!(
-      use_hours: 6, amp_hours: 12, build: build9, appliance: lights2
+      use_hours: 4, amp_hours: 8, build: build9, appliance: lights2
     )
 
     fanx6_build = BuildAppliance.create!(
@@ -254,23 +255,22 @@ BuildAppliance.destroy_all
     )
 
     pump6_build = BuildAppliance.create!(
-      use_hours: 2, amp_hours: 12, build: build9, appliance: pump6
+      use_hours: 2, amp_hours: 11, build: build9, appliance: pump6
     )
 
     charger1_build = BuildAppliance.create!(
-      use_hours: 8, amp_hours: 8, build: build9, appliance: charger1
+      use_hours: 4, amp_hours: 2, build: build9, appliance: charger1
     )
 
-    build9.update(total_price: build9.set_total_price)
+    build9.update(total_price: 1840)
 
 puts "created #{Build.count} builds"
 
 
-  Bookmark.create(user: user2, build: build4)
-  Bookmark.create(user: user1, build: build5)
+  Bookmark.create(user: user1, build: build4)
+  Bookmark.create(user: user1, build: build8)
   Bookmark.create(user: user2, build: build6)
   Bookmark.create(user: user3, build: build7)
-  Bookmark.create(user: user1, build: build8)
   Bookmark.create(user: user1, build: build9)
 
   puts "created #{Bookmark.count} bookmarks"
