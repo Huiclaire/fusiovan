@@ -80,8 +80,8 @@ BuildAppliance.destroy_all
 
 # battery
 
-  battery100 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle", voltage: 12, amp_hours: 100, price: 269.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-100ah/")
-  battery200 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle", voltage: 12, amp_hours: 200, price: 395.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-200ah/")
+  battery100 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle 100", voltage: 12, amp_hours: 100, price: 269.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-100ah/")
+  battery200 = Battery.create!(kind: "AGM", make: "Renogy", model: "AGM Deep Cycle 200", voltage: 12, amp_hours: 200, price: 395.99, product_url: "https://renogy.com/deep-cycle-agm-battery-12-volt-200ah/")
   battery170 = Battery.create!(kind: "Lithium Iron Phosphate", make: "Renogy", model: "Li-ion Deep C", voltage: 12, amp_hours: 170, price: 1279.99, product_url: "https://renogy.com/lithium-iron-phosphate-battery-12-volt-170ah/")
 
   puts "created #{Battery.count} batteries"

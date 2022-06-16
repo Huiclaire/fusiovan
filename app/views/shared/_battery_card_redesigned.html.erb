@@ -6,8 +6,8 @@
         <p class="appliances-text mb-1"><%= battery.make %></p>
       </div>
     </div>
-    <div style="width 30px">
-      <%= image_tag "new_battery.png", class: "appliance-img" %>
+    <div>
+      <%= image_tag "new_battery_#{battery.model.gsub(/\s+/, "").downcase}.png", class: "battery-img"%>
     </div>
   </div>
   <div class="d-flex mt-5">
