@@ -89,7 +89,7 @@ BuildAppliance.destroy_all
 # BUILDS
 
   # user 1 24ah
-    build1 = Build.create!(name: 'stay light', solar_panel: panel100, battery: battery100, user: user4)
+    build1 = Build.create!(name: 'Stay light', solar_panel: panel100, battery: battery100, user: user4)
     fridge1_build = BuildAppliance.create!(
       use_hours: 12, amp_hours: 12, build: build1, appliance: fridge1
     )
