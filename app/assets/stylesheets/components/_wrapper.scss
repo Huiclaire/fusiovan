@@ -26,6 +26,8 @@
 
 .create-page-header {
   // margin: 0px 25px 0px 25px;
+  padding-left: 8px;
+  margin-bottom: 30px;
   // place holder for when this gets worked on.
 }
 
@@ -49,13 +51,13 @@
 
 .sidebar-header {
   h2 {
-    margin: -30px 0px 30px 0px;
+    margin: -45px 0px 30px 0px;
     font-family: 'Quicksand', sans-serif;
   }
 }
 .sidebar-logo {
   height: 120px;
-  margin-top: 15px;
+  margin-top: 30px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
