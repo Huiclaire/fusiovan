@@ -137,11 +137,11 @@
       </div>
     </div>
     <div class="mh-100" style="height: 150px"></div>
-    <h2>Select recent builds from our community</h2>
+      <h2>Recent builds from our community</h2>
     <div class="mh-100" style="height: 60px"></div>
     <div class="cards-new mb-5">
       <% @builds.each do |build| %>
-        <%= render "shared/build_card", build: Build.first, appliances: Build.first.appliances %>
+        <%= render "shared/build_card", build: build, appliances: build.appliances %>
       <% end %>
     </div>
   </div>
