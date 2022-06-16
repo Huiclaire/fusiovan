@@ -16,14 +16,17 @@ BuildAppliance.destroy_all
 # USERS:
 
 
-  user1 = User.create!(email: "email1@email.com", password: "123456", reset_password_token: "reset token test 1", first_name: "Maxime", last_name: "Howard", bio: "Am I supposed to write something here?", user_url: "https://kitt.lewagon.com/placeholder/users/ThierryMR")
+  user1 = User.create!(email: "email1@email.com", password: "1234561", reset_password_token: "reset token test 1", first_name: "Maxime", last_name: "Howard", bio: "Am I supposed to write something here?", user_url: "https://kitt.lewagon.com/placeholder/users/ThierryMR")
 
-  user2 = User.create!(email: "email2@email.com", password: "123456", reset_password_token: "reset token test 2", first_name: "Melissa", last_name: "Ugas", bio: "I like turtles.", user_url: "https://kitt.lewagon.com/placeholder/users/menzoid")
+  user2 = User.create!(email: "email2@email.com", password: "1234561", reset_password_token: "reset token test 2", first_name: "Melissa", last_name: "Ugas", bio: "I like turtles.", user_url: "https://kitt.lewagon.com/placeholder/users/menzoid")
 
-  user3 = User.create!(email: "user3@email.com", password: "123456", reset_password_token: "reset token test 3", first_name: "Jamie", last_name: "Guzman", bio: "I've decided to rent my personal camper van François, so that others can enjoy the beauty of nature and have a comfortable camping experience. I try to be a responsible steward of the land, air, water, and biodiversity. Realizing that we all have impacts when we visit natural areas and parks, I will donate 2% of proceeds to environmental causes, National Parks Foundations, and other friend group organizations. Please reach out with any questions!", user_url: "https://kitt.lewagon.com/placeholder/users/christinasugiono")
+  user3 = User.create!(email: "user3@email.com", password: "1234561", reset_password_token: "reset token test 3", first_name: "Jamie", last_name: "Guzman", bio: "I've decided to rent my personal camper van François, so that others can enjoy the beauty of nature and have a comfortable camping experience. I try to be a responsible steward of the land, air, water, and biodiversity. Realizing that we all have impacts when we visit natural areas and parks, I will donate 2% of proceeds to environmental causes, National Parks Foundations, and other friend group organizations. Please reach out with any questions!", user_url: "https://kitt.lewagon.com/placeholder/users/christinasugiono")
 
-  user4 = User.create!(email: "user4@email.com", password: "123456", reset_password_token: "reset token test 4", first_name: "Patricio", last_name: "Henrickson", bio: "We love to camp, our camping love started with backpacking trips in college and as we had kids shifted to long car/RV camping trips with the kids. We have slowly introduced them to backpacking but our primary camping trips are 3-4 days in length. We transitioned from a pop-up trailer and now have a van that we rent out here on Vanish.", user_url: "https://kitt.lewagon.com/placeholder/users/random")
+  user4 = User.create!(email: "user4@email.com", password: "1234561", reset_password_token: "reset token test 4", first_name: "Patricio", last_name: "Henrickson", bio: "We love to camp, our camping love started with backpacking trips in college and as we had kids shifted to long car/RV camping trips with the kids. We have slowly introduced them to backpacking but our primary camping trips are 3-4 days in length. We transitioned from a pop-up trailer and now have a van that we rent out here on Vanish.", user_url: "https://images.generated.photos/EXIRLfhp4EO7tw8742yaTL1CuHfiCCyGx7gPlj2aQUE/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/MzY1MjA5LmpwZw.jpg")
 
+  user5 = User.create!(email: "email5@email.com", password: "1234561", reset_password_token: "reset token test 5", first_name: "Jessie", last_name: "Snow", bio: "I like turtles.", user_url: "https://images.unsplash.com/photo-1643732994192-03856731da2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTl8fGF2YXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60")
+
+  user6 = User.create!(email: "email6@email.com", password: "1234561", reset_password_token: "reset token test 6", first_name: "John", last_name: "Snow", bio: "I like turtles.", user_url: "https://images.unsplash.com/photo-1632922267756-9b71242b1592?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fGF2YXRhcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60")
 
   puts "created 4 users"
 
@@ -103,7 +106,7 @@ BuildAppliance.destroy_all
     build2 = Build.create!(name: 'Westy', solar_panel: panel170, battery: battery200, user: user1)
 
     fridge1x25_build = BuildAppliance.create!(
-      use_hours: 20, amp_hours: 25, build: build2, appliance: fridge1x25
+      use_hours: 18, amp_hours: 25, build: build2, appliance: fridge1x25
     )
 
     lights1x5_build = BuildAppliance.create!(
@@ -118,10 +121,10 @@ BuildAppliance.destroy_all
       use_hours: 1, amp_hours: 6, build: build2, appliance: pump6
     )
 
-    build2.update(total_price: build2.set_total_price)
+    build2.update(total_price: 990)
 
   # user 1 61ah
-    build3 = Build.create!(name: 'Sprint Deluxe', solar_panel: panel450, battery: battery170, user: user3)
+    build3 = Build.create!(name: 'Sprint Deluxe', solar_panel: panel450, battery: battery170, user: user5)
 
     fridge2x2_build = BuildAppliance.create!(
       use_hours: 10, amp_hours: 22, build: build3, appliance: fridge2x2
@@ -156,11 +159,15 @@ BuildAppliance.destroy_all
     lights1build = BuildAppliance.create!(
       use_hours: 12, amp_hours: 12, build: build4, appliance: lights1
     )
-    build4.update(total_price: build4.set_total_price)
+
+    charger1_build = BuildAppliance.create!(
+      use_hours: 8, amp_hours: 8, build: build4, appliance: charger1
+    )
+    build4.update(total_price: 720)
 
 
   # user 2 48ah
-    build5 = Build.create!(name: 'Amine', solar_panel: panel170, battery: battery200, user: user2)
+    build5 = Build.create!(name: 'Amine', solar_panel: panel170, battery: battery200, user: user6)
 
     fridge1x25_build = BuildAppliance.create!(
       use_hours: 20, amp_hours: 25, build: build5, appliance: fridge1x25
@@ -178,7 +185,7 @@ BuildAppliance.destroy_all
       use_hours: 1, amp_hours: 6, build: build5, appliance: pump6
     )
 
-    build5.update(total_price: build5.set_total_price)
+    build5.update(total_price: 1330)
 
   # user 2 61ah
     build6 = Build.create!(name: 'Folds', solar_panel: panel450, battery: battery170, user: user2)
@@ -218,56 +225,57 @@ BuildAppliance.destroy_all
   build7.update(total_price: build7.set_total_price)
 
 
-  # user 3 48ah
-    build8 = Build.create!(name: 'Sprinter', solar_panel: panel170, battery: battery200, user: user3)
-
-    fridge1x25_build = BuildAppliance.create!(
-      use_hours: 20, amp_hours: 25, build: build8, appliance: fridge1x25
-    )
-
-    lights1x5_build = BuildAppliance.create!(
-      use_hours: 3, amp_hours: 4.5, build: build8, appliance: lights1x5
-    )
-
-    fan1x2_build = BuildAppliance.create!(
-      use_hours: 10, amp_hours: 12, build: build8, appliance: fan1x2
-    )
-
-    pump6_build = BuildAppliance.create!(
-      use_hours: 1, amp_hours: 6, build: build8, appliance: pump6
-    )
-
-    build8.update(total_price: build8.set_total_price)
-
-  # user 3 61ah
-    build9 = Build.create!(name: 'Koala', solar_panel: panel450, battery: battery170, user: user4)
+    # user 3 61ah
+    build8 = Build.create!(name: 'Koala', solar_panel: panel450, battery: battery170, user: user4)
 
     fridge2x2_build = BuildAppliance.create!(
-      use_hours: 6, amp_hours: 20, build: build9, appliance: fridge2x2
+      use_hours: 6, amp_hours: 20, build: build8, appliance: fridge2x2
     )
 
     lights2_build = BuildAppliance.create!(
-      use_hours: 4, amp_hours: 8, build: build9, appliance: lights2
+      use_hours: 4, amp_hours: 8, build: build8, appliance: lights2
     )
 
     fanx6_build = BuildAppliance.create!(
-      use_hours: 12, amp_hours: 7, build: build9, appliance: fanx6
+      use_hours: 12, amp_hours: 7, build: build8, appliance: fanx6
     )
 
     pump6_build = BuildAppliance.create!(
-      use_hours: 2, amp_hours: 11, build: build9, appliance: pump6
+      use_hours: 2, amp_hours: 11, build: build8, appliance: pump6
     )
 
     charger1_build = BuildAppliance.create!(
-      use_hours: 4, amp_hours: 2, build: build9, appliance: charger1
+      use_hours: 4, amp_hours: 2, build: build8, appliance: charger1
     )
 
-    build9.update(total_price: 1840)
+    build8.update(total_price: 1840)
+
+  # user 3 48ah
+    build9 = Build.create!(name: 'Sprinter', solar_panel: panel170, battery: battery200, user: user3)
+
+    fridge1x25_build = BuildAppliance.create!(
+      use_hours: 20, amp_hours: 25, build: build9, appliance: fridge1x25
+    )
+
+    lights1x5_build = BuildAppliance.create!(
+      use_hours: 3, amp_hours: 4.5, build: build9, appliance: lights1x5
+    )
+
+    fan1x2_build = BuildAppliance.create!(
+      use_hours: 10, amp_hours: 12, build: build9, appliance: fan1x2
+    )
+
+    pump6_build = BuildAppliance.create!(
+      use_hours: 1, amp_hours: 6, build: build9, appliance: pump6
+    )
+
+    build9.update(total_price: build9.set_total_price)
+
+
 
 puts "created #{Build.count} builds"
 
 
-  Bookmark.create(user: user1, build: build4)
   Bookmark.create(user: user1, build: build8)
   Bookmark.create(user: user2, build: build6)
   Bookmark.create(user: user3, build: build7)
