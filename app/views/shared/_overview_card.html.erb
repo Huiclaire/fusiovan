@@ -1,6 +1,9 @@
 
 <div class="card-overview box-relative">
-  <h2 class="mb-0">Overview</h2>
+  <div class="d-flex justify-content-between">
+    <h2 class="mb-0">Overview</h2>
+    <%= image_tag @build.user.user_url, class: "avatar-large", alt: "avatar-large" %>
+  </div>
   <h3 class="p-1 my-3"><strong>Appliances</strong></h3>
   <div class="d-flex mb-3" style="flex-wrap: wrap;">
     <% @build.appliances.each do |appliance| %>

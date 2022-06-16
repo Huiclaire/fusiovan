@@ -4,10 +4,11 @@
   height: 95%;
   padding: 18px;
   border-radius: 11px;
-  width: 278px;
+  width: 300px;
   height: 83vh;
-  margin-right: 18px;
+  margin-right: 32px;
   color: #3E3B3B;
+  margin-top: 12px;
 }
 
 .card-overview h2 {
@@ -33,10 +34,9 @@
 .card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 18px;
+  grid-gap: 44px;
   position: relative;
   margin-right: 520px;
-  margin-left: 16px;
 }
 
 .pill-grid {
