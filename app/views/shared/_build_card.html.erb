@@ -12,27 +12,27 @@
           <div class="d-flex" style="flex-wrap: wrap">
             <% appliances.each do |appliance| %>
               <% if appliance.kind == "inverter" %>
-                <div class="pill-container me-1">
+                <div class="pill-container me-1 mb-1">
                   <span class="pill-font"> 🔌 inverter</span>
                 </div>
               <% elsif appliance.kind == "lights"%>
-                <div class="pill-container me-1">
+                <div class="pill-container me-1 mb-1">
                   <span class="pill-font"> 💡 lights</span>
                 </div>
               <% elsif appliance.kind == "fridge"%>
-                <div class="pill-container me-1">
+                <div class="pill-container me-1 mb-1">
                   <span class="pill-font"> ❄️ fridge</span>
                 </div>
               <% elsif appliance.kind == "fan"%>
-                <div class="pill-container me-1">
+                <div class="pill-container me-1 mb-1">
                   <span class="pill-font"> 💨 fan</span>
                 </div>
               <% elsif appliance.kind == "charger"%>
-                <div class="pill-container me-1">
+                <div class="pill-container me-1 mb-1">
                   <span class="pill-font"> ⚡ 12V charger</span>
                 </div>
               <% elsif appliance.kind == "pump"%>
-                <div class="pill-container me-1">
+                <div class="pill-container me-1 mb-1">
                   <span class="pill-font"> 💧 water pump</span>
                 </div>
               <% end %>
