@@ -2,7 +2,7 @@
 <% if params[:query].present? && params[:query][:search_word].present? %>
   <div class="index-results">
   <h1>Explore Builds</h1>
-  <p> Showing <%= @builds.length %> results for <%= @params_query %> </p>
+  <p> Showing <%= @builds.length %> results for  <span class="text-warning"> '<%= @params_query %>' </span></p>
   </div>
 <% else %>
   <h1>Explore Builds</h1>
