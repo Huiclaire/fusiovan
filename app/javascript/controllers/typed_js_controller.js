@@ -9,8 +9,8 @@ export default class extends Controller {
       typeSpeed: 90,
       loop: true,
       showCursor: false,
-      // backDelay: 2000,
-      startDelay: 700,
+      backDelay: 2000,
+      // startDelay: 700,
     });
   }
 }
