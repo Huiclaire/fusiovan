@@ -16,7 +16,11 @@
             <%= link_to "All Builds", builds_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag current_user.user_url, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= cl_image_tag("THE_IMAGE_ID_FROM_LIBRARY",
+                      class: "avatar dropdown-toggle",
+                      id: "navbarDropdown", data: { bs_toggle: "dropdown" },
+                      'aria-haspopup': true, 'aria-expanded': false) %>
+            <%# <%= image_tag current_user.user_url, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
