@@ -2,7 +2,11 @@
 <div class="card-overview box-relative">
   <div class="d-flex justify-content-between">
     <h2 class="mb-0">Overview</h2>
+    <% if @build.user.user_url != nil %>
     <%= image_tag @build.user.user_url, class: "avatar-large", alt: "avatar-large" %>
+    <%  else %>
+    <%= cl_image_tag @build.user.photo.key, class: "avatar-large", alt: "avatar-large"%>
+    <% end%>
   </div>
   <h3 class="p-1 my-3"><strong>Appliances</strong></h3>
   <div class="d-flex mb-3" style="flex-wrap: wrap;">
