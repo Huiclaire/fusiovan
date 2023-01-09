@@ -15,12 +15,28 @@
           <li class="nav-item active">
             <%= link_to "All Builds", builds_path, class: "nav-link" %>
           </li>
-          <li class="nav-item dropdown">
-            <%= image_tag current_user.user_url, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% if current_user.user_url?%>
+            <li class="nav-item dropdown">
+              <%= image_tag current_user.user_url,
+              class: "avatar dropdown-toggle",
+              id: "navbarDropdown",
+              data: { bs_toggle: "dropdown" },
+              'aria-haspopup': true,
+              'aria-expanded': false %>
+            <% else%>
+              <li class="nav-item dropdown">
+                <%= cl_image_tag current_user.photo.key,
+                class: "avatar dropdown-toggle",
+                id: "navbarDropdown",
+                data: { bs_toggle: "dropdown" },
+                'aria-haspopup': true,
+                'aria-expanded': false %>
+                <% end%>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
+
         <% else %>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
