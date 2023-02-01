@@ -1,29 +1,55 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the FusioVan (https://www.lewagon.com) team from the Bali bootcamp batch #882.
 
-PROJECT NAME
-FusioVan - a web app to help aspiring DIY camper van builders choose their appliances and solar energy system components in a user friendly way
-Visit the production version at http://www.fusiovan.com/
+# FusioVan
 
-DESCRIPTION
-This project has used the LeWagon Rails Devise template. This template installed everything necessary to go straight into prototyping the application and avoid spending a long time in configuration. As the Rails doctrine states, 'Convention over Configuration'. Heroku was used for deploying the application to production.
+FusioVan is a web app to help aspiring DIY camper van builders choose their appliances and solar energy system components in a user friendly way.
 
-The web app allows aspiring DIY camper van builders to browse community built camper van 'builds' or create their own, using the 'Create a build' tool. This tool was made using Javascript and Stimulus. At this stage of the app the existing 'builds' are provided via seeds included in the application files.
+## Demo
 
-INSTALLATION
-After forking the repo, you should run the following in your terminal:
-- bundle install
-- yarn install
-- rails db:migrate
-- rails db:seed
+Visit the production version [here](http://www.fusiovan.com/)
 
-TECH STACK
-- Ruby on Rails
-- HTML
-- CSS
-- Bootstrap
-- JavaScript/Stimulus
-- Heroku
-- Figma
+Demo Login can use the following credentials to explore the app:
 
-AUTHORS AND ACKNOWLEDGMENT
-FusioVan was made possible through the contributions of Tim Banta, Demetris Tzionis, Claire Lin and Maxime Carrat
+- Username: email1@email.com
+- Password: 1234561
+
+## Stack
+
+- Beckend: Ruby on Rails
+- Frontend: HTML5,CSS3, JavaScript, Bootstrap
+
+## Features
+
+- Browse community builds: Allow users to browse and explore a library of camper van builds created by the community.
+- Create a build: Enable users to create their own camper van builds using an easy-to-use tool powered by Javascript and Stimulus.
+- Build library: Provide access to a growing library of camper van builds, with new builds added regularly.
+- User-friendly tool: Make it easy for users to create and customize their own builds using a user-friendly interface.
+- Realistic simulations: Offer real-time simulations of the builds, allowing users to visualize their creations in detail.
+
+## Code Structure
+
+The application centered around the Build model.
+There are three important parts of a build that is Battery, SolarPanel and many Appliance(s) with their own models and configuration. 
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  bundle install
+```
+```bash
+  yarn install
+```
+```bash
+  rails db:migrate
+```
+```bash
+  rails db:seed
+```
+
+## Authors and Acknowledgment
+
+- [Tim Banta](https://github.com/bantabanta)
+- [Demetris Tzionis](https://github.com/D-i-m-i)
+- [Maxime Carrat](https://github.com/MaximeCarrat)
+
